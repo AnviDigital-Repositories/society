@@ -1,0 +1,425 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: rgba(0, 0, 0, 0.3)
+  opacity: 1
+
+*:-moz-placeholder
+  color: rgba(0, 0, 0, 0.3)
+  opacity: 1
+
+*::-moz-placeholder
+  color: rgba(0, 0, 0, 0.3)
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: rgba(0, 0, 0, 0.3)
+  opacity: 1
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+input[type="number"]
+  -moz-appearance: textfield
+
+input[type="number"]:hover, input[type="number"]:focus
+  -moz-appearance: number-input
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: rgba(0, 0, 0, 0.3)
+
+body input:required:valid,
+body textarea:required:valid
+  color: rgb(0, 0, 0)
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+a
+  text-decoration: none
+  outline: none
+input
+  outline: none
+  border: none
+button
+  outline: none
+  background: none
+  border: none
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: "ploni-regular", sans-serif
+  overflow-x: hidden
+img
+  display: block
+  max-width: 100%
+  height: auto
+svg
+  overflow: hidden
+section
+  min-height: 100vh
+.container
+  width: 100%
+  max-width: 1380px
+  padding: 0 20px
+  margin: 0 auto
+  position: relative
+.header
+  background: #F8F8F8
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 2
+  &-news
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: #000000
+    padding: 8px 30px
+    position: relative
+    &-btn
+      width: 20px
+      text-align: center
+    &-slider
+      position: absolute
+      width: 100%
+      max-width: 660px
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &-link
+      font-size: 14px
+      letter-spacing: 0.1em
+      text-decoration: underline
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #FFFFFF
+    &-text
+      padding: 0 20px
+      font-size: 14px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #FFFFFF
+  &-top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 25px 0
+    &-left
+      width: 200px
+    &-right
+      width: 200px
+    &-logo
+      display: flex
+      font-size: 13px
+      letter-spacing: 0.02em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+      svg
+        margin-right: 8px
+    &-right
+      display: flex
+      align-items: center
+      justify-content: flex-end
+    &-basket
+      position: relative
+      margin-left: 20px
+      display: flex
+      align-items: center
+      justify-content: center
+    &-like
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-left: 15px
+    &-number
+      position: absolute
+      left: 50%
+      top: 60%
+      transform: translate(-50%, -50%)
+      z-index: 1
+      font-size: 8px
+    &-name
+      font-size: 13px
+      letter-spacing: 0.02em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+  &-menu
+    &-list
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+    &-link
+      display: block
+      font-size: 16px
+      text-align: center
+      letter-spacing: 0.08em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+      padding: 10px 10px
+      transition: color .5s ease
+      &:hover, &.active
+        color: #ED0F0F
+    &-item
+      padding: 0 12px
+      &:hover
+        .header-menu-drop
+          opacity: 1
+          pointer-events: auto
+    &-drop
+      position: absolute
+      width: 100vw
+      left: 50%
+      transform: translateX(-50%)
+      top: 100%
+      background: #ffffff
+      padding: 25px 0
+      opacity: 0
+      pointer-events: none
+      transition: opacity .5s ease
+    &-flex
+      width: 100%
+      max-width: 970px
+      margin: 0 auto
+      display: flex
+      justify-content: space-between
+    &-subtitle
+      font-size: 14px
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      color: #000000
+      font-family: 'ploni-bold'
+      margin-bottom: 15px
+    &-sublist
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      width: 220px
+    &-sublink
+      font-size: 15px
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      color: #000000
+    &-col
+      width: calc(25% - 22.5px)
+    &-img
+      width: 100%
+      height: 350px
+      border: 1px solid #E5E5E5
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      &_custom
+        background: #F8F8F8
+      a
+        margin: 15px 0
+    &-subitem
+      margin: 4.5px 0
+    &-text
+      font-size: 16px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+      margin-top: 10px
+.title
+  font-size: 19px
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  font-variant: small-caps
+  color: #000000
+  font-family: 'ploni-bold'
+.text
+  font-size: 15px
+  line-height: 22px
+  letter-spacing: 0.04em
+  color: #000000
+
+.first
+  background: #F8F8F8
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  &-content
+    width: 100%
+    max-width: 400px
+  &-title
+    margin-bottom: 10px
+  &-text
+    margin-bottom: 15px
+  &-link
+    font-size: 14px
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    font-variant: small-caps
+    color: #000000
+    margin: 0 10px
+    position: relative
+    &_nomarg
+      margin: 0
+    &:after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 1px
+      background: #000000
+      left: 0
+      bottom: -2px
+.second
+  &-flex
+    display: flex
+    height: 100%
+  &-left
+    background: #F8F8F8
+    width: 50%
+    padding: 70px 100px
+    display: flex
+    align-items: flex-start
+    justify-content: flex-end
+    flex-direction: column
+  &-right
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 70px 70px
+    flex-direction: column
+    width: 50%
+  &-list
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+  &-item
+    width: 15vw
+    height: calc(50vh - 85px)
+    background: #F8F8F8
+    margin: 15px 30px
+.third
+  &-flex
+    display: flex
+    height: 100%
+  &-left
+    width: 50%
+  &-right
+    width: 50%
+    background: #F8F8F8
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    text-align: center
+.fourth
+  padding: 140px 20px 20px
+  &-flex
+    display: flex
+  &-center
+    width: 34%
+    height: 33.33vw
+    background: rgba(0, 0, 0, 0.6)
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    &-text
+      font-size: 24px
+      text-align: center
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #FFFFFF
+    &-link
+      width: 34px
+      height: 34px
+      border-radius: 50%
+      background: #ffffff
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-top: 10px
+  &-item
+    display: flex
+    width: 33%
+    height: 33.33vw
+    flex-wrap: wrap
+    &-block
+      width: 50%
+      height: 50%
+      background: #DEE0DF
+      &:nth-child(3), &:nth-child(2)
+        background: #D3D3D3
+.trust
+  &-list
+    display: flex
+    align-items: center
+    padding: 50px 0
+    border-bottom: 1px solid #BCBEC0
+    border-top: 1px solid #BCBEC0
+  &-item
+    width: 25%
+    display: flex
+    padding: 0 40px
+    align-items: center
+    min-height: 75px
+    border-right: 1px solid #BCBEC0
+    &:last-child
+       border: none
+    &-text
+      font-size: 14px
+      line-height: 21px
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #000000
+      margin-left: 20px
+
+@import "../components/pages/home/style"
+@import "media"
+// Всегда в конце
