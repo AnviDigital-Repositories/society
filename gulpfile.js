@@ -52,6 +52,8 @@ gulp.task('libs-css', ['sass'], function(){
 });
 gulp.task('libs-js', function(){
   return gulp.src([
+      'app/libs/fullPage.js-master/dist/fullpage.min.js',
+      'app/libs/select2-4.0.7/dist/js/select2.min.js',
       // 'app/libs/swiper/dist/js/swiper.min.js',
       // 'app/libs/jquery.maskedinput/dist/jquery.maskedinput.min.js',
       // 'app/libs/nselect/build/jquery.nselect.min.js',
