@@ -97,17 +97,14 @@
     display: block
     transition: all 0.5s ease
     cursor: pointer
-    &:hover
-      background: #F8F8F8
+
+
   &-list
     &:last-child
       .collection-link
         border-right: 1px solid #BCBEC0
-    &:focus, &:active
+    &.active
       background: #F8F8F8
-      .collection-type
-        opacity: 1
-        pointer-events: auto
 
   &-second
     border-bottom: 1px solid #BCBEC0
@@ -162,7 +159,25 @@
       border: 1px solid #BCBEC0
       border-top: none
       cursor: pointer
-  &-type
+  &-change
+    &-item
+      position: absolute
+      top: 50px
+      left: 0
+      width: 100%
+      background: #F8F8F8
+      opacity: 0
+      pointer-events: none
+      transition: all 0.2s ease
+      padding: 0 60px
+      height: 0
+      border-top: 1px solid #BCBEC0
+      border-bottom: 1px solid #BCBEC0
+      &.active
+        height: auto
+        opacity: 1
+        pointer-events: auto
+  &-type, &-gender
     position: absolute
     top: 50px
     left: 0
@@ -170,16 +185,29 @@
     background: #F8F8F8
     opacity: 0
     pointer-events: none
-    transition: all 0.5s ease
+    transition: all 0.2s ease
     padding: 0 60px
+    &.active
+      opacity: 1
+      pointer-events: auto
+    &-label
+      position: relative
+      margin-bottom: 10px
+    &-check
+      display: flex
+      justify-content: center
+      transform: translateY(20px)
+      transition: opacity .3s,transform .3s
+      opacity: 0
+      height: 0
+      &.active
+        opacity: 1
+        height: 100%
+        transform: translateY(0)
     &-top
       padding: 40px 20px 35px
-      display: none
-      justify-content: center
-      &.active
-        display: flex
+      overflow: hidden
     &-item
-      margin: 0 25px
       cursor: pointer
       display: block
       &:hover
@@ -195,8 +223,13 @@
       border-radius: 50%
       background: #ffffff
       padding: 6px
-      margin: 0 auto
       border: 1px solid #FFFFFF
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      cursor: pointer
+      margin: 0 30px
     &-glasses
       width: 100%
       height: 100%
@@ -210,6 +243,7 @@
       text-transform: uppercase
       font-variant: small-caps
       color: #808285
+      display: block
       margin-top: 11px
     &-bottom
       padding: 17px 0
@@ -227,15 +261,25 @@
       text-transform: uppercase
       font-variant: small-caps
       color: #000000
+    &-close
+      cursor: pointer
     &-type
       color: #808285
       svg
         margin: 0 5px 0 10px
-
-  &-lvl2
-    display: none
+    &-list
+      width: 100%
+  &-lvl2, &-lvl3
+    display: flex
+    justify-content: center
+    transform: translateY(20px)
+    transition: opacity .3s,transform .3s
+    opacity: 0
+    height: 0
     &.active
-      display: block
+      opacity: 1
+      height: 100%
+      transform: translateY(0)
     &-top
       padding: 40px 20px 35px
       display: flex
@@ -244,4 +288,432 @@
     &-block
       display: flex
       flex-wrap: wrap
-      margin: 0 50px
+      margin: 0 2.6vw
+  &-gender
+    &-men
+      width: 19px
+      height: 28px
+      object-fit: contain
+    &-women
+      width: 22px
+      height: 21px
+      object-fit: contain
+    &-junior
+      width: 19px
+      height: 18px
+      object-fit: contain
+  &-size
+    &-small
+      width: 32px
+      height: 43px
+    &-medium
+      width: 34px
+      height: 45px
+    &-large
+      width: 36px
+      height: 47px
+    &-extra
+      width: 38px
+      height: 50px
+  &-brand
+    &-top
+      padding: 20px 0
+      border-bottom: 1px solid #BCBEC0
+    &-list
+      display: flex
+      justify-content: center
+      align-items: center
+    &-field
+      position: relative
+      width: 100%
+      margin-top: 23px
+      &:before
+        content: ''
+        position: absolute
+        right: 0
+        top: 0
+        background: url("../img/search.svg") no-repeat center / 100%
+        width: 14px
+        height: 100%
+    &-bet
+      margin: 0 13px
+      position: relative
+      font-family: "ploni-regular", sans-serif
+      font-size: 20px
+      line-height: 29px
+      text-align: center
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #000000
+      cursor: pointer
+      &:before
+        content: none
+        position: absolute
+        left: 0
+        bottom: 0
+        height: 1px
+        width: 100%
+        background: #000000
+      &.active:before
+        content: ''
+    &-input
+      width: 100%
+      background: none
+      height: 35px
+      border-bottom: 1px solid #000000
+      font-size: 24px
+      line-height: 35
+      font-family: "ploni-light", sans-serif
+      position: relative
+      padding-right: 20px
+      &::-webkit-input-placeholder
+        font-family: "ploni-light", sans-serif
+        font-size: 24px
+        line-height: 35
+      &:-moz-placeholder
+        font-family: "ploni-light", sans-serif
+        font-size: 24px
+        line-height: 35
+      &::-moz-placeholder
+        font-family: "ploni-light", sans-serif
+        font-size: 24px
+        line-height: 35
+      &:-ms-input-placeholder
+        font-family: "ploni-light", sans-serif
+        font-size: 24px
+        line-height: 35
+    &-mid
+      max-width: 995px
+      width: 100%
+      margin: 0 auto
+      padding: 0 0 100px
+    &-flex
+      display: flex
+      margin-top: 25px
+    &-block
+      width: 20%
+    &-label
+      display: flex
+      align-items: center
+      position: relative
+      margin-bottom: 10px
+      cursor: pointer
+    &-check
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: 15px
+      height: 15px
+      border: 1px solid #000000
+    &-title
+      padding-left: 26px
+  &-lens
+    &-list
+      width: 190px
+      display: block
+      margin: -40px auto 15px
+      padding: 15px 10px 15px 20px
+      background: #ffffff
+      border-radius: 0 0 20px 20px
+      border: 1px solid #BCBEC0
+    &-checkbox
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      opacity: 0
+      z-index: 100
+      position: absolute
+      width: 100%
+      height: 100%
+      cursor: pointer
+    &-label
+      display: block
+      width: 44px
+      height: 24px
+      position: relative
+      background: #000000
+      border-radius: 12px
+      box-shadow: inset 0 3px 8px 1px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.5)
+
+    &-i
+      display: block
+      height: 18px
+      width: 18px
+      position: absolute
+      left: 4px
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 2
+      border-radius: inherit
+      background: #ffffff
+    &-title
+      padding-left: 60px
+      font-family: "ploni-regular", sans-serif
+      font-size: 14px
+      line-height: 21px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+  &-color
+    width: 38px
+    height: 38px
+    border-radius: 50%
+    position: relative
+  &-frame
+    max-width: 995px
+    width: 100%
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    &-disc
+      width: 50px
+      height: 50px
+      margin: 0 22px
+      padding: 0
+      position: relative
+  &-third
+    padding: 50px 0 80px
+    border-bottom: 1px solid #BCBEC0
+    &-flex
+      display: flex
+      flex-wrap: wrap
+    &-slider
+      height: 100%
+      width: 100%
+
+    &-card
+      width: calc(25% - 15px)
+      margin-right: 20px
+      margin-bottom: 30px
+      overflow: hidden
+      &:nth-child(4n+4)
+        margin-right: 0
+      &_two
+        width: calc(50% - 15px)
+        margin-right: 20px
+        &:nth-child(2n+2)
+          margin-right: 0
+    &-sub, &-slider, &-slide
+      position: relative
+      width: 100%
+      height: 455px
+      cursor: pointer
+      &:hover
+        .collection-third-item
+          opacity: 1
+          pointer-events: auto
+          transform: translateY(0)
+    &-slide
+      opacity: 0
+      pointer-events: none
+      transition: all 0.5s ease
+      position: absolute
+      left: 0
+      top: 0
+      &.active
+        opacity: 1
+        pointer-events: auto
+    &-block
+      display: flex
+      align-items: center
+    &-img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      background: #F8F8F8
+    &-span
+      position: absolute
+      font-family: "ploni-light", sans-serif
+      font-size: 12px
+      line-height: 18px
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+    &-new
+      left: 15px
+      top: 12px
+    &-btn
+      right: 12px
+      bottom: 6px
+
+    &-item
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      height: auto
+      background: #ffffff
+      padding: 4px 20px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      opacity: 0
+      pointer-events: none
+      transform: translateY(20px)
+      transition: all 0.5s ease
+      &.active
+        opacity: 1
+        pointer-events: auto
+        transform: translateY(0)
+    &-change
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      margin-left: 10px
+      width: 200px
+      height: 40px
+      overflow: hidden
+      transition: all 0.5s ease
+      justify-content: flex-end
+      &.active
+        width: auto
+        height: auto
+    &-color
+      width: 28px
+      height: 28px
+      margin: 6px
+      background: #F8F8F8
+      border: 1px solid #F8F8F8
+      cursor: pointer
+      &.active
+        border: 1px solid #000000
+    &-more
+      width: 16px
+      height: 16px
+      position: relative
+      margin: 6px 12px
+      cursor: pointer
+    &-one, &-two
+      background: #000000
+      height: 1px
+      width: 100%
+      display: block
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      transition: all 0.4s ease
+    &-two
+      position: absolute
+      left: 50%
+      top: 0
+      width: 1px
+      height: 100%
+      transform: translateX(-50%)
+      transition: all 0.4s ease
+    &-heart
+      cursor: pointer
+      transition: all 0.4s ease
+      &:hover, &.active
+        fill: #000000
+    &-sup
+      margin-top: 17px
+      text-align: center
+    &-title, &-name, &-graythrough
+      font-family: "ploni-light", sans-serif
+      font-size: 20px
+      line-height: 29px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+    &-name, &-graythrough, .graythrough
+      font-size: 18px
+      line-height: 26px
+      .graythrough
+        text-decoration-color: #ED0F0F
+    &-graythrough
+      font-family: "ploni-regular", sans-serif
+    &-big
+      width: 50%
+      padding: 50px 60px 50px 0
+      height: 1035px
+      position: relative
+      &_right
+        padding: 50px 0 50px 60px
+    &-bottom
+      position: absolute
+      bottom: 105px
+      text-align: center
+      left: 40px
+      max-width: 530px
+      width: 100%
+    &-top
+      position: absolute
+      top: 105px
+      right: 40px
+      max-width: 530px
+      width: 100%
+      text-align: center
+      bottom: auto
+      left: auto
+    &-main, &-text
+      font-family: "ploni-light", sans-serif
+      font-size: 30px
+      line-height: 44px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+    &-text
+      font-size: 14px
+      line-height: 21px
+      font-variant: none
+      text-transform: initial
+    &-container
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+    &-products
+      display: flex
+      flex-wrap: wrap
+      width: 50%
+  &-fouth
+    padding: 67px 0 120px
+    &-slider
+      margin-top: 15px
+      padding: 0 38px
+    .slick-arrow
+      position: absolute
+      top: calc(50% - 70px)
+      transform: translateY(-50%)
+    .slick-next
+      right: 0
+      svg
+        transform: rotate(180deg)
+    .slick-prev
+      left: 0
+    .slick-slide img
+      margin: 0 20px
+
+.color
+  &-black
+    background: url("../img/black.jpg") no-repeat center / 100%
+  &-clear
+    background: #F8F8F8
+  &-gold
+    background: url("../img/gold.jpg") no-repeat center / 100%
+  &-green
+    background: #377D21
+  &-gunmetal
+    background: url("../img/gunmetal.jpg") no-repeat center / 100%
+  &-silver
+    background: url("../img/silver.jpg") no-repeat center / 100%
+  &-tortoise
+    background: url("../img/tortoise.jpg") no-repeat center / 100%
+  &-plastic
+    background: linear-gradient(180deg, #BCBEC0 0%, #808285 100%)
+  &-mixed
+    background: linear-gradient(180deg, rgba(188, 190, 192, 0.2) 0%, #808285 100%)
+
+.collection-lens-checkbox:checked ~ .collection-lens-i
+  left: auto
+  right: 4px
+  transition: all 0.5s ease

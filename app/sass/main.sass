@@ -524,6 +524,31 @@ section
       font-size: 16px
       line-height: 24px
       color: #000000
+.checkbox
+  position: absolute
+  opacity: 0
+  cursor: pointer
+  height: 0
+  width: 0
+.checkbox:checked ~ .collection-type-disc
+  border: 1px solid #000000
+.checkbox:checked ~ .collection-type-title
+  color: #000000
+.checkbox:checked ~ .collection-brand-check
+  background: #000000
+.checkbox:checked ~ .collection-frame-disc:after
+  position: absolute
+  content: ''
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  width: 15px
+  height: 9px
+  background: url("../img/check.svg") no-repeat center / 100%
+  z-index: 9
+
+
+
 .graythrough
   font-family: "ploni-light", sans-serif
   font-size: 16px

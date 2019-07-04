@@ -128,17 +128,49 @@ $(document).ready(function () {
         placeholder: 'sort',
     });
 
-    // $(".collection-type-item").click(function () {
-    //     $(this).parent().find(".collection-lvl2").slideDown(500);
-    //     $(".collection-type-item").slideUp(500);
-    // });
+    //Collection - menu
+    $(".collection-list").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let index = $(this).index();
+        $(".collection-change-item").eq(index).addClass('active').siblings().removeClass('active');
+        $(".collection-type-check").eq(index).addClass('active').siblings().removeClass('active');
+
+    });
 
     $('.collection-type-sunglasses').click(function() {
-        $('.collection-type-top').removeClass('active');
+        $('.collection-type-check').removeClass('active');
         $('.collection-lvl2').addClass('active');
     });
-    $(".collection-type-close").click(function () {
-        $('.collection-type-top').addClass('active');
-        $('.collection-lvl2').removeClass('active');
+    $('.collection-type-optical').click(function() {
+        $('.collection-type-check, .collection-lvl2').removeClass('active');
+        $('.collection-lvl3').addClass('active');
     });
+    $(".collection-type-close").click(function () {
+        $('.collection-lvl2, .collection-link, .collection-type-check, .collection-type, .collection-lvl3, .collection-change-item').removeClass('active');
+    });
+
+    //Collection - change colors
+    $(".collection-third-color").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let index = $(this).index();
+        $(".collection-third-slide").eq(index).addClass('active').siblings().removeClass('active');
+    });
+
+    //Collection - plus more colors
+    $(".collection-third-more").click(function () {
+        $(".collection-third-change").addClass('active');
+        $(this).hide();
+    });
+
+    $(".collection-third-heart").click(function () {
+        $(this).toggleClass('active');
+    });
+
+    $(".collection-fouth-slider").slick({
+        slidesToScroll: 1,
+        slidesToShow: 4,
+        arrows: true,
+        dots: false,
+
+    })
 });
