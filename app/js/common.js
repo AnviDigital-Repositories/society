@@ -10,7 +10,7 @@ $(document).ready(function () {
     function bodyUnfreezeScroll() {
         var bodyWidth = $body.innerWidth();
         $body.css('marginRight', '0');
-        $body.css('overflow', 'auto');
+        $body.css('overflow-y', 'auto');
         $body.css('position', 'relative');
     }
 
@@ -171,6 +171,115 @@ $(document).ready(function () {
         slidesToShow: 4,
         arrows: true,
         dots: false,
+    });
 
-    })
+    //Product - header
+    $(".product-svg").click(function () {
+        $(".product-item").addClass('active');
+    });
+
+
+    // $(".product-slider").slick({
+    //     slidesToScroll: 1,
+    //     slidesToShow: 1,
+    //     arrows: false,
+    //     dots: true,
+    //     vertical: true
+    // });
+
+    //Product - slider main
+    const slider = $(".product-slider");
+    slider
+        .slick({
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            arrows: false,
+            dots: true,
+            vertical: true,
+            prevArrow: document.querySelector('slider-prev'),
+            nextArrow: document.querySelector('slider-next'),
+        });
+
+    slider.on('wheel', (function(e) {
+        e.preventDefault();
+
+        if (e.originalEvent.deltaY < 0) {
+            $(this).slick('slickNext');
+        } else {
+            $(this).slick('slickPrev');
+        }
+    }));
+
+    // $('.zoom').zoomple({
+    //     offset : {x: 0, y: 0},
+    //     zoomWidth : 100,
+    //     zoomHeight : 100,
+    //     roundedCorners : true
+    // });
+
+    //Product - slider colors
+    $(".product-colors").slick({
+        slidesToShow: 9,
+        arrows: true ,
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        centerPadding: '40px'
+    });
+
+    //Product - star
+    var star = $('.jq-star');
+    star.click(function (event) {
+        event.preventDefault();
+        var rating = star.index(this);
+        star.removeClass('active');
+        $(this).addClass('active');
+    });
+    $(".popup-returns-close").click(function () {
+        $(".popup-returns").removeClass('active');
+    });
+    $(".product-returns-btn").click(function (e) {
+        e.preventDefault();
+        $(".popup-returns").addClass('active');
+    });
+
+    $(".slick-arrow").text("");
+
+    $('[data-fancybox="gallery"]').fancybox({
+        thumbs: {
+            autoStart : true,
+            axis      : 'x'
+        }
+    });
+
+    $(".product-second-tab").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let index = $(this).index();
+        $(".product-second-item").eq(index).addClass('active').siblings().removeClass('active');
+    });
+
+    //Product - More fit details
+    $(".product-details").click(function () {
+        $(".product-second-popup").addClass('active');
+        bodyFreezeScroll();
+    });
+    $(".product-second-close").click(function () {
+        $(".product-second-popup").removeClass('active');
+        bodyUnfreezeScroll();
+    });
+
+    $(".product-third-tab_options").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let index = $(this).index();
+        $(".product-third-options").eq(index).addClass('active').siblings().removeClass('active');
+        $(".product-third-side").eq(index).addClass('active').siblings().removeClass('active');
+    });
+    $(".product-third-tab_lens").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let index = $(this).index();
+        $(".product-third-offerings").eq(index).addClass('active').siblings().removeClass('active');
+        // $(".product-third-side").eq(index).addClass('active').siblings().removeClass('active');
+    });
+
+
 });

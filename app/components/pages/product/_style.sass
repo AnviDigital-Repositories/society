@@ -1,0 +1,456 @@
+.product
+  //padding-top: 117px
+  .header
+    position: relative
+  .header-news
+    display: none
+  &-header
+    display: flex
+    justify-content: space-between
+    border-top: 1px solid #BCBEC0
+    margin-top: 20px
+    padding: 10px 0
+    overflow: hidden
+    position: relative
+  &-item
+    display: flex
+    position: absolute
+    right: -100%
+    top: 50%
+    pointer-events: none
+    transition: all 0.5s ease
+    transform: translateY(-50%)
+    width: 0
+    align-items: center
+    &.active
+      pointer-events: auto
+      width: 30%
+      right: 0
+  &-svg
+    cursor: pointer
+  &-btn
+    font-size: 16px
+    height: 30px
+    line-height: 24px
+    margin-left: 2.6vw
+  &-span
+    margin-right: 30px
+    white-space: nowrap
+    font-family: "ploni-light", sans-serif
+    font-size: 18px
+    line-height: 26px
+    letter-spacing: 0.1em
+    font-variant: small-caps
+    color: #000000
+  &-input
+    width: 65%
+  &-flex
+    display: flex
+    white-space: nowrap
+  &-between
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-revers
+    display: flex
+    flex-direction: row-reverse
+    .product-third-item
+      padding: 0 50px 0 0
+  &-title
+    font-family: "ploni-light", sans-serif
+    font-size: 36px
+    line-height: 53px
+    text-align: center
+    letter-spacing: 0.1em
+    font-variant: small-caps
+    color: #000000
+  &-first
+    padding: 35px 0 0
+    position: relative
+    &-left
+      max-width: 775px
+      width: 100%
+      max-height: 815px
+      height: 100%
+      position: relative
+    &-fixed
+      display: flex
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      justify-content: space-between
+      align-items: center
+      padding: 10px 15px
+    &-text
+      font-family: "ploni-light", sans-serif
+      font-size: 16px
+      line-height: 24px
+      text-align: center
+      letter-spacing: 0.08em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+      strong
+        margin-left: 7px
+    &-right
+      text-align: center
+      width: 100%
+      padding-left: 50px
+
+    &-name, &-span
+      font-family: "ploni-light", sans-serif
+      font-size: 20px
+      line-height: 29px
+      text-align: center
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #000000
+      margin-bottom: 6px
+    .collection-third-graythrough, .graythrough
+      font-size: 20px
+      line-height: 29px
+    &-span
+      font-size: 14px
+      line-height: 21px
+      margin: 2px 0 30px
+    &-btn
+      margin-bottom: 15px
+    &-field
+      display: flex
+      justify-content: space-between
+      width: 100%
+      border-bottom: 1px solid #000000
+      margin: 45px 0 20px
+      align-items: center
+    &-input
+      font-size: 18px
+      line-height: 30
+      height: 30px
+      width: 100%
+      &::-webkit-input-placeholder
+        font-size: 18px
+        line-height: 30
+
+      &:-moz-placeholder
+        font-size: 18px
+        line-height: 30
+
+      &::-moz-placeholder
+        font-size: 18px
+        line-height: 30
+
+      &:-ms-input-placeholder
+        font-size: 18px
+        line-height: 30
+    &-msg
+      color: #ED0F0F
+      font-family: "ploni-bold", sans-serif
+    &-flex
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &-box
+      width: 100%
+    &-img
+      width: 100%
+      height: 356px
+      background: #F8F8F8
+      object-fit: cover
+      margin: 22px 0 8px
+    &-bottom
+      display: flex
+      justify-content: center
+      padding: 15px 0
+      .product-first-text
+        font-family: "ploni-regular", sans-serif
+    &-icon
+      margin: 0 15px 0 30px
+  &-bold
+    font-family: "ploni-bold", sans-serif
+    color: #000000
+    border-bottom: 1px solid #000000
+  &-colors
+    max-width: 515px
+    width: 100%
+    margin: 10px auto 0
+    padding: 0 15px
+    &-item
+      width: 40px
+      height: 40px
+      border: 1px solid #F8F8F8
+      background: #F8F8F8
+      margin: 0 5px
+      cursor: pointer
+    .slick-current
+      .product-colors-item
+        border: 1px solid #000000
+    .slick-prev
+      left: -17px
+    .slick-next
+      right: -17px
+      transform: scale(-1,1)
+  &-slider
+    &-item
+      background-size: cover
+    &-img
+      object-fit: contain
+      height: 835px
+  .slick-dots
+    position: absolute
+    left: 10px
+    top: 50%
+    transform: translateY(-50%)
+  .slick-dots li button
+    position: relative
+    color: transparent
+    display: flex
+    align-items: center
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background: none
+      border: 1px solid #000000
+      box-sizing: border-box
+      width: 6px
+      height: 6px
+      border-radius: 50%
+  .slick-dots .slick-active button
+    &:before
+      background: #000000
+.slick-slide, .slick-current, .slick-active, .slick-center
+  outline: none
+.slick-arrow
+  position: absolute
+  top: 11px
+  background: url("../img/arrow-left.svg") no-repeat center / contain
+  width: 8px
+  height: 16px
+.product
+  &-second
+    position: relative
+    &-align
+      min-height: 800px
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      background: #F8F8F8
+      height: 100%
+      padding: 30px 90px
+    &-flex
+      display: flex
+    &-tab
+      font-family: "ploni-light", sans-serif
+      font-size: 30px
+      line-height: 44px
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #808285
+      position: relative
+      margin-right: 30px
+      margin-bottom: 20px
+      cursor: pointer
+      &:before
+        content: none
+        position: absolute
+        left: 0
+        bottom: 3px
+        height: 1px
+        width: 100%
+        background: #000000
+      &.active
+        color: #000000
+        &:before
+          content: ''
+    &-item
+      display: none
+      &.active
+        display: block
+    &-text
+      font-family: "ploni-light", sans-serif
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.1em
+      color: #000000
+      margin-bottom: 19px
+    &-disc
+      list-style-type: disc
+      padding-left: 5px
+      margin-left: 15px
+    &-col
+      margin-right: 50px
+      .product-second-text
+        margin-bottom: 3px
+        letter-spacing: 0.02em
+        font-variant: small-caps
+    &-btn
+      display: inline-block
+      width: 220px
+      background: #FFffff
+      color: #000000
+      border: 1px solid #000000
+      font-size: 16px
+      line-height: 49px
+      margin: 30px 20px 0 0
+    &-bottom
+      margin-top: 120px
+    &-popup
+      background: #E5E5E5
+      z-index: 9
+      width: 100%
+      height: 100%
+      position: fixed
+      left: 0
+      top: -100%
+      display: flex
+      align-items: center
+      pointer-events: none
+      justify-content: center
+      transition: all 0.5s ease
+      &.active
+        top: 0
+        pointer-events: auto
+    &-details
+      width: 100%
+      max-width: 1280px
+      margin: 0 auto
+      transition: all 0.5s ease
+      background: #ffffff
+      height: 100%
+      max-height: 620px
+      position: relative
+      overflow-y: auto
+    &-close
+      position: absolute
+      right: 20px
+      top: 20px
+      cursor: pointer
+    &-title
+      text-align: center
+      font-family: "ploni-regular", sans-serif
+      font-size: 20px
+      line-height: 29px
+      letter-spacing: 0.1em
+      color: #000000
+      padding: 14px 0 12px
+      border-bottom: 1px solid #BCBEC0
+    &-content
+      padding: 0 50px 25px
+    &-gray
+      font-family: "ploni-regular", sans-serif
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #808285
+      margin: 25px 0 10px
+    &-name
+      font-family:  "ploni-regular", sans-serif
+      font-size: 20px
+      line-height: 29px
+      letter-spacing: 0.1em
+      color: #000000
+      margin-bottom: 8px
+    &-img
+      margin: 30px auto 0
+  &-third
+    padding: 30px 0 0
+    &-eye
+      position: relative
+      width: calc(50% + 100px)
+      margin-left: -100px
+    &-side
+      position: absolute
+      height: initial
+      width: 100%
+      left: calc(50% + 50px)
+      top: 50%
+      transform: translate(-50%, -50%)
+      display: none
+      &.active
+        display: block
+      .product-second-text
+        font-family: "ploni-regular", sans-serif
+        margin: 15px 0
+        font-variant: small-caps
+        text-align: center
+    &-left
+      margin-right: 130px
+    &-right
+      margin-left: 105px
+    &-bottom, &-top, &-bottom svg, &-top svg
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+    &-bottom
+      bottom: -55px
+      svg
+        bottom: 0
+      .product-second-text
+        margin: 40px 0
+    &-top
+      height: 138px
+      svg
+        top: -40px
+    &-line
+      margin: 0 auto
+      display: block
+    &-item
+      width: 50%
+      padding-left: 6.25vw
+      .product-title
+        text-align: left
+    &-flex, &-row
+      display: flex
+      align-items: center
+      justify-content: center
+    &-row
+      margin-top: 50px
+    &-tab
+      margin: 15px 20px 29px 0
+      font-family: "ploni-regular", sans-serif
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.1em
+      color: #808285
+      position: relative
+      cursor: pointer
+      &.active
+        color: #000000
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          bottom: 0
+          height: 1px
+          width: 100%
+          background: #000000
+    &-options
+      display: none
+      &.active
+        display: block
+    &-disc
+      list-style-type: disc
+      margin-left: 17px
+    &-btn
+      text-decoration-line: underline
+      font-family: 'ploni-regular', sans-serif
+      margin-left: 17px
+      cursor: pointer
+    &-scale
+      transform: scale(-1,1)
+      margin-left: 0
+      margin-right: -100px
+      .product-third-item
+        margin-left: 0
+    &-block
+      padding: 70px 0
+      border-bottom: 1px solid #BCBEC0
+    &-offerings
+      display: none
+      &.active
+        display: block
+

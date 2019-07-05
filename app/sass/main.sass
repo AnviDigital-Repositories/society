@@ -160,7 +160,7 @@ img
 svg
   overflow: hidden
 section
-  min-height: 100vh
+  //min-height: 100vh
 .container
   width: 100%
   max-width: 1380px
@@ -582,6 +582,13 @@ section
   text-transform: uppercase
   font-variant: small-caps
   color: #FFFFFF
+.product
+  &-popup
+    position: absolute
+    right: 0
+    top: 0
+    background: #ffffff
+    border: 1px solid #E5E5E5
 .popup
   &-title
     font-family: "ploni-bold", sans-serif
@@ -1228,6 +1235,26 @@ section
     &-arrow
       height: 4px
       width: 5px
+  &-returns
+    height: 520px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    max-width: 540px
+    width: 100%
+    padding: 35px 15px 50px
+    right: -100%
+    transition: all 0.5s ease
+    &.active
+      right: 0
+    &-close
+      position: absolute
+      right: 15px
+      top: 15px
+      cursor: pointer
+    .product-first-text
+      text-transform: initial
+      font-variant: none
 
 .footer
   height: auto!important
@@ -1573,6 +1600,26 @@ section
       font-variant: small-caps
       color: #000000
       margin-left: 20px
+.star
+  display: flex
+  align-items: center
+  .jq-star
+    background: url("../img/star-black.svg") no-repeat
+    width: 13px
+    height: 13px
+    margin-right: 1px
+    &.active
+      width: 13px
+      height: 13px
+      background: url("../img/star-black.svg") no-repeat
+  &:hover .active ~ .jq-star
+    background: url("../img/star-black.svg") no-repeat center
+    width: 13px
+    height: 13px
+  &:hover .jq-star:hover ~ .jq-star, .active ~ .jq-star
+    background: url("../img/star.svg") no-repeat center
+    width: 13px
+    height: 13px
 #fp-nav
   top: 193px
 #fp-nav ul li a span, .fp-slidesNav ul li a span
@@ -1604,7 +1651,39 @@ span.select2-selection.select2-selection--single
 .select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true]
   background: #F8F8F8
   color: #000000
+.fancybox-thumbs
+  top: auto
+  width: auto
+  bottom: 0
+  left: 0
+  right: 0
+  height: auto
+  padding: 20px
+  box-sizing: border-box
+  background: rgba(0, 0, 0, 0.3)
+.fancybox-show-thumbs .fancybox-inner
+  right: 0
+  bottom: 95px
+  width: auto
+.fancybox-thumbs__list
+  margin: 0 auto
+  display: flex
+.fancybox-thumbs__list a
+  width: 50px
+  height: 70px
+  margin: 0 10px
+  //overflow-x: auto
+  //background: none
+  //overflow-y: hidden
+  //width: 50%
+  //height: 120px
+  //bottom: 0
+  //top: auto
+  //margin: 0 auto
+  //left: 50%
+  //transform: translateX(-50%)
 @import "../components/pages/home/style"
 @import "../components/pages/collection/style"
+@import "../components/pages/product/style"
 @import "media"
 // Всегда в конце
