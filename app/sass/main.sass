@@ -546,6 +546,10 @@ section
   height: 9px
   background: url("../img/check.svg") no-repeat center / 100%
   z-index: 9
+.checkbox:checked ~ .product-bag-price
+  color: #000000
+  &:before
+    content: ''
 
 
 
@@ -1243,7 +1247,7 @@ section
     max-width: 540px
     width: 100%
     padding: 35px 15px 50px
-    right: -100%
+    right: -200%
     transition: all 0.5s ease
     &.active
       right: 0
@@ -1255,6 +1259,267 @@ section
     .product-first-text
       text-transform: initial
       font-variant: none
+
+  &-select
+    position: fixed
+    left: 0
+    top: 0
+    z-index: 2
+    width: 100%
+    height: 100%
+    transform: translateY(-200%)
+    transition: all 0.5s ease
+    &.active
+      transform: translateY(0)
+    &-flex
+      display: flex
+      height: 100%
+    &-left
+      background: #F8F8F8
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 100%
+      width: calc(100% - 530px)
+      padding-bottom: 95px
+      .product-second-text
+        margin: 10px 0
+        font-variant: small-caps
+    &-drop
+      position: relative
+    &-menu
+      display: flex
+      align-items: center
+    &-footer
+      position: absolute
+      left: 0
+      width: 100%
+      bottom: 0
+      padding: 0 0 50px 70px
+      font-family: "ploni-regular", sans-serif
+      font-size: 30px
+      line-height: 44px
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #000000
+      background: #F8F8F8
+    &-span
+      font-family: "ploni-light", sans-serif
+      font-size: 16px
+      line-height: 24px
+    &-side, &-lens
+      position: absolute
+      left: calc(50% + 50px)
+      top: 50px
+      transform: translateX(-50%)
+      margin: 0 auto
+      display: none
+      &.active
+        display: block
+      &_two
+        top: 110px
+        left: calc(50% + 30px)
+      .product-third-top svg
+        top: -50px
+    &-line
+      display: block
+      margin: 0 auto
+    &-right
+      max-width: 530px
+      width: 100%
+      background: #ffffff
+      padding: 30px 15px
+      position: relative
+      height: 100%
+      z-index: 3
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      overflow-y: auto
+    &-close
+      position: absolute
+      right: 30px
+      top: 30px
+      cursor: pointer
+    &-title
+      font-family: "ploni-light", sans-serif
+      font-size: 22px
+      line-height: 32px
+      text-align: center
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #000000
+      margin-bottom: 35px
+      padding-top: 50px
+    &-list
+      padding: 15px
+      cursor: pointer
+      overflow: hidden
+      &.active
+        border: 1px solid #000000
+        box-sizing: border-box
+        .popup-select-name
+          &:before
+            content: ''
+        .popup-select-focus.active
+          transform: translateY(0)
+          margin: -15px -15px 15px -15px
+      &.available
+        border: 1px solid #F8F8F8
+        .popup-select-item, .popup-select-text
+          color: #808285
+        .popup-select-available
+          transform: translateY(0)
+          margin: -15px -15px 15px -15px
+        .popup-select-name:before
+          content: none
+    &-available
+      transform: translateY(-20px)
+      font-family: "ploni-bold", sans-serif
+      font-size: 14px
+      line-height: 21px
+      text-align: center
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #000000
+      background: #F8F8F8
+      margin: -20px -15px 15px
+      transition: all 0.5s ease
+    &-name
+      position: relative
+      display: block
+      &:before
+        content: none
+        position: absolute
+        bottom: 3px
+        left: 0
+        height: 1px
+        width: 100%
+        background: #000000
+    &-item
+      font-family: "ploni-regular", "aaa-fonts-regular", sans-serif
+      font-size: 18px
+      line-height: 26px
+      text-align: right
+      letter-spacing: 0.04em
+      font-variant: small-caps
+      color: #000000
+      display: flex
+      justify-content: space-between
+      margin-bottom: 10px
+    &-text
+      font-family: "ploni-light", sans-serif
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.04em
+      color: #000000
+      display: block
+    &-link
+      font-family: "ploni-light", sans-serif
+      font-size: 16px
+      line-height: 24px
+      text-align: center
+      letter-spacing: 0.1em
+      text-decoration-line: underline
+      font-variant: small-caps
+      color: #000000
+      width: 100%
+      display: flex
+      justify-content: center
+      margin-bottom: 20px
+    &-lens
+      &_tree
+        left: 52px
+        transform: translateX(0) scale(1.25) rotate(-14deg)
+        top: 44px
+      &_four
+        left: 0
+        top: 0
+        transform: translateX(0)
+    &-subtotal
+      margin-top: 30px
+    &-bottom
+      padding: 40px 15px 0
+    &-focus
+      font-family: 'ploni-bold', sans-serif
+      background: #000000
+      margin: -20px -15px 0
+      width: calc(100% + 30px)
+      font-size: 14px
+      line-height: 21px
+      text-align: center
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #FFFFFF
+      transform: translateY(-20px)
+      transition: all 0.5s ease
+  &-review
+    &-text
+      margin-top: 10px
+      text-align: center
+    &-list
+      display: flex
+      justify-content: space-between
+      padding: 12px 0 15px
+      align-items: center
+    &-item
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-bottom: 20px
+      font-family: "ploni-light", sans-serif
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.04em
+      color: #000000
+      cursor: pointer
+    &-change
+      display: flex
+      align-items: center
+      letter-spacing: 0.1em
+    &-arrow
+      width: 10px
+      height: 14px
+      margin: 0 5px
+      transition: all 0.5s ease
+      &.active
+        transform: rotate(180deg)
+    &-price
+      font-size: 18px
+      line-height: 26px
+      font-family: "ploni-regular", sans-serif
+    &-accordion
+      padding: 0 15px 3px
+      border: 1px solid #BCBEC0
+      display: none
+  &-prescription
+    &-back
+      width: 20%
+  &-prescription, &-lens, &-material, &-review
+    height: 100%
+    display: none
+    &.active
+      display: block
+    &-back
+      position: absolute
+      left: 0
+      top: 0
+      padding: 30px
+      cursor: pointer
+      border-top: 3px solid #000000
+  &-material
+    &-technology
+      margin-top: 25px
+      svg
+        margin: 0 auto
+        display: block
+      &.active
+        path
+          fill: #000000
+        .product-third-span
+          color: #000000
+    &-back
+      width: 25%
 
 .footer
   height: auto!important
@@ -1603,6 +1868,7 @@ section
 .star
   display: flex
   align-items: center
+  height: 13px
   .jq-star
     background: url("../img/star-black.svg") no-repeat
     width: 13px
@@ -1613,13 +1879,13 @@ section
       height: 13px
       background: url("../img/star-black.svg") no-repeat
   &:hover .active ~ .jq-star
-    background: url("../img/star-black.svg") no-repeat center
     width: 13px
     height: 13px
   &:hover .jq-star:hover ~ .jq-star, .active ~ .jq-star
     background: url("../img/star.svg") no-repeat center
     width: 13px
     height: 13px
+    margin-bottom: 3px
 #fp-nav
   top: 193px
 #fp-nav ul li a span, .fp-slidesNav ul li a span
@@ -1672,18 +1938,9 @@ span.select2-selection.select2-selection--single
   width: 50px
   height: 70px
   margin: 0 10px
-  //overflow-x: auto
-  //background: none
-  //overflow-y: hidden
-  //width: 50%
-  //height: 120px
-  //bottom: 0
-  //top: auto
-  //margin: 0 auto
-  //left: 50%
-  //transform: translateX(-50%)
 @import "../components/pages/home/style"
 @import "../components/pages/collection/style"
 @import "../components/pages/product/style"
+@import "../components/pages/reviews/style"
 @import "media"
 // Всегда в конце

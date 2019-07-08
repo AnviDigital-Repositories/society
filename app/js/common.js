@@ -243,7 +243,7 @@ $(document).ready(function () {
         $(".popup-returns").addClass('active');
     });
 
-    $(".slick-arrow").text("");
+
 
     $('[data-fancybox="gallery"]').fancybox({
         thumbs: {
@@ -268,6 +268,7 @@ $(document).ready(function () {
         bodyUnfreezeScroll();
     });
 
+    //Product - tabs lens
     $(".product-third-tab_options").click(function () {
         $(this).addClass('active').siblings().removeClass('active');
         let index = $(this).index();
@@ -278,8 +279,78 @@ $(document).ready(function () {
         $(this).addClass('active').siblings().removeClass('active');
         let index = $(this).index();
         $(".product-third-offerings").eq(index).addClass('active').siblings().removeClass('active');
-        // $(".product-third-side").eq(index).addClass('active').siblings().removeClass('active');
+        $(".product-third-protection").eq(index).addClass('active').siblings().removeClass('active');
+    });
+    $(".product-third-tab_materials").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let index = $(this).index();
+        $(".product-third-material").eq(index).addClass('active').siblings().removeClass('active');
+        $(".product-third-technology").eq(index).addClass('active').siblings().removeClass('active');
     });
 
+    $(".product-slider-two").slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+    });
+    $(".product-slider-tree").slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+    });
+    $(".product-slider-four").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
 
+    $(".reviews-link").click(function (e) {
+        e.preventDefault();
+        $(".reviews-write").toggleClass('active');
+    });
+    
+    $(".product-btn-bag").click(function () {
+        $(".product-bag").addClass('active');
+    });
+
+    //Product - select a prescription type
+    $(".popup-select-list").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let index = $(this).index();
+        $(".popup-select-side ").eq(index).addClass('active').siblings().removeClass('active');
+    });
+    $(".popup-select-list").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let index = $(this).index();
+        $(".popup-select-lens").eq(index).addClass('active').siblings().removeClass('active');
+    });
+    $(".popup-select-list").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $(this).find(".popup-select-focus").addClass('active').parent().siblings().find(".popup-select-focus").removeClass('active');
+        let index = $(this).index();
+        $(".popup-material-technology").eq(index).addClass('active').siblings().removeClass('active');
+    });
+
+    // $(".product-first-btn").click(function (e) {
+    //     e.preventDefault();
+    //     $(".popup-select, .popup-prescription").addClass('active');
+    // });
+    $(".popup-select-lens_type").click(function (e) {
+        e.preventDefault();
+        $(".popup-prescription").removeClass('active');
+        $(".popup-lens").addClass('active');
+    });
+    $(".popup-prescription-back").click(function () {
+        $(".popup-prescription").addClass('active');
+        $(".popup-lens").removeClass('active');
+    });
+    $(".popup-material-back").click(function (){
+        $(".popup-lens").addClass('active');
+        $(".popup-material").removeClass('active');
+    });
+    $(".popup-select-close").click(function () {
+        $(".popup-select, .popup-lens, .popup-prescription, .popup-material").removeClass('active');
+    });
+
+    $(".popup-review-item").click(function () {
+        $(this).parent().find(".popup-review-accordion").slideToggle(500);
+    });
+    $(".slick-arrow").text("");
 });
