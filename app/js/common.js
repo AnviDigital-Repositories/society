@@ -128,6 +128,7 @@ $(document).ready(function () {
         placeholder: 'sort',
     });
 
+
     //Collection - menu
     $(".collection-list").click(function () {
         $(this).addClass('active').siblings().removeClass('active');
@@ -328,16 +329,33 @@ $(document).ready(function () {
         $(".popup-material-technology").eq(index).addClass('active').siblings().removeClass('active');
     });
 
-    // $(".product-first-btn").click(function (e) {
-    //     e.preventDefault();
-    //     $(".popup-select, .popup-prescription").addClass('active');
-    // });
-    $(".popup-select-lens_type").click(function (e) {
+    //Product - open popup select lenses and next popup
+    $(".product-first-btn").click(function (e) {
         e.preventDefault();
-        $(".popup-prescription").removeClass('active');
+        $(".popup-select, .popup-prescription_type").addClass('active');
+        bodyFreezeScroll();
+    });
+    $(".popup-next-type").click(function (e) {
+        e.preventDefault();
+        $(".popup-prescription_type").removeClass('active');
         $(".popup-lens").addClass('active');
     });
-    $(".popup-prescription-back").click(function () {
+    $(".popup-next_material").click(function (e) {
+        e.preventDefault();
+        $(".popup-lens").removeClass('active');
+        $(".popup-material").addClass('active');
+    });
+    $(".popup-next-selections").click(function (e) {
+        e.preventDefault();
+        $(".popup-material").removeClass('active');
+        $(".popup-prescription ").addClass('active');
+    });
+    $(".popup-next-measure").click(function (e) {
+        e.preventDefault();
+        $(".popup-prescription").removeClass('active');
+        $(".popup-measure").addClass('active');
+    });
+    $(".popup-lens-back").click(function () {
         $(".popup-prescription").addClass('active');
         $(".popup-lens").removeClass('active');
     });
@@ -345,12 +363,48 @@ $(document).ready(function () {
         $(".popup-lens").addClass('active');
         $(".popup-material").removeClass('active');
     });
+    $(".popup-review-back").click(function () {
+        $(".popup-prescription").removeClass('active');
+        $(".popup-material").addClass('active');
+    });
+    $(".popup-measure-back").click(function () {
+        $(".popup-measure").removeClass('active');
+        $(".popup-prescription").addClass('active');
+    });
+    //Product - close popup select lenses
     $(".popup-select-close").click(function () {
         $(".popup-select, .popup-lens, .popup-prescription, .popup-material").removeClass('active');
+        bodyUnfreezeScroll();
     });
-
+    //Product - add to cart "review your lens selections"
+    $(".popup-review-add").click(function (e) {
+        e.preventDefault();
+        $(".popup-review-select").removeClass('active');
+        $(".popup-review-totals").addClass('active');
+    });
+    //Product - accordion in "review your lens selections"
     $(".popup-review-item").click(function () {
         $(this).parent().find(".popup-review-accordion").slideToggle(500);
+        $(this).find(".popup-review-arrow").toggleClass('active');
+    });
+
+    $(".popup-prescription-select").select2({
+        minimumResultsForSearch: -1,
+    });
+    $(".popup-prescription-subselect").select2({
+        minimumResultsForSearch: -1,
+        placeholder: '0.00'
+    });
+    $(".popup-measure-select").select2({
+        minimumResultsForSearch: -1,
+        placeholder: '--'
+    });
+    $(".popup-measure-face svg").click(function () {
+        $(".popup-prescription-hover").addClass('active');
+    });
+    $(".popup-prescription-cancel").click(function (e) {
+        e.preventDefault();
+        $(".popup-prescription-hover").removeClass('active');
     });
     $(".slick-arrow").text("");
 });

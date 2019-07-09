@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
     <meta name="viewport" content="width=375, maximum-scale=1.0"/>
-    <link href="https://fonts.googleapis.com/css?family=Assistant:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/libs.min.css">
@@ -16,9 +16,8 @@
 
 </head>
 
-<body>
+<body class="product">
 
-<div class="product">
     <!-- header.html -->
 <header class="header">
     <div class="header-news">
@@ -1744,7 +1743,7 @@
         </div>
     </section>
     <div class="product-popup popup-select">
-        <div class="popup-prescription active">
+        <div class="popup-prescription_type">
             <div class="popup-select-flex">
                 <ul class="popup-select-left">
                     <li class="popup-select-drop">
@@ -1823,7 +1822,7 @@
                     </div>
                     <div class="popup-select-bottom">
                         <a href="" class="popup-select-link">Learn more about prescription options</a>
-                        <a href="" class="popup-select-lens_type btn">Next up: Select lens type</a>
+                        <a href="" class="popup-next-type btn">Next up: Select lens type</a>
                     </div>
                 </div>
                 <div class="popup-select-footer">
@@ -1889,7 +1888,7 @@
                     </li>
                 </ul>
                 <div class="popup-select-right">
-                    <div class="popup-prescription-back">
+                    <div class="popup-lens-back">
                         <svg class="" width="20" height="14" vie wBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 15L1 8M1 8L8 0.999999M1 8L21 8" stroke="black"/>
                         </svg>
@@ -1938,7 +1937,7 @@
                     </div>
                     <div class="popup-select-bottom">
                         <a href="" class="popup-select-link">Learn more about lenses types</a>
-                        <a href="" class="popup-select-prescription btn">Next up: enter your prescription</a>
+                        <a href="" class="popup-next_material btn">Next up: enter your prescription</a>
                         <div class="popup-select-subtotal">
                             <p class="popup-select-item">
                                 <span class="popup-select-name">Subtotal</span>
@@ -2062,7 +2061,7 @@
                     </div>
                     <div class="popup-select-bottom">
                         <a href="" class="popup-select-link">Learn more about lens materials</a>
-                        <a href="" class="popup-select-material btn">Next up: Review your lens selections</a>
+                        <a href="" class="popup-next-selections btn">Next up: Review your lens selections</a>
                         <div class="popup-select-subtotal">
                             <p class="popup-select-item">
                                 <span class="popup-select-name">Subtotal</span>
@@ -2077,13 +2076,13 @@
                 </div>
             </div>
         </div>
-        <div class="popup-review ">
+        <div class="popup-review" >
             <div class="popup-select-flex">
                 <ul class="popup-select-left" >
                     <img src="img/image.svg" alt="" class="popup-select-img">
                 </ul>
                 <div class="popup-select-right">
-                    <div class="popup-prescription-back">
+                    <div class="popup-review-back">
                         <svg class="" width="20" height="14" vie wBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 15L1 8M1 8L8 0.999999M1 8L21 8" stroke="black"/>
                         </svg>
@@ -2091,116 +2090,993 @@
                     <svg class="popup-select-close" width="14" height="14" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L21 21M21 1L1 21" stroke="black"/>
                     </svg>
-                    <div class="">
-                        <p class="popup-select-title">review your lens selections
-                            <span class="popup-select-text popup-review-text">Everithing looking good? Great! Add to cart and <br> proceed to checkout</span>
-                        </p>
-                        <ul class="popup-select-top">
-                            <li class="popup-review-main">
-                                <p class="popup-select-item">
-                                    prescription
-                                </p>
-                                <p class="popup-review-item">
-                                    Single-Vision
-                                    <span class="popup-review-change">
+                    <div class="popup-review-select active">
+
+                        <div class="popup-review-block">
+                            <p class="popup-select-title popup-review-title">review your lens selections
+                                <span class="popup-select-text popup-review-text">Everithing looking good? Great! Add to cart and <br> proceed to checkout</span>
+                            </p>
+                            <div class="popup-review-content">
+                                <ul class="popup-review-top">
+                                    <li class="popup-review-main">
+                                        <p class="popup-select-item">
+                                            prescription
+                                        </p>
+                                        <p class="popup-review-item">
+                                            Single-Vision
+                                            <span class="popup-review-change">
                                         <span class="popup-review-view">(View prescription</span>
                                         <img src="img/arrow-down.svg" alt="" class="popup-review-arrow">
                                         )
                                     </span>
-                                    <span class="popup-review-price">$145</span>
-                                </p>
-                                <ul class="popup-review-accordion">
-                                    <li class="popup-review-list">
-                                        <p class="popup-bag-text">
-                                            prescription
+                                            <span class="popup-review-price">$145</span>
                                         </p>
-                                        <span class="popup-bag-edit">edit</span>
-                                    </li>
-                                    <li class="popup-review-drop">
-                                        <table class="popup-bag-droptable">
-                                            <tr class="popup-bag-droprow">
-                                                <td class="popup-bag-droptext"></td>
-                                                <td class="popup-bag-droptop">
-                                                    sph
-                                                </td>
-                                                <td class="popup-bag-droptop">
-                                                    cyl
-                                                </td>
-                                                <td class="popup-bag-droptop">
-                                                    axis
-                                                </td>
-                                                <td class="popup-bag-droptop">
-                                                    add
-                                                </td>
-                                                <td class="popup-bag-droptop">
-                                                    pd
-                                                </td>
+                                        <ul class="popup-review-accordion">
+                                            <li class="popup-review-list">
+                                                <p class="popup-bag-text">
+                                                    prescription
+                                                </p>
+                                                <span class="popup-bag-edit">edit</span>
+                                            </li>
+                                            <li class="popup-review-drop">
+                                                <table class="popup-bag-droptable">
+                                                    <tr class="popup-bag-droprow">
+                                                        <td class="popup-bag-droptext"></td>
+                                                        <td class="popup-bag-droptop">
+                                                            sph
+                                                        </td>
+                                                        <td class="popup-bag-droptop">
+                                                            cyl
+                                                        </td>
+                                                        <td class="popup-bag-droptop">
+                                                            axis
+                                                        </td>
+                                                        <td class="popup-bag-droptop">
+                                                            add
+                                                        </td>
+                                                        <td class="popup-bag-droptop">
+                                                            pd
+                                                        </td>
 
-                                            </tr>
-                                            <tr class="popup-bag-dropcol">
-                                                <td class="popup-bag-dropleft">
-                                                    od
-                                                    (right)
-                                                </td>
-                                                <td class="popup-bag-droptext">
-                                                    +2.0
-                                                </td>
-                                                <td class="popup-bag-droptext">
-                                                    none
-                                                </td>
-                                                <td class="popup-bag-droptext">
-                                                    none
-                                                </td>
-                                                <td class="popup-bag-droptext">
-                                                    none
-                                                </td>
-                                                <td class="popup-bag-droptext"  rowspan="2">
-                                                    63.0
-                                                </td>
-                                            </tr>
-                                            </tr>
-                                            <tr class="popup-bag-dropcol" >
-                                                <td class="popup-bag-dropleft">
-                                                    os
-                                                    (left)
-                                                </td>
-                                                <td class="popup-bag-droptext">
-                                                    +2.0
-                                                </td>
-                                                <td class="popup-bag-droptext">
-                                                    none
-                                                </td>
-                                                <td class="popup-bag-droptext">
-                                                    none
-                                                </td>
-                                                <td class="popup-bag-droptext">
-                                                    none
-                                                </td>
-                                                <td class="popup-bag-droptext">
-                                                </td>
-                                            </tr>
-                                        </table>
+                                                    </tr>
+                                                    <tr class="popup-bag-dropcol">
+                                                        <td class="popup-bag-dropleft">
+                                                            od
+                                                            (right)
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            +2.0
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            none
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            none
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            none
+                                                        </td>
+                                                        <td class="popup-bag-droptext"  rowspan="2">
+                                                            63.0
+                                                        </td>
+                                                    </tr>
+                                                    </tr>
+                                                    <tr class="popup-bag-dropcol" >
+                                                        <td class="popup-bag-dropleft">
+                                                            os
+                                                            (left)
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            +2.0
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            none
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            none
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            none
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="popup-review-main">
+                                        <p class="popup-select-item">
+                                            lens type
+                                        </p>
+                                        <p class="popup-review-item">
+                                    <span class="popup-review-change">
+                                        Blue-light-filtering
+                                    </span>
+                                            <span class="popup-review-price">$145</span>
+                                        </p>
+                                        <p class="popup-review-item">Color</p>
+                                    </li>
+                                    <li class="popup-review-main">
+                                        <p class="popup-select-item">
+                                            Lens material
+                                        </p>
+                                        <p class="popup-review-item">
+                                    <span class="popup-review-change">
+                                       1.67 high-index
+                                    </span>
+                                            <span class="popup-review-price">+$30</span>
+                                        </p>
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="popup-review-list">
-                                <p class="popup-select-item">
-                                    <span class="popup-select-name">Sunglasses</span>
-                                    $100
+                                <ul class="popup-review-sum">
+                                    <li class="popup-review-result">
+                                        frame
+                                        <span class="popup-review-price">$#</span>
+                                    </li>
+                                    <li class="popup-review-result">
+                                        lenses
+                                        <span class="popup-review-price">$#</span>
+                                    </li>
+                                    <li class="popup-review-result">
+                                        <span class="popup-review-price">Subtotal</span>
+                                        <span class="popup-review-price">$195</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="popup-review-bottom">
+                            <a href="" class="popup-review-add btn">add to cart</a>
+                            <div class="popup-select-subtotal">
+                                <p class="popup-select-item popup-review-center">
+                                    edit selections
                                 </p>
-                                <p class="popup-select-text">
-                                    Scratch-resistant, anti-reflective lenses that block 100% of UV rays; transition from clear to a darker tint when you’re outside, and filter more blue light than our classic lenses
-                                </p>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
+                    <div class="popup-review-totals">
+                        <div class="popup-review-block">
+                            <p class="popup-select-title popup-review-title">review your lens selections
+                                <span class="popup-select-text popup-review-text">Everithing looking good? Great! Add to cart and <br> proceed to checkout</span>
+                            </p>
+                            <div class="popup-review-content">
+                                <ul class="popup-review-top">
+                                    <li class="popup-review-main">
+                                        <p class="popup-select-item">
+                                            prescription
+                                        </p>
+                                        <p class="popup-review-item">
+                                            Single-Vision
+                                            <span class="popup-review-change">
+                                        <span class="popup-review-view">(View prescription</span>
+                                        <img src="img/arrow-down.svg" alt="" class="popup-review-arrow">
+                                        )
+                                    </span>
+                                            <span class="popup-review-price">$145</span>
+                                        </p>
+                                        <ul class="popup-review-accordion">
+                                            <li class="popup-review-list">
+                                                <p class="popup-bag-text">
+                                                    prescription
+                                                </p>
+                                                <span class="popup-bag-edit">edit</span>
+                                            </li>
+                                            <li class="popup-review-drop">
+                                                <table class="popup-bag-droptable">
+                                                    <tr class="popup-bag-droprow">
+                                                        <td class="popup-bag-droptext"></td>
+                                                        <td class="popup-bag-droptop">
+                                                            sph
+                                                        </td>
+                                                        <td class="popup-bag-droptop">
+                                                            cyl
+                                                        </td>
+                                                        <td class="popup-bag-droptop">
+                                                            axis
+                                                        </td>
+                                                        <td class="popup-bag-droptop">
+                                                            add
+                                                        </td>
+                                                        <td class="popup-bag-droptop">
+                                                            pd
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr class="popup-bag-dropcol">
+                                                        <td class="popup-bag-dropleft">
+                                                            od
+                                                            (right)
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            +2.0
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            none
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            none
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            none
+                                                        </td>
+                                                        <td class="popup-bag-droptext"  rowspan="2">
+                                                            63.0
+                                                        </td>
+                                                    </tr>
+                                                    </tr>
+                                                    <tr class="popup-bag-dropcol" >
+                                                        <td class="popup-bag-dropleft">
+                                                            os
+                                                            (left)
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            +2.0
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            none
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            none
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                            none
+                                                        </td>
+                                                        <td class="popup-bag-droptext">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="popup-review-main">
+                                        <p class="popup-select-item">
+                                            lens type
+                                        </p>
+                                        <p class="popup-review-item">
+                                    <span class="popup-review-change">
+                                        Blue-light-filtering
+                                    </span>
+                                            <span class="popup-review-price">$145</span>
+                                        </p>
+                                        <p class="popup-review-item">Color</p>
+                                    </li>
+                                    <li class="popup-review-main">
+                                        <p class="popup-select-item">
+                                            Lens material
+                                        </p>
+                                        <p class="popup-review-item">
+                                    <span class="popup-review-change">
+                                       1.67 high-index
+                                    </span>
+                                            <span class="popup-review-price">+$30</span>
+                                        </p>
+                                    </li>
+                                </ul>
+                                <ul class="popup-review-sum">
+                                    <li class="popup-review-result">
+                                        frame
+                                        <span class="popup-review-price">$#</span>
+                                    </li>
+                                    <li class="popup-review-result">
+                                        lenses
+                                        <span class="popup-review-price">$#</span>
+                                    </li>
+                                    <li class="popup-review-result">
+                                        <span class="popup-review-price">Subtotal</span>
+                                        <span class="popup-review-price">$195</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-select-footer">
+                    Brandname
+                    <span class="popup-select-span">Canyon Tortoise With Polished Gold</span>
+                </div>
+            </div>
+        </div>
+        <div class="popup-prescription " >
+            <div class="popup-select-flex">
+                <div class="popup-select-left" >
+                    <div class="popup-prescription-block">
+                        <p class="popup-prescription-title">How to read your glasses prescription (Rx)</p>
+                        <p class="popup-prescription-text ">All glasses prescriptions require a Pupillary Distance (PD). A prescription missing entries for SPH, CYL, Axis, and ADD may mean you do not require that type of correction.</p>
+                        <p class="popup-prescription-name">An example of a glasses Rx</p>
+                        <table class="popup-prescription-table">
+                            <tr class="popup-prescription-flex">
+                                <td class="popup-prescription-col_main">
+                                    <div class="popup-prescription-tr">
+                                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                                <path d="M16.3746 16.9184C15.8912 16.435 15.4079 15.6495 14.6224 14.5015L17.281 11.2387L15.6495 10.0302L13.5347 12.6888C12.8701 11.5408 12.145 10.2719 11.8429 9.60725C13.7764 8.82175 15.4683 7.43202 15.4683 4.89426C15.4683 3.08157 14.6828 1.81269 13.4743 1.02719C12.2659 0.302115 10.8157 0 8.27795 0H0.120846V1.02719C2.23565 1.20846 2.47734 1.51057 2.47734 3.80665V14.9245C2.47734 17.281 2.17523 17.5831 0 17.8248V18.852H8.64048L10.0906 20L12.145 17.5227C13.1118 18.4894 14.4411 18.9728 17.0997 19.0937C17.4622 19.0937 17.8248 19.0937 17.9456 19.0937L18.1269 18.1873C17.4622 17.9456 16.9789 17.5831 16.3746 16.9184ZM6.28399 2.53776C6.28399 1.93353 6.34441 1.63142 6.52568 1.45015C6.70695 1.26888 7.12991 1.14804 7.85499 1.14804C9.48641 1.14804 11.2991 2.29607 11.2991 5.37764C11.2991 6.82779 10.8761 8.03625 9.90937 8.82175C9.24471 9.42598 8.27795 9.60725 7.06949 9.60725H6.34441V2.53776H6.28399ZM8.76133 18.6103V17.8248C6.5861 17.6435 6.28399 17.3414 6.28399 14.9245V10.6949H6.8278C7.73414 10.6949 8.27795 11.0574 8.76133 11.9637C9.54683 13.3535 10.2115 14.7432 10.9366 15.8912L8.76133 18.6103Z" fill="black"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0">
+                                                    <rect width="18.1269" height="20" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="popup-prescription-tr">od</div>
+                                    <div class="popup-prescription-tr">os</div>
+                                </td>
+                                <td class="popup-prescription-col bg-yellow">
+                                    <div class="popup-prescription-tr">sphere</div>
+                                    <div class="popup-prescription-tr">-2.50</div>
+                                    <div class="popup-prescription-tr">-3.00</div>
+                                </td>
+                                <td class="popup-prescription-col bg-turquoise">
+                                    <div class="popup-prescription-tr">cylinder</div>
+                                    <div class="popup-prescription-tr">-0.75</div>
+                                    <div class="popup-prescription-tr">-1.00</div>
+                                </td>
+                                <td class="popup-prescription-col bg-blue">
+                                    <div class="popup-prescription-tr">axis</div>
+                                    <div class="popup-prescription-tr">173</div>
+                                    <div class="popup-prescription-tr">004</div>
+                                </td>
+                                <td class="popup-prescription-col">
+                                    <div class="popup-prescription-tr">prism</div>
+                                    <div class="popup-prescription-tr"></div>
+                                    <div class="popup-prescription-tr"></div>
+                                </td>
+                                <td class="popup-prescription-col bg-pink">
+                                    <div class="popup-prescription-tr">add</div>
+                                    <div class="popup-prescription-tr">+2.25</div>
+                                    <div class="popup-prescription-tr">+2.25</div>
+                                </td>
+                            </tr>
+                            <tr class="popup-prescription-flex">
+                                <td class="popup-prescription-col_main bg-blue">
+                                    <div class="popup-prescription-tr popup-prescription-tr_big">
+                                        pd:
+                                        <span class="popup-prescription-span">
+                                        63
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="popup-prescription-col_big">
+                                    Indication or contraindication
+                                </td>
+                            </tr>
+
+                        </table>
+                        <p class="popup-prescription-name">Match the numbers on your Rx to the following fields.</p>
+                        <table class="popup-prescription-table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <tr class="popup-prescription-row">
+                                            <td class="popup-prescription-col"></td>
+                                            <td class="popup-prescription-first">SPH </td>
+                                            <td class="popup-prescription-first">CYL </td>
+                                            <td class="popup-prescription-first">axis </td>
+                                            <td class="popup-prescription-first popup-prescription-padding">add </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="popup-prescription-col">OD <br>
+                                                (Right)</td>
+                                            <td class="popup-prescription-yellow">
+                                                <select class="popup-prescription-select">
+                                                    <option>-2.50</option>
+                                                    <option>-1.50</option>
+                                                    <option>-2.50</option>
+                                                    <option>-2.50</option>
+                                                </select>
+                                            </td>
+                                            <td class="popup-prescription-turquoise">
+                                                <select class="popup-prescription-select">
+                                                    <option>-2.50</option>
+                                                    <option>-1.50</option>
+                                                    <option>-2.50</option>
+                                                    <option>-2.50</option>
+                                                </select>
+                                            </td>
+                                            <td class="popup-prescription-blue">
+                                                <select class="popup-prescription-select">
+                                                    <option>-2.50</option>
+                                                    <option>-1.50</option>
+                                                    <option>-2.50</option>
+                                                    <option>-2.50</option>
+                                                </select>
+                                            </td>
+                                            <td class="popup-prescription-pink">
+                                                <select class="popup-prescription-select">
+                                                    <option>-2.50</option>
+                                                    <option>-1.50</option>
+                                                    <option>-2.50</option>
+                                                    <option>-2.50</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="popup-prescription-col">OD <br>
+                                                (left)</td>
+                                            <td class="popup-prescription-yellow">
+                                                <select class="popup-prescription-select">
+                                                    <option>-2.50</option>
+                                                    <option>-1.50</option>
+                                                    <option>-2.50</option>
+                                                    <option>-2.50</option>
+                                                </select>
+                                            </td>
+                                            <td class="popup-prescription-turquoise">
+                                                <select class="popup-prescription-select">
+                                                    <option>-2.50</option>
+                                                    <option>-1.50</option>
+                                                    <option>-2.50</option>
+                                                    <option>-2.50</option>
+                                                </select>
+                                            </td>
+                                            <td class="popup-prescription-blue">
+                                                <select class="popup-prescription-select">
+                                                    <option>-2.50</option>
+                                                    <option>-1.50</option>
+                                                    <option>-2.50</option>
+                                                    <option>-2.50</option>
+                                                </select>
+                                            </td>
+                                            <td class="popup-prescription-pink">
+                                                <select class="popup-prescription-select">
+                                                    <option>4</option>
+                                                    <option>3</option>
+                                                    <option>2</option>
+                                                    <option>1</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody class="popup-prescription-tbody">
+                                <tr class="popup-prescription-subcenter">
+                                    <td class="popup-prescription-first">add </td>
+                                </tr>
+                                <tr class="popup-prescription-subcenter">
+                                    <td class="popup-prescription-light">
+                                        <select class="popup-prescription-select">
+                                            <option>63</option>
+                                            <option>63</option>
+                                            <option>63</option>
+                                            <option>63</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td class="popup-prescription-submt">
+                                        <a href="" class="popup-prescription-have">I have one PD number</a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                </div>
+                <div class="popup-select-right">
+                    <div class="popup-review-back">
+                        <svg class="" width="20" height="14" vie wBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 15L1 8M1 8L8 0.999999M1 8L21 8" stroke="black"/>
+                        </svg>
+                    </div>
+                    <svg class="popup-select-close" width="14" height="14" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L21 21M21 1L1 21" stroke="black"/>
+                    </svg>
+                    <div class="popup-prescription-subblock">
+                        <p class="popup-select-title popup-review-title popup-prescription-title">enter your prescription
+                            <span class="popup-prescription-span">How do I read my glasses prescription (Rx)?
+                                <a href="" class="popup-prescription-link">Learn more</a></span>
+                        </p>
+                        <div class="popup-prescription-center">
+                            <a href="" class="popup-prescription-link">I want lenses without a prescription.</a>
+                        </div>
+                        <div class="popup-review-content">
+                            <p class="popup-prescription-required">Please enter your PD</p>
+                            <table class="popup-prescription-subtable">
+                                <tr class="popup-prescription-subflex">
+                                    <td class="popup-prescription-subtd"></td>
+                                    <td class="popup-prescription-subtd">SPH
+                                        <span class="popup-prescription-subask">?
+                                            <p class="popup-prescription-subanswer popup-prescription-subanswer_one">
+                                                You can find your sphere value on your prescription form. It is often abbreviated to SPH
+                                            </p>
+                                        </span>
+                                    </td>
+                                    <td class="popup-prescription-subtd">CYL
+                                        <span class="popup-prescription-subask">?
+                                        <p class="popup-prescription-subanswer popup-prescription-subanswer_two">
+                                            You can find your cylinder value on your prescription form. It is often abbreviated to CYL. If no value is stated, then please leave this field empty.
+                                        </p>
+                                        </span>
+                                    </td>
+                                    <td class="popup-prescription-subtd">axis
+                                        <span class="popup-prescription-subask">?
+                                        <p class="popup-prescription-subanswer popup-prescription-subanswer_tree">
+                                            You can find your axis value on your prescription form. It is often abbreviated to A. You can only enter this value together with a cylinder value.
+                                        </p>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="popup-prescription-subflex">
+                                    <td class="popup-prescription-subleft">
+                                        OD <br>
+                                        (Right)
+                                    </td>
+                                    <td class="popup-prescription-subtd">
+                                        <select class="popup-prescription-subselect">
+                                            <option></option>
+                                            <option>+1.50</option>
+                                            <option>+1.25</option>
+                                            <option>+1.00</option>
+                                            <option>+0.75</option>
+                                            <option>+0.50</option>
+                                            <option>+0.25</option>
+                                            <option>0.00</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                        </select>
+                                    </td>
+                                    <td class="popup-prescription-subtd">
+                                        <select class="popup-prescription-subselect">
+                                            <option></option>
+                                            <option>+1.50</option>
+                                            <option>+1.25</option>
+                                            <option>+1.00</option>
+                                            <option>+0.75</option>
+                                            <option>+0.50</option>
+                                            <option>+0.25</option>
+                                            <option>0.00</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                        </select>
+                                    </td>
+                                    <td class="popup-prescription-subtd">
+                                        <select class="popup-prescription-subselect">
+                                            <option></option>
+                                            <option>+1.50</option>
+                                            <option>+1.25</option>
+                                            <option>+1.00</option>
+                                            <option>+0.75</option>
+                                            <option>+0.50</option>
+                                            <option>+0.25</option>
+                                            <option>0.00</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="popup-prescription-subflex">
+                                    <td class="popup-prescription-subleft popup-prescription-subtd">
+                                        OD <br>
+                                        (Left)
+                                    </td>
+                                    <td class="popup-prescription-subtd">
+                                        <select class="popup-prescription-subselect">
+                                            <option></option>
+                                            <option>+1.50</option>
+                                            <option>+1.25</option>
+                                            <option>+1.00</option>
+                                            <option>+0.75</option>
+                                            <option>+0.50</option>
+                                            <option>+0.25</option>
+                                            <option>0.00</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                        </select>
+                                    </td>
+                                    <td class="popup-prescription-subtd">
+                                        <select class="popup-prescription-subselect">
+                                            <option></option>
+                                            <option>+1.50</option>
+                                            <option>+1.25</option>
+                                            <option>+1.00</option>
+                                            <option>+0.75</option>
+                                            <option>+0.50</option>
+                                            <option>+0.25</option>
+                                            <option>0.00</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                        </select>
+                                    </td>
+                                    <td class="popup-prescription-subtd">
+                                        <select class="popup-prescription-subselect">
+                                            <option></option>
+                                            <option>+1.50</option>
+                                            <option>+1.25</option>
+                                            <option>+1.00</option>
+                                            <option>+0.75</option>
+                                            <option>+0.50</option>
+                                            <option>+0.25</option>
+                                            <option>0.00</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="popup-prescription-subflex">
+                                    <td class="popup-prescription-subtd"></td>
+                                    <td class="popup-prescription-subtd">od</td>
+                                    <td class="popup-prescription-subtd">os</td>
+                                </tr>
+                                <tr class="popup-prescription-subflex">
+                                    <td class="popup-prescription-subleft">
+                                        ADD<br>
+                                        <span class="popup-prescription-subask">?
+                                            <p class="popup-prescription-subanswer popup-prescription-subanswer_four">
+                                                Your prescription must have been taken within the last 2 years
+                                            </p>
+                                        </span>
+                                    </td>
+                                    <td class="popup-prescription-subtd">
+                                        <select class="popup-prescription-subselect">
+                                            <option></option>
+                                            <option>+1.50</option>
+                                            <option>+1.25</option>
+                                            <option>+1.00</option>
+                                            <option>+0.75</option>
+                                            <option>+0.50</option>
+                                            <option>+0.25</option>
+                                            <option>0.00</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                        </select>
+                                    </td>
+                                    <td class="popup-prescription-subtd">
+                                        <select class="popup-prescription-subselect">
+                                            <option></option>
+                                            <option>+1.50</option>
+                                            <option>+1.25</option>
+                                            <option>+1.00</option>
+                                            <option>+0.75</option>
+                                            <option>+0.50</option>
+                                            <option>+0.25</option>
+                                            <option>0.00</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                            </table>
+                            <table class="popup-prescription-subbottom">
+                                <tr class="popup-prescription-subflex">
+                                    <td class="popup-prescription-subleft">
+                                        pd<br>
+                                        <span class="popup-prescription-subask">?
+                                            <p class="popup-prescription-subanswer popup-prescription-subanswer_five">
+                                                You can find your pupillary distance on your prescription form. It is often abbreviated to PD. If you don’t know your measurement, you can download our pupillary distance ruler.
+                                            </p>
+                                        </span>
+                                    </td>
+                                    <td class="popup-prescription-subtd required">
+                                        <select class="popup-prescription-subselect">
+                                            <option></option>
+                                            <option>+1.50</option>
+                                            <option>+1.25</option>
+                                            <option>+1.00</option>
+                                            <option>+0.75</option>
+                                            <option>+0.50</option>
+                                            <option>+0.25</option>
+                                            <option>0.00</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                        </select>
+                                    </td>
+                                    <td class="popup-prescription-subtd required">
+                                        <select class="popup-prescription-subselect">
+                                            <option></option>
+                                            <option>+1.50</option>
+                                            <option>+1.25</option>
+                                            <option>+1.00</option>
+                                            <option>+0.75</option>
+                                            <option>+0.50</option>
+                                            <option>+0.25</option>
+                                            <option>0.00</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                            <option>-0.25</option>
+                                            <option>-0.50</option>
+                                            <option>-0.75</option>
+                                        </select>
+                                    </td>
+
+                                </tr>
+                                <tr class="popup-prescription-subflex popup-prescription-submt">
+                                    <td class="popup-prescription-subleft"></td>
+                                    <td class="">
+                                        <a href="" class="popup-prescription-have">I have one PD number</a>
+                                        <a href="" class="popup-prescription-have">I need help finding my PD</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="popup-review-bottom">
+                        <a href="" class="popup-next-measure btn">Next up: Select lens material</a>
+                        <div class="popup-select-subtotal">
+                            <a href="#" class="popup-select-item popup-review-center">
+                                Need help? (Live Chat)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-select-footer">
+                    Brandname
+                    <span class="popup-select-span">Canyon Tortoise With Polished Gold</span>
+                </div>
+            </div>
+        </div>
+        <div class="popup-measure">
+            <div class="popup-select-flex">
+                <div class="popup-select-left" >
+                    <div class="popup-measure-block">
+                        <p class="popup-measure-title">
+                            measure your PD
+                        </p>
+                        <svg width="600" height="116" viewBox="0 0 600 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g >
+                                <path d="M599.209 0.791992H0.791992V114.776H599.209V0.791992Z" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M29.2881 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M43.5352 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M57.7832 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M72.0312 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M15.04 15.04V43.5361" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M100.527 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M114.775 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M129.023 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M143.271 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M86.2793 15.04V43.5361" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M171.768 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M186.016 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M200.264 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M214.512 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M157.52 15.04V43.5361" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M243.008 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M257.256 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M271.504 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M285.752 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M228.76 15.04V43.5361" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M314.248 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M328.496 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M342.744 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M356.992 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M300 15.04V43.5361" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M385.488 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M399.736 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M413.984 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M428.232 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M371.24 15.04V43.5361" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M456.729 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M470.977 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M485.225 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M499.473 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M442.48 15.04V43.5361" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M527.969 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M542.217 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M556.465 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M570.713 15.04V29.2881" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M513.721 15.04V43.5361" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M584.961 15.04V43.5361" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                                <path d="M36.4121 86.2793C40.3466 86.2793 43.5361 83.0897 43.5361 79.1553C43.5361 75.2208 40.3466 72.0312 36.4121 72.0312C32.4776 72.0312 29.2881 75.2208 29.2881 79.1553C29.2881 83.0897 32.4776 86.2793 36.4121 86.2793Z" stroke="#1D1D1B" stroke-miterlimit="10"/>
+                            </g>
+                            <defs>
+                                <clipPath >
+                                    <rect width="600" height="115.567" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="popup-select-right">
+                    <div class="popup-measure-back">
+                        <svg class="" width="20" height="14" vie wBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 15L1 8M1 8L8 0.999999M1 8L21 8" stroke="black"/>
+                        </svg>
+                    </div>
+                    <svg class="popup-select-close" width="14" height="14" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L21 21M21 1L1 21" stroke="black"/>
+                    </svg>
+                    <div class="popup-measure-block">
+                        <p class="popup-select-title popup-review-title">How to measure your PD
+                            <span class="popup-measure-span">If you cannot obtain your PD from your eye doctor, stand about an arm’s-length away from a mirror with a ruler. Looking straight ahead, measure the distance between the center of one pupil and the center of the other, in millimetres (mm). The average PD is 63 mm, but varies by person.
+                             </span>
+                            <a href="" class="popup-prescription-link popup-measure-link">Learn more</a>
+                        </p>
+                    </div>
+                    <div class="popup-measure-face">
+                        <svg class="" width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g >
+                                <path d="M120.59 11.6101L109.952 20.7689L105.927 13.3679C105.927 13.3679 73.733 21.0001 79.9775 19.3812C84.9732 18.0397 99.2201 8.32595 104.863 4.44043C110.414 6.24442 115.641 8.64974 120.59 11.6101Z" fill="#EDEDED"/>
+                                <path d="M140.017 54.4435L139.277 133.033C135.715 137.011 131.737 140.665 127.435 143.857C129.656 138.907 132.061 131.969 132.061 125.4C132.061 113.374 126.048 88.9506 126.048 84.0012C126.048 79.0518 130.35 74.1024 132.061 66.8864C127.389 57.0339 124.105 46.9038 122.902 36.4036C115.548 40.0116 107.499 41.9543 98.1553 40.8905L100.006 33.1194C86.8688 39.549 68.4126 43.342 47.1348 45.7474L51.9917 30.1128L45.2383 27.0599L63.6482 25.6722C60.0865 28.8176 57.7274 32.3793 57.7737 36.7737C72.0206 36.8199 87.0076 33.1194 103.243 23.3594L105.88 33.5357C111.57 34.0445 122.255 25.996 126.372 25.2096C127.528 50.928 140.017 54.4435 140.017 54.4435Z" fill="#EDEDED"/>
+                                <path d="M32.5185 143.81C27.9391 140.434 23.776 136.548 20.0293 132.246V55.6923L26.5514 50.6504C26.5514 50.6504 21.5558 73.9635 28.6329 80.023C35.7101 86.0826 22.1571 104.585 27.7078 125.262C30.2056 134.374 31.6858 140.156 32.5185 143.81Z" fill="#EDEDED"/>
+                                <path d="M159.538 80.0235C159.538 100.376 151.859 118.971 139.278 133.079C135.716 137.057 131.738 140.712 127.436 143.903C114.207 153.756 97.7858 159.584 80.0235 159.584C62.2611 159.584 45.8402 153.756 32.5647 143.857C27.9853 140.48 23.8222 136.595 20.0755 132.293C7.86388 118.277 0.462891 100.006 0.462891 80.0235C0.462891 36.0801 36.0801 0.462891 79.9772 0.462891C88.6734 0.462891 97.0457 1.85058 104.863 4.44092C110.414 6.24491 115.641 8.65023 120.59 11.6106C143.903 25.4412 159.538 50.8821 159.538 80.0235Z" stroke="#B2B2B2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                                <path d="M92.9282 129.517C83.5845 134.698 74.657 134.421 65.7296 128.639C65.3133 128.361 64.712 128.5 64.4344 128.916C64.1569 129.332 64.2957 129.934 64.712 130.211C69.7076 133.403 74.7495 135.022 79.884 135.022C84.5096 135.022 89.1352 133.727 93.8071 131.136C94.2696 130.905 94.4084 130.304 94.1771 129.887C93.9459 129.425 93.3908 129.286 92.9282 129.517Z" fill="#1D1D1B"/>
+                                <path d="M62.3064 84.6946C56.2006 88.0713 50.3723 87.8862 44.5441 84.1395C44.1278 83.862 43.5264 84.0007 43.2489 84.417C42.9713 84.8333 43.1101 85.4347 43.5264 85.7122C46.9031 87.8862 50.3261 88.9501 53.7953 88.9501C56.8945 88.9501 60.0399 88.0713 63.2315 86.3135C63.6941 86.0823 63.8329 85.4809 63.6016 85.0646C63.3241 84.6021 62.769 84.4633 62.3064 84.6946Z" fill="#1D1D1B"/>
+                                <path d="M53.0092 83.8162C55.1295 83.8162 56.8484 82.0973 56.8484 79.9769C56.8484 77.8566 55.1295 76.1377 53.0092 76.1377C50.8888 76.1377 49.1699 77.8566 49.1699 79.9769C49.1699 82.0973 50.8888 83.8162 53.0092 83.8162Z" fill="#1D1D1B"/>
+                                <path d="M63.5096 58.9297C43.0182 58.9297 38.0687 66.562 37.2361 67.4871C36.4498 68.4122 38.0687 69.1986 39.0401 68.4122C41.3067 66.5157 45.6548 65.4518 62.7233 65.4518C68.7366 65.4981 67.8577 58.9297 63.5096 58.9297Z" fill="#1D1D1B"/>
+                                <path d="M65.3596 77.016C57.3572 71.8353 49.0774 71.604 40.705 76.2296C40.4737 76.3684 40.335 76.5534 40.2425 76.7847C40.15 77.016 40.1962 77.2935 40.335 77.4786C40.4737 77.7098 40.6588 77.8486 40.8901 77.9411C41.1213 77.9874 41.3989 77.9874 41.5839 77.8486C49.4012 73.5005 56.8484 73.7318 64.3419 78.5887C64.4807 78.6812 64.6657 78.7275 64.8507 78.7275C65.1745 78.7275 65.4521 78.5887 65.6371 78.3112C65.7759 78.1261 65.8221 77.8486 65.7759 77.6173C65.6834 77.386 65.5446 77.1548 65.3596 77.016Z" fill="#1D1D1B"/>
+                                <path d="M117.722 76.7847C117.675 76.5534 117.49 76.3684 117.259 76.2296C108.887 71.604 100.607 71.8353 92.6045 77.016C92.4195 77.1548 92.2345 77.3398 92.1882 77.6173C92.142 77.8486 92.1882 78.1261 92.327 78.3112C92.512 78.5887 92.7896 78.7275 93.1134 78.7275C93.2984 78.7275 93.4834 78.6812 93.6222 78.5887C101.116 73.7781 108.563 73.5468 116.38 77.8486C116.612 77.9874 116.843 77.9874 117.074 77.9411C117.305 77.8949 117.49 77.7098 117.629 77.4786C117.722 77.2935 117.768 77.016 117.722 76.7847Z" fill="#1D1D1B"/>
+                                <path d="M113.42 84.1395C107.592 87.8862 101.763 88.0713 95.6576 84.6946C95.195 84.4633 94.64 84.6021 94.4087 85.0646C94.1774 85.5272 94.3162 86.0823 94.7787 86.3135C97.9242 88.0713 101.07 88.9501 104.215 88.9501C107.684 88.9501 111.107 87.8862 114.484 85.7122C114.9 85.4347 115.039 84.8796 114.761 84.417C114.391 84.0007 113.836 83.862 113.42 84.1395Z" fill="#1D1D1B"/>
+                                <path d="M104.955 83.8162C107.076 83.8162 108.795 82.0973 108.795 79.9769C108.795 77.8566 107.076 76.1377 104.955 76.1377C102.835 76.1377 101.116 77.8566 101.116 79.9769C101.116 82.0973 102.835 83.8162 104.955 83.8162Z" fill="#1D1D1B"/>
+                                <path d="M94.4545 58.9297C90.1064 58.9297 89.2738 65.4518 95.1946 65.4518C112.309 65.4518 116.611 66.5157 118.878 68.4122C119.803 69.1986 121.468 68.4122 120.682 67.4871C119.895 66.562 114.9 58.9297 94.4545 58.9297Z" fill="#1D1D1B"/>
+                                <path d="M79.7915 85.8516H77.4787C77.4787 89.182 74.3795 94.0852 71.6967 98.4332C69.0138 102.735 66.4697 106.806 66.4697 109.72C66.4697 111.154 67.6724 112.588 69.8464 113.744C71.8354 114.762 74.8883 115.687 78.2188 115.687C81.0867 115.687 84.1858 114.993 86.8687 113.143L85.5735 111.246C81.2254 114.253 74.7958 113.698 70.9566 111.709C69.3839 110.876 68.8288 110.09 68.8288 109.72C68.8288 107.453 71.3266 103.475 73.6857 99.6359C76.6923 94.8253 79.7915 89.8296 79.7915 85.8516Z" fill="#1D1D1B"/>
+                                <path d="M10.5924 71.0034C10.1298 71.2347 9.99108 71.7898 10.2224 72.2523C10.2224 72.2986 11.1012 73.9176 11.5175 76.3691C11.4713 76.3691 11.4713 76.3691 11.425 76.4154C11.24 76.5079 9.38975 77.5255 9.29723 79.2833C9.20472 80.4397 9.89856 81.5036 11.3325 82.475C11.3788 82.5212 11.425 82.5212 11.425 82.5212C11.2862 83.215 11.1012 83.9089 10.8237 84.6027C10.6387 85.0653 10.8699 85.6204 11.3788 85.8054C11.4713 85.8517 11.61 85.8517 11.7026 85.8517C12.0726 85.8517 12.4427 85.6204 12.5814 85.2503C15.3105 77.9881 11.9801 71.651 11.8413 71.3735C11.61 70.9109 11.055 70.7721 10.5924 71.0034Z" fill="#1D1D1B"/>
+                                <path d="M148.528 76.3685C148.528 76.3685 148.482 76.3685 148.436 76.3223C148.898 73.8707 149.731 72.2517 149.731 72.2055C149.962 71.7429 149.823 71.1878 149.361 70.9565C148.898 70.7253 148.343 70.864 148.112 71.3266C147.973 71.6041 144.643 77.9412 147.372 85.2035C147.511 85.5735 147.881 85.8048 148.251 85.8048C148.343 85.8048 148.482 85.8048 148.575 85.7585C149.037 85.5735 149.315 85.0647 149.13 84.5559C148.852 83.862 148.667 83.1682 148.528 82.4743C148.575 82.4743 148.621 82.4281 148.621 82.4281C150.055 81.4567 150.749 80.3928 150.656 79.2364C150.564 77.4787 148.76 76.5073 148.528 76.3685Z" fill="#1D1D1B"/>
+                                <path d="M150.841 60.3179C151.35 57.9589 152.553 51.7606 152.46 46.5799C151.766 46.3948 151.442 45.0997 150.887 44.6834C151.211 49.9103 149.453 57.9589 148.991 60.1792C145.938 60.503 142.885 63.5559 140.942 67.5802V54.1196L140.526 53.7958C131.691 46.4411 127.667 36.4498 128.222 23.2668L128.361 20.2139L126.233 22.4342C120.913 27.9849 114.669 31.3616 107.222 32.7493C107.175 28.4937 106.019 25.117 103.66 22.4804L102.92 21.6478L102.087 22.3416C91.4944 30.8065 77.2013 35.0158 58.4675 35.2471C59.4852 32.6568 61.2429 29.8814 63.6945 26.9673L65.6372 24.6545L62.6306 25.0708C53.9344 26.3197 44.5907 25.3483 34.9694 22.1104L33.5355 21.6478L33.443 23.1743C32.5641 38.0225 27.8922 48.3839 19.6124 53.9809L19.1035 54.3046V67.5339C17.1608 63.4634 14.0616 60.4105 11.055 60.1329C10.5924 57.9589 9.11222 49.309 9.38976 44.082C8.88094 44.7296 8.32587 46.8574 7.58577 47.0424C7.53951 52.1306 8.69592 58.0514 9.20473 60.3179C7.77079 60.7342 6.15183 61.9832 4.85666 65.0823C3.42272 68.5978 2.68262 73.871 2.68262 80.7632C2.68262 91.4021 7.16946 96.0739 11.3788 96.9528C11.8876 97.0453 12.3964 97.0916 12.9052 97.0916C15.218 97.0916 17.4383 95.9814 19.1035 94.0387V131.09C20.0749 131.599 20.8613 132.385 21.1851 133.495H21.4164V55.461C29.7425 49.5865 34.5068 39.2714 35.6632 24.7007C44.1281 27.3373 52.3617 28.3087 60.179 27.6148C58.0512 30.529 56.5248 33.3506 55.7384 35.9872L55.2759 37.4674H56.8486H56.8948C76.4612 37.4674 91.4019 33.3044 102.642 24.747C104.354 27.106 105.094 30.1127 104.909 33.9519L104.862 35.3396L106.25 35.1546C113.929 34.0445 120.358 31.0378 125.909 25.9496C126.002 38.1612 130.303 47.9676 138.676 55.1373V134.143C139.231 133.218 139.74 132.246 140.341 131.367C140.526 131.136 140.757 130.905 140.988 130.72V94.0387C142.7 95.9814 144.874 97.0916 147.187 97.0916C147.696 97.0916 148.204 97.0453 148.713 96.9528C152.923 96.0739 157.409 91.4021 157.409 80.7632C157.409 73.8247 156.669 68.5515 155.235 65.0823C153.94 61.9832 152.275 60.7342 150.841 60.3179ZM19.0573 90.7082C17.4383 93.9924 14.5704 95.7039 11.7026 95.1488C8.37212 94.455 4.48661 90.2919 4.48661 80.7632C4.48661 74.1023 5.18045 69.0604 6.52188 65.7762C7.21572 64.0184 8.51089 61.9832 10.4999 61.9832C13.7841 61.9832 18.0397 67.3951 19.0573 73.5935V90.7082ZM148.297 95.1026C145.383 95.7039 142.561 93.9462 140.942 90.662V73.5472C141.96 67.3489 146.215 61.9369 149.5 61.9369C151.489 61.9369 152.784 64.0184 153.478 65.7299C154.819 69.0141 155.513 74.056 155.513 80.7169C155.513 90.2919 151.627 94.455 148.297 95.1026Z" fill="#1D1D1B"/>
+                                <path d="M53.0098 105.325V104.631" stroke="#B2B2B2" stroke-width="2" stroke-miterlimit="10"/>
+                                <path d="M53.0098 103.706V81.1328" stroke="#B2B2B2" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2.99 2.99"/>
+                                <path d="M53.0098 80.6704V79.9766" stroke="#B2B2B2" stroke-width="2" stroke-miterlimit="10"/>
+                                <path d="M104.539 105.325V104.631" stroke="#B2B2B2" stroke-width="2" stroke-miterlimit="10"/>
+                                <path d="M104.539 103.706V81.1328" stroke="#B2B2B2" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2.99 2.99"/>
+                                <path d="M104.539 80.6704V79.9766" stroke="#B2B2B2" stroke-width="2" stroke-miterlimit="10"/>
+                                <path d="M52.0381 107.638H104.955" stroke="#B2B2B2" stroke-width="4" stroke-miterlimit="10" stroke-linecap="square"/>
+                            </g>
+                            <defs>
+                                <clipPath>
+                                    <rect width="160" height="160" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="popup-prescription-hover">
+                            <p class="popup-prescription-hover_span">
+                                The selected PD is smaller than average, please confirm this is your correct PD.
+                                <br><br>
+                                Pupillary distance or PD is the distance from the center of the pupil in one eye to the center of the pupil in the other eye.
+                                <br><br>If you do not have the PD, you can measure it as shown below:
+                            </p>
+                            <img src="img/pd.svg" alt="" class="popup-prescription-img">
+                            <div class="popup-prescription-hover_flex">
+                                <a href="" class="btn popup-prescription-btn">confirm</a>
+                                <a href="" class="btn popup-prescription-btn popup-prescription-cancel">cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-measure-content">
+                        <select class="popup-measure-select">
+                            <option></option>
+                            <option>+1.50</option>
+                            <option>+1.25</option>
+                            <option>+1.00</option>
+                            <option>+0.75</option>
+                            <option>+0.50</option>
+                            <option>+0.25</option>
+                            <option>0.00</option>
+                            <option>-0.25</option>
+                            <option>-0.50</option>
+                            <option>-0.75</option>
+                            <option>-0.25</option>
+                            <option>-0.50</option>
+                            <option>-0.75</option>
+                        </select>
+                        <select class="popup-measure-select">
+                            <option></option>
+                            <option>+1.50</option>
+                            <option>+1.25</option>
+                            <option>+1.00</option>
+                            <option>+0.75</option>
+                            <option>+0.50</option>
+                            <option>+0.25</option>
+                            <option>0.00</option>
+                            <option>-0.25</option>
+                            <option>-0.50</option>
+                            <option>-0.75</option>
+                            <option>-0.25</option>
+                            <option>-0.50</option>
+                            <option>-0.75</option>
+                        </select>
+                    </div>
+                    <div class="popup-review-bottom">
+                        <a href="" class="popup-next-continue btn">continue</a>
+                        <div class="popup-select-subtotal">
+                            <a href="#" class="popup-select-item popup-review-center">
+                                Need help? (Live Chat)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-select-footer">
+                    Brandname
+                    <span class="popup-select-span">Canyon Tortoise With Polished Gold</span>
+                </div>
+            </div>
+        </div>
+        <div class="popup-color active">
+            <div class="popup-select-flex">
+                <div class="popup-select-left" >
+                    <div class="">
+                        <svg width="805" height="472" viewBox="0 0 805 472" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M637.5 400.5C727.5 337 732.5 174 724 80.5002C659 4.00018 522.5 22.5002 452.5 22.5002C382.5 22.5002 227.5 64.0002 206 80.5002C188.8 93.7002 142.166 120.334 121 132V234C141 275 190.3 365.7 227.5 400.5C264.7 435.3 359.666 449.334 402.5 452C450.833 456 565.5 451.3 637.5 400.5Z" fill="#555455"></path>
+                            <path d="M532 2C183 2 135.7 140.3 0 115V179C0 179 77.2 153.5 106.3 220.7C169 365 221 465 444 465C658 465 720.3 347 737.3 225C754.3 103 805 95 805 62C805 29 757 2 532 2ZM435.7 441.7C183 441.7 133 239 133 173C133 79 391.7 31 539.7 31C687.7 31 713 96.3 713 173C713 249.7 691 441.7 435.7 441.7Z" fill="#E8E8E8"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="popup-select-right">
+                    <div class="popup-measure-back">
+                        <svg class="" width="20" height="14" vie wBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 15L1 8M1 8L8 0.999999M1 8L21 8" stroke="black"/>
+                        </svg>
+                    </div>
+                    <svg class="popup-select-close" width="14" height="14" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L21 21M21 1L1 21" stroke="black"/>
+                    </svg>
+                    <div class="popup-measure-block">
+                        <p class="popup-select-title popup-review-title">Select lens color</p>
+                    </div>
+                    <ul class="popup-color-content">
+                        <li class="popup-color-list">
+                            <div class="popup-color-tup">
+                                <p class="popup-color-item">
+                                    TInt
+                                    <span class="popup-color-span">Included</span>
+                                </p>
+                                <p class="popup-color-gray">Grey</p>
+                                <div class="popup-color-flex">
+                                    <label class="popup-color-label" style="background: #7D7E7D;">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="popup-color-checkbox" ></span>
+                                    </label>
+                                    <label class="popup-color-label" style="background: #98806D;">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="popup-color-checkbox" ></span>
+                                    </label>
+                                    <label class="popup-color-label" style="background: #697464;">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="popup-color-checkbox" ></span>
+                                    </label>
+                                    <label class="popup-color-label" style="background: #8A9BB2;">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="popup-color-checkbox"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                     <div class="popup-select-bottom">
                         <a href="" class="popup-select-link">Learn more about lenses types</a>
-                        <a href="" class="popup-select-prescription btn">Next up: enter your prescription</a>
+                        <a href="" class="popup-next-selections btn">Next up: enter your prescription</a>
                         <div class="popup-select-subtotal">
                             <p class="popup-select-item">
                                 <span class="popup-select-name">Subtotal</span>
-                                $145
+                                $195
                             </p>
                         </div>
                     </div>
@@ -2212,11 +3088,10 @@
             </div>
         </div>
     </div>
-</div>
+
 
 <script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
-<script src="https://kit.fontawesome.com/7d794170e7.js"></script>
 <script src="js/common.js"></script>
 
 </body>
