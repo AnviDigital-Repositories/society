@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -790,7 +791,7 @@
         </div>
     </section>
     <div class="product-popup popup-select">
-        <div class="popup-prescription_type">
+        <div class="popup-close popup-prescription_type active">
             <div class="popup-select-flex">
                 <ul class="popup-select-left">
                     <li class="popup-select-drop">
@@ -878,7 +879,7 @@
                 </div>
             </div>
         </div>
-        <div class="popup-lens">
+        <div class="popup-close popup-lens ">
             <div class="popup-select-flex">
                 <ul class="popup-select-left">
                     <li class="popup-select-drop">
@@ -915,10 +916,34 @@
                             </div>
                         </div>
                         <div class="popup-select-lens popup-select-lens_tree">
-                            <!--<svg width="606" height="434" viewBox="0 0 606 434" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-                                <!--<path d="M516.5 380.5C606.5 317 611.5 154 603 60.5002C538 -15.9998 401.5 2.50018 331.5 2.50018C261.5 2.50018 106.5 44.0002 84.9996 60.5002C67.7996 73.7002 21.1663 100.334 -0.000366211 112V214C19.9996 255 69.2996 345.7 106.5 380.5C143.7 415.3 238.666 429.334 281.5 432C329.833 436 444.5 431.3 516.5 380.5Z" fill="#E3F4FD"/>-->
-                            <!--</svg>-->
-                            <img src="img/protection.png" alt="" class="">
+                            <svg width="805" height="472" viewBox="0 0 805 472" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <linearGradient id="paint0_linear" x1="708.5" y1="217.5" x2="214" y2="334.5" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#E3F4FD"/>
+                                    <stop offset="1" stop-color="#79E2FF"/>
+                                </linearGradient>
+                                <path d="M637.5 400.5C727.5 337 732.5 174 724 80.5002C659 4.00018 522.5 22.5002 452.5 22.5002C382.5 22.5002 227.5 64.0002 206 80.5002C188.8 93.7002 142.166 120.334 121 132V234C141 275 190.3 365.7 227.5 400.5C264.7 435.3 359.666 449.334 402.5 452C450.833 456 565.5 451.3 637.5 400.5Z" fill="#E3F4FD"/>
+                                <path d="M532 2C183 2 135.7 140.3 0 115V179C0 179 77.2 153.5 106.3 220.7C169 365 221 465 444 465C658 465 720.3 347 737.3 225C754.3 103 805 95 805 62C805 29 757 2 532 2ZM435.7 441.7C183 441.7 133 239 133 173C133 79 391.7 31 539.7 31C687.7 31 713 96.3 713 173C713 249.7 691 441.7 435.7 441.7Z" fill="#E8E8E8"/>
+
+                            </svg>
+                            <svg class="popup-select-blue" width="944" height="509" viewBox="0 0 944 509" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="944" height="509">
+                                    <path d="M0 0H943.3V508.181H0V0Z" fill="white"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M123.438 198.306C114.679 197.673 97.6997 216.974 102.883 231.203L196.477 486.226C201.66 500.455 225.263 501.648 231.565 495.529L289.158 441.652C295.585 435.875 292.403 422.185 288.588 411.679L220.588 223.912C216.773 213.416 210.802 202.859 202.178 202.547L123.438 198.316V198.306ZM190.122 219.815L193.408 228.838L153.261 229.875L149.581 219.774L190.122 219.815ZM248.12 453.495L241.029 434.029L251.644 426.043L258.455 444.794L248.12 453.495ZM213.902 441.092L141.745 240.848L216.483 236.575L275.164 397.886L213.902 441.092Z" fill="#E8E8E8" fill-opacity="0.87"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M213.955 441.288L141.258 239.551L216.453 235.288L275.57 397.802L213.955 441.288Z" fill="#B2E4F2"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M466.021 126.83C479.144 123.2 488.235 120.814 493.294 119.674C506.666 116.645 515.487 115.65 523.977 114.696C550.057 112.082 554.494 111.698 567.514 111.584C580.378 111.47 601.856 111.595 622.453 113.658C643.185 114.696 674.283 119.881 696.051 131.289C717.405 142.48 731.295 166.551 734.405 182.107C739.588 208.035 738.914 224.971 738.759 240.444C738.603 255.918 737.453 268.27 733.058 289.396C726.112 316.931 715.747 342.858 701.131 355.511C684.649 373.971 654.494 388.501 622.453 394.506C590.422 400.511 564.3 398.654 550.275 399.152C401.69 404.483 290.194 417.799 215.766 439.102L146.429 240.299L466.021 126.819V126.83Z" fill="url(#paint0_linear)" fill-opacity="0.54"/>
+                                    <path d="M326.529 283.368L559.763 231.513L336.895 96.6895" stroke="#01A6D4" stroke-linecap="square" stroke-dasharray="3 3"/>
+                                    <path d="M343.009 328.554L673.786 247.079L388.723 50.0298" stroke="#01A6D4" stroke-linecap="square" stroke-dasharray="3 3"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M270.863 59.5931L348.162 72.9925L323.18 118.075L270.863 59.5931ZM321.956 6.77344L398.727 22.8589L372.19 67.0499L321.956 6.77344Z" fill="#01A6D4"/>
+                                </g>
+                                <defs>
+                                    <linearGradient id="paint0_linear" x1="708.5" y1="217.5" x2="214" y2="334.5" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#E3F4FD"/>
+                                        <stop offset="1" stop-color="#79E2FF"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
                         </div>
                         <div class="popup-select-lens popup-select-lens_four">
                             <svg width="805" height="472" viewBox="0 0 805 472" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -999,7 +1024,7 @@
                 </div>
             </div>
         </div>
-        <div class="popup-material">
+        <div class="popup-close popup-material">
             <div class="popup-select-flex">
                 <ul class="popup-select-left">
                     <li class="product-third-eye">
@@ -1123,7 +1148,7 @@
                 </div>
             </div>
         </div>
-        <div class="popup-review" >
+        <div class="popup-close popup-review" >
             <div class="popup-select-flex">
                 <ul class="popup-select-left" >
                     <img src="img/image.svg" alt="" class="popup-select-img">
@@ -1423,7 +1448,7 @@
                 </div>
             </div>
         </div>
-        <div class="popup-prescription " >
+        <div class="popup-close popup-prescription " >
             <div class="popup-select-flex">
                 <div class="popup-select-left" >
                     <div class="popup-prescription-block">
@@ -1892,7 +1917,7 @@
                 </div>
             </div>
         </div>
-        <div class="popup-measure">
+        <div class="popup-close popup-measure">
             <div class="popup-select-flex">
                 <div class="popup-select-left" >
                     <div class="popup-measure-block">
@@ -2052,7 +2077,7 @@
                         </select>
                     </div>
                     <div class="popup-review-bottom">
-                        <a href="" class="popup-next-continue btn">continue</a>
+                        <a href="" class="popup-next-color btn">continue</a>
                         <div class="popup-select-subtotal">
                             <a href="#" class="popup-select-item popup-review-center">
                                 Need help? (Live Chat)
@@ -2066,18 +2091,18 @@
                 </div>
             </div>
         </div>
-        <div class="popup-color active">
+        <div class="popup-close popup-color">
             <div class="popup-select-flex">
                 <div class="popup-select-left" >
                     <div class="">
                         <svg width="805" height="472" viewBox="0 0 805 472" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M637.5 400.5C727.5 337 732.5 174 724 80.5002C659 4.00018 522.5 22.5002 452.5 22.5002C382.5 22.5002 227.5 64.0002 206 80.5002C188.8 93.7002 142.166 120.334 121 132V234C141 275 190.3 365.7 227.5 400.5C264.7 435.3 359.666 449.334 402.5 452C450.833 456 565.5 451.3 637.5 400.5Z" fill="#555455"></path>
+                            <path class="popup-color-change" id="swatch" d="M637.5 400.5C727.5 337 732.5 174 724 80.5002C659 4.00018 522.5 22.5002 452.5 22.5002C382.5 22.5002 227.5 64.0002 206 80.5002C188.8 93.7002 142.166 120.334 121 132V234C141 275 190.3 365.7 227.5 400.5C264.7 435.3 359.666 449.334 402.5 452C450.833 456 565.5 451.3 637.5 400.5Z" fill="#555455"></path>
                             <path d="M532 2C183 2 135.7 140.3 0 115V179C0 179 77.2 153.5 106.3 220.7C169 365 221 465 444 465C658 465 720.3 347 737.3 225C754.3 103 805 95 805 62C805 29 757 2 532 2ZM435.7 441.7C183 441.7 133 239 133 173C133 79 391.7 31 539.7 31C687.7 31 713 96.3 713 173C713 249.7 691 441.7 435.7 441.7Z" fill="#E8E8E8"></path>
                         </svg>
                     </div>
                 </div>
                 <div class="popup-select-right">
-                    <div class="popup-measure-back">
+                    <div class="popup-color-back">
                         <svg class="" width="20" height="14" vie wBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 15L1 8M1 8L8 0.999999M1 8L21 8" stroke="black"/>
                         </svg>
@@ -2085,41 +2110,230 @@
                     <svg class="popup-select-close" width="14" height="14" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L21 21M21 1L1 21" stroke="black"/>
                     </svg>
-                    <div class="popup-measure-block">
+                    <div class="popup-color-block">
                         <p class="popup-select-title popup-review-title">Select lens color</p>
-                    </div>
-                    <ul class="popup-color-content">
-                        <li class="popup-color-list">
-                            <div class="popup-color-tup">
-                                <p class="popup-color-item">
-                                    TInt
-                                    <span class="popup-color-span">Included</span>
-                                </p>
-                                <p class="popup-color-gray">Grey</p>
-                                <div class="popup-color-flex">
-                                    <label class="popup-color-label" style="background: #7D7E7D;">
-                                        <input type="checkbox" class="checkbox">
-                                        <span class="popup-color-checkbox" ></span>
-                                    </label>
-                                    <label class="popup-color-label" style="background: #98806D;">
-                                        <input type="checkbox" class="checkbox">
-                                        <span class="popup-color-checkbox" ></span>
-                                    </label>
-                                    <label class="popup-color-label" style="background: #697464;">
-                                        <input type="checkbox" class="checkbox">
-                                        <span class="popup-color-checkbox" ></span>
-                                    </label>
-                                    <label class="popup-color-label" style="background: #8A9BB2;">
-                                        <input type="checkbox" class="checkbox">
-                                        <span class="popup-color-checkbox"></span>
-                                    </label>
+                        <ul class="popup-color-content">
+                            <li class="popup-color-list">
+                                <div class="popup-color-tup">
+                                    <p class="popup-color-item">
+                                        <span class="popup-color-span">TInt </span>
+                                        Included
+                                    </p>
+                                    <p class="popup-color-text">Grey</p>
+                                    <div class="popup-color-flex">
+                                        <label class="popup-color-label" style="background: #7D7E7D;" >
+                                            <input type="radio" class="checkbox" name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: #98806D;">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox" ></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: #697464;">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox" ></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: #8A9BB2;">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: #9A80A5;">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: #EFC9C5;">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: #EBD355;">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: #F38249;">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                    </div>
+                                    <div class="popup-color-overflow">
+                                        <div class="popup-color-drop">
+                                            <p class="popup-color-text">Select tint level - <input type="text" class="popup-color-level"></p>
+                                            <div class="popup-color-select">
+                                                <span class="popup-color-pale">pale</span>
+                                                <div class="popup-color-range"></div>
+                                                <span class="popup-color-pale">very dark</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                            <li class="popup-color-list">
+                                <div class="popup-color-tup">
+                                    <p class="popup-color-item">
+                                        <span class="popup-color-span">gradient TInt </span>
+                                        +$50
+                                    </p>
+                                    <p class="popup-color-text">Grey</p>
+                                    <div class="popup-color-flex">
+                                        <label class="popup-color-label" style="background: linear-gradient(180deg, #7D7E7D 0%, #C7C7C7 100%);" >
+                                            <input type="radio" class="checkbox" name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: linear-gradient(180deg, #98806D 0%, #E1CDC3 100%);">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox" ></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: linear-gradient(180deg, #697464 0%, #ACCEBD 100%);">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox" ></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: linear-gradient(180deg, #8A9BB2 0%, #DEE1E9 100%);">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: linear-gradient(180deg, #7A6185 0%, #C0A5CB 100%);">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: linear-gradient(180deg, #EFC9C5 0%, #EFC9C5 100%);">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: linear-gradient(180deg, #E7CE41 0%, #EFD86A 100%);">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: linear-gradient(180deg, #F0763B 0%, #F99D68 100%);">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                    </div>
+                                    <div class="popup-color-overflow">
+                                        <div class="popup-color-drop">
+                                            <p class="popup-color-text">Select tint level - <input type="text" class="popup-color-level"></p>
+                                            <div class="popup-color-select">
+                                                <span class="popup-color-pale">pale</span>
+                                                <div class="popup-color-range"></div>
+                                                <span class="popup-color-pale">very dark</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="popup-color-list">
+                                <div class="popup-color-tup">
+                                    <p class="popup-color-item">
+                                        <span class="popup-color-span">polarized</span>
+                                        +$50
+                                    </p>
+                                    <p class="popup-color-text">Grey</p>
+                                    <div class="popup-color-flex">
+                                        <label class="popup-color-label" style="background: #7D7E7D;" >
+                                            <input type="radio" class="checkbox" name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: #697464;">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox" ></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: #98806D;">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox" ></span>
+                                        </label>
+                                    </div>
+                                    <div class="popup-color-overflow">
+                                        <div class="popup-color-drop">
+                                            <p class="popup-color-text">Select tint level - <input type="text" class="popup-color-level"></p>
+                                            <div class="popup-color-select">
+                                                <span class="popup-color-pale">pale</span>
+                                                <div class="popup-color-range"></div>
+                                                <span class="popup-color-pale">very dark</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="popup-color-sublist">
+                                <div class="popup-color-tup">
+                                    <p class="popup-color-item">
+                                        <span class="popup-color-span">Transitions Signature</span>
+                                        Included
+                                    </p>
+                                    <p class="popup-color-text">Fully clear Indoor to Dark Grey outdoor</p>
+                                    <div class="popup-color-flex">
+                                        <label class="popup-color-label" style="background: #7D7E7D;" >
+                                            <input type="radio" class="checkbox" name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: #697464;">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox" ></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: #98806D;">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox" ></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="popup-color-sublist">
+                                <div class="popup-color-tup">
+                                    <p class="popup-color-item">
+                                        <span class="popup-color-span">Transitions XTRActive</span>
+                                        +$50
+                                    </p>
+                                    <p class="popup-color-text">Hint of Grey Indoor to Darkest grey outdoor</p>
+                                    <div class="popup-color-flex">
+                                        <label class="popup-color-label" style="background: #7D7E7D;" >
+                                            <input type="radio" class="checkbox" name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: #697464;">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox" ></span>
+                                        </label>
+                                        <label class="popup-color-label" style="background: #98806D;">
+                                            <input type="radio" class="checkbox"  name="check">
+                                            <span class="popup-color-checkbox" ></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="popup-color-sublist">
+                                <div class="popup-color-tup">
+                                    <p class="popup-color-item">
+                                        <span class="popup-color-span">Transitions Vantage</span>
+                                        +$50
+                                    </p>
+                                    <p class="popup-color-text">Hint of Grey Indoor to Darkest grey outdoor</p>
+                                    <div class="popup-color-flex">
+                                        <label class="popup-color-label" style="background: #7D7E7D;" >
+                                            <input type="radio" class="checkbox" name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="popup-color-sublist">
+                                <div class="popup-color-tup">
+                                    <p class="popup-color-item">
+                                        <span class="popup-color-span">Transitions Drivewear</span>
+                                        +$50
+                                    </p>
+                                    <p class="popup-color-text">Olive Green indoor to Polarized Dark Brown outdoor <br>
+                                        * Behind the wheel activation</p>
+                                    <div class="popup-color-flex">
+                                        <label class="popup-color-label" style="background: #7D7E7D;" >
+                                            <input type="radio" class="checkbox" name="check">
+                                            <span class="popup-color-checkbox"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="popup-select-bottom">
                         <a href="" class="popup-select-link">Learn more about lenses types</a>
-                        <a href="" class="popup-next-selections btn">Next up: enter your prescription</a>
+                        <a href="" class="popup-next-boxes btn">Next up: enter your prescription</a>
                         <div class="popup-select-subtotal">
                             <p class="popup-select-item">
                                 <span class="popup-select-name">Subtotal</span>
@@ -2134,10 +2348,181 @@
                 </div>
             </div>
         </div>
+        <div class="popup-close popup-boxes ">
+            <div class="popup-select-flex">
+                <div class="popup-select-left" >
+                </div>
+                <div class="popup-select-right">
+                    <div class="popup-boxes-back">
+                        <svg class="" width="20" height="14" vie wBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 15L1 8M1 8L8 0.999999M1 8L21 8" stroke="black"/>
+                        </svg>
+                    </div>
+                    <svg class="popup-select-close" width="14" height="14" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L21 21M21 1L1 21" stroke="black"/>
+                    </svg>
+                    <div class="popup-boxes-block">
+                        <p class="popup-select-title popup-review-title">select number of boxes</p>
+                        <div class="popup-boxes-choice">
+                            <label class="popup-boxes-label">
+                                <input type="radio" class="checkbox" name="boxes">
+                                <span class="popup-boxes-check"></span>
+                                <span class="popup-boxes-bgcheck"></span>
+                                <span class="popup-boxes-text">1 box</span>
+                                <span class="popup-boxes-span">$139 per Box</span>
+                            </label>
+                            <label class="popup-boxes-label">
+                                <input type="radio" class="checkbox" name="boxes">
+                                <span class="popup-boxes-best">best deal</span>
+                                <span class="popup-boxes-save">SAVE 45%</span>
+                                <span class="popup-boxes-bgcheck"></span>
+                                <span class="popup-boxes-check"></span>
+                                <span class="popup-boxes-text">24 boxes</span>
+                                <span class="popup-boxes-span">$90 per Box</span>
+                            </label>
+                            <label class="popup-boxes-label">
+                                <input type="radio" class="checkbox" name="boxes">
+                                <span class="popup-boxes-save">SAVE 30%</span>
+                                <span class="popup-boxes-bgcheck"></span>
+                                <span class="popup-boxes-check"></span>
+                                <span class="popup-boxes-text">6 boxes</span>
+                                <span class="popup-boxes-span">$100 per Box</span>
+                            </label>
+                            <label class="popup-boxes-label">
+                                <input type="radio" class="checkbox" name="boxes">
+                                <span class="popup-boxes-save">SAVE 20%</span>
+                                <span class="popup-boxes-bgcheck"></span>
+                                <span class="popup-boxes-check"></span>
+                                <span class="popup-boxes-text">4 boxes</span>
+                                <span class="popup-boxes-span">$105 per Box</span>
+                            </label>
+                        </div>
+                        <p class="popup-select-title popup-boxes-title">enter your prescription</p>
+                        <table class="popup-boxes-table">
+                            <tr>
+                                <td class="popup-boxes-tdleft"></td>
+                                <td class="popup-boxes-td">
+                                    OD (Right)
+                                </td>
+                                <td class="popup-boxes-td">
+                                    Os (Left)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="popup-boxes-tdleft">power</td>
+                                <td class="popup-boxes-td">
+                                    <select class="popup-boxes-select">
+                                        <option></option>
+                                        <option>0.42</option>
+                                        <option>14.2</option>
+                                    </select>
+                                </td>
+                                <td class="popup-boxes-td">
+                                    <select class="popup-boxes-select2">
+                                        <option></option>
+                                        <option>0.42</option>
+                                        <option>14.2</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="popup-boxes-tdleft">bc</td>
+                                <td class="popup-boxes-td">
+                                    <select class="popup-boxes-select3">
+                                        <option></option>
+                                        <option>0.42</option>
+                                        <option>14.2</option>
+                                    </select>
+                                </td>
+                                <td class="popup-boxes-td">
+                                    <select class="popup-boxes-select4">
+                                        <option></option>
+                                        <option>0.42</option>
+                                        <option>14.2</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="popup-boxes-tdleft">dia</td>
+                                <td class="popup-boxes-td popup-boxes-main">14.2</td>
+                                <td class="popup-boxes-td popup-boxes-main">14.2</td>
+                            </tr>
+                            <tr>
+                                <td class="popup-boxes-tdleft">bc</td>
+                                <td class="popup-boxes-td">
+                                    <select class="popup-boxes-select5">
+                                        <option></option>
+                                        <option>0.42</option>
+                                        <option>14.2</option>
+                                    </select>
+                                </td>
+                                <td class="popup-boxes-td">
+                                    <select class="popup-boxes-select6">
+                                        <option></option>
+                                        <option>0.42</option>
+                                        <option>14.2</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="popup-boxes-tdleft">bc</td>
+                                <td class="popup-boxes-td">
+                                    <select class="popup-boxes-select7">
+                                        <option></option>
+                                        <option>0.42</option>
+                                        <option>14.2</option>
+                                    </select>
+                                </td>
+                                <td class="popup-boxes-td">
+                                    <select class="popup-boxes-select8">
+                                        <option></option>
+                                        <option>0.42</option>
+                                        <option>14.2</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="popup-boxes-tdleft">boxes</td>
+                                <td class="popup-boxes-td">
+                                    <select class="popup-boxes-select9">
+                                        <option></option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </td>
+                                <td class="popup-boxes-td">
+                                    <select class="popup-boxes-select10">
+                                        <option></option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="popup-boxes-bottom">
+                        <a href="" class="popup-select-link">book an eye exam</a>
+                        <a href="" class="popup-next-add popup-boxes-btn btn">add to cart</a>
+                        <a href="" class="popup-select-link popup-boxes-link">Need help? (Live Chat)</a>
+                        <div class="popup-select-subtotal">
+                            <p class="popup-select-item">
+                                <span class="popup-select-name">SUBTOTAL (24 Boxes)</span>
+                                $145
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-select-footer">
+                    Brandname
+                    <span class="popup-select-span">Canyon Tortoise With Polished Gold</span>
+                </div>
+            </div>
+        </div>
     </div>
 
 
 <script src="js/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/common.js"></script>
 
