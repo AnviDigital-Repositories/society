@@ -1,0 +1,346 @@
+.account
+  &-my
+    padding: 30px 0
+    display: block
+    font-family: "ploni-regular", sans-serif
+    font-size: 12px
+    line-height: 18px
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    font-variant: small-caps
+    color: #000000
+  &-sing
+    max-width: 510px
+    width: 100%
+    margin: 0 auto
+    padding: 30px 20px
+    &-text
+      text-decoration: none
+      color: #000000
+      &:hover
+        color: #000000
+.wishlist
+  padding: 50px 0 70px
+  min-height: 100vh
+  &-share
+    transform: translateY(-200%)
+    transition: all 0.5s ease
+    background: #ffffff
+    pointer-events: none
+    &.active
+      pointer-events: auto
+      transform: translateY(0)
+  &-link
+    font-family: "ploni-light", sans-serif
+    font-size: 16px
+    line-height: 24px
+    text-align: center
+    letter-spacing: 0.08em
+    text-transform: uppercase
+    font-variant: small-caps
+    color: #808085
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 50%
+      bottom: 0
+      transform: translateX(-50%)
+      width: 95%
+      height: 1px
+      background: #808085
+  &-flex
+    display: flex
+    height: 100%
+    &-card
+      display: flex
+      flex-wrap: wrap
+    &-justify
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &-btns
+      margin: 5px 0 40px
+      padding-bottom: 40px
+      border-bottom: 1px solid #DDDDDD
+      flex-wrap: wrap
+  &-title
+    font-family: "ploni-bold", sans-serif
+    font-size: 20px
+    line-height: 29px
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    font-variant: small-caps
+    color: #000000
+    padding-bottom: 40px
+    border-bottom: 1px solid #DDDDDD
+    width: 100%
+    margin-bottom: 15px
+  &-text
+    font-family: "ploni-light", sans-serif
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: 0.1em
+    font-variant: small-caps
+    color: #000000
+
+  &-left
+    max-width: 270px
+    width: 100%
+    padding-right: 20px
+    border-right: 1px solid #DDDDDD
+    height: 100%
+    margin-right: 80px
+    min-height: calc(100vh - 120px)
+    &-list
+      font-family: "ploni-regular", sans-serif
+      font-size: 16px
+      line-height: 2.5em
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #808085
+      cursor: pointer
+      &.active
+        font-family: "ploni-bold", sans-serif
+        color: #000000
+  &-right
+    width: 100%
+    &-block
+      transform: translateY(-200%)
+      transition: all 0.5s ease
+      height: 0
+      margin-top: 45px
+      &.active
+        transform: translateY(0)
+    &-items
+      font-family: "ploni-light", sans-serif
+      font-size: 14px
+      line-height: 21px
+      letter-spacing: 0.1em
+      color: #000000
+    &-list
+      display: none
+      overflow-y: hidden
+      &.active
+        display: block
+  &-card
+    width: calc(25% - 30px)
+    margin: 40px 40px 0 0
+    position: relative
+    &:nth-child(4n+4)
+      margin-right: 0
+  &-img
+    width: 100%
+    height: 315px
+    object-fit: cover
+    background: #F8F8F8
+    margin-bottom: 10px
+  &-heart
+    position: absolute
+    top: 10px
+    right: 8px
+  &-name, &-price
+    font-family: "ploni-light", sans-serif
+    font-size: 18px
+    line-height: 24px
+    text-align: center
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    font-variant: small-caps
+    color: #000000
+  &-price
+    font-size: 16px
+  &-btn
+    height: 35px
+    line-height: 35px
+    margin-top: 10px
+    font-family: "ploni-bold", sans-serif
+    font-size: 16px
+    letter-spacing: 0.04em
+
+  &-noitems
+    font-variant: none
+    text-transform: inherit
+    &:before
+      content: none
+    &-card
+      width: calc(33.33% - 30px)
+      margin: 20px 45px 0 0
+      &:nth-child(3n+3)
+        margin-right: 0
+    &-img
+      border: 1px solid #E5E5E5
+      box-sizing: border-box
+      width: 100%
+      height: 430px
+      margin-bottom: 5px
+    &-title
+      font-family: "ploni-light", sans-serif
+      font-size: 18px
+      line-height: 26px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+  &-form
+    padding-top: 20px
+    &-block
+      max-width: 600px
+      width: 100%
+    &-flex
+      display: flex
+
+    &-text
+      font-family: "ploni-bold", sans-serif
+      font-size: 14px
+      line-height: 21px
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #AAAAAA
+      white-space: nowrap
+      z-index: 1
+    &-input
+      height: 30px
+      line-height: 30px
+      border-bottom: 1px solid #AAAAAA
+      font-family: "ploni-light", sans-serif
+      font-size: 14px
+      letter-spacing: 0.04em
+      color: #000000
+
+      width: 100%
+    &-field
+      margin-bottom: 40px
+      width: 100%
+      padding-right: 20px
+    &-label
+      position: relative
+      cursor: pointer
+      margin-bottom: 25px
+      display: block
+    &-check
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      border: 1px solid #000000
+      width: 11px
+      height: 11px
+    &-item
+      padding-left: 20px
+      font-family: "ploni-light", sans-serif
+      font-size: 14px
+      line-height: 21px
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+    &-btn
+      margin: 0 20px 20px 0
+      max-width: 280px
+  &-rewards
+    margin-top: 60px
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-title, &-main, &-number, &-link
+      font-family: "ploni-regular", sans-serif
+      font-size: 36px
+      line-height: 53px
+      text-align: center
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #000000
+    &-span, &-link
+      display: block
+      letter-spacing: 0.1em
+      font-size: 14px
+      line-height: 21px
+    &-point
+      margin-top: 74px
+    &-main
+      font-size: 26px
+      line-height: 1
+    &-number
+      font-size: 60px
+      display: block
+    &-link
+      text-decoration-line: underline
+  &-add
+    margin-top: 49px
+    &-flex
+      display: flex
+      justify-content: space-between
+      padding-bottom: 35px
+      margin-bottom: 50px
+      border-bottom: 1px solid #DDDDDD
+    &-edits
+      display: flex
+    &-edit
+      font-size: 12px
+      line-height: 21px
+      margin-left: 30px
+    &-list
+      font-family: "ploni-light", sans-serif
+      margin-bottom: 3px
+      font-size: 14px
+      line-height: 21px
+      letter-spacing: 0.04em
+      color: #000000
+      &.default
+        color: #808285
+  &-add, &-form
+    display: none
+    &.active
+      display: block
+  &-white
+    background: none
+    color: #000000
+    border: 1px solid #000000
+  span.select2.select2-container.select2-container--default
+    max-width: 280px
+    width: 100%!important
+  .select2-container--default .select2-selection--single
+    border-radius: 0
+  .select2-container--default .select2-selection--single .select2-selection__rendered, .select2-results__option[aria-selected], .collection .select2-container--default .select2-selection--single .select2-selection__rendered
+    font-family: "ploni-light", sans-serif
+    font-size: 14px
+    line-height: 28px
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    font-variant: small-caps
+    color: #000000
+    padding: 0px 10px
+  .select2-container--default .select2-selection--single .select2-selection__arrow
+    background: url("../img/arrow-down.svg") no-repeat center / 9px 6px
+    transition: all 0.5s ease
+    b
+      display: none
+  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow
+    transform: rotate(180deg)
+.form
+  &-information
+    padding-top: 20px
+    &-flex
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border-bottom: 1px solid #BCBEC0
+      position: relative
+      padding-right: 0
+      .wishlist-form-input
+        border: none
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        padding-left: 15%
+        padding-right: 5%
+      .wishlist-form-text
+        line-height: 30px
+    &-edit
+      font-size: 12px
+      line-height: 18px
