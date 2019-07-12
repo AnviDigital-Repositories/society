@@ -66,30 +66,13 @@
       background: #BCBEC0
     &-container
       padding: 30px 2.7vw 28px
-  &-container
-    max-width: 1285px
-    width: 100%
-    margin: 0 auto
-    padding: 0 20px
-  &-second
-    padding: 105px 0 95px
-    &-flex
+  &-flex
+    display: flex
+    justify-content: space-between
+    &-align
       display: flex
-      justify-content: space-between
-    &-title
-      font-family: "ploni-light", sans-serif
-      font-size: 40px
-      line-height: 105%
-      letter-spacing: 0.1em
-      text-transform: uppercase
-      color: #000000
-    &-text
-      text-align: left
-      letter-spacing: 0.1em
-      margin-top: 20px
-    &-btn
-      font-size: 12px
-      letter-spacing: 0.2em
+      align-items: center
+
   &-left
     max-width: 300px
     width: 100%
@@ -106,9 +89,216 @@
       color: #000000
       position: relative
       width: max-content
-    &-line
+      white-space: nowrap
+  &-line
+    width: 100%
+    margin-left: 20px
+    height: 1px
+    background: #BCBEC0
+  &-container
+    max-width: 1040px
+    width: 100%
+    margin: 0 auto
+    padding: 0 20px
+  &-card
+    width: calc(25% - 15px)
+    margin: 20px 20px 0 0
+    background: #FFFFFF
+    padding: 40px 15px 30px
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15)
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    &_big
       width: 100%
-      margin-left: 20px
-      height: 1px
+      margin-right: 0
+      padding: 0
+      flex-direction: row
+    &-left
+      padding: 40px 15px 30px
+    &-img
+      display: block
+      margin: 0 auto 13px
+    &-title
+      font-family: "ploni-regular", sans-serif
+      font-size: 14px
+      line-height: 21px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      color: #000000
+    &-btn
+      height: 25px
+      line-height: 25px
+      font-size: 12px
+      width: max-content
+      min-width: 100px
+      margin: 8px auto 0
+      display: block
+    &-block
+      width: 50%
+    &-main
+      background: #F8F8F8
+      width: 100%
+      height: 100%
+      object-fit: cover
+      background-size: cover
+
+  &-second
+    padding: 105px 0 95px
+    background: #F7F8F9
+    &-cards
+      display: flex
+      flex-wrap: wrap
+      margin-bottom: 28px
+      &:nth-child(2),
+        .rewards-card:nth-child(4n+4)
+          margin: 20px 0 0 0
+      &:nth-child(4)
+        .rewards-card:nth-child(5n+5)
+          margin: 20px 0 0 0
+    &-card
+      width: calc(50% - 10px)
+      margin: 20px 20px 0 0
+      background: #FFFFFF
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15)
+      min-height: 170px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      &:nth-child(2n+2)
+        margin: 20px 0 0 0
+    &-item
+      font-family: "ploni-light", sans-serif
+      font-size: 24px
+      line-height: 35px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      color: #000000
+    &-span
+      display: block
+      font-size: 44px
+      font-family: "ploni-regular", sans-serif
+    &-title
+      font-family: "ploni-light", sans-serif
+      font-size: 40px
+      line-height: 105%
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      color: #000000
+    &-text
+      text-align: left
+      letter-spacing: 0.1em
+      margin-top: 20px
+    &-btn
+      font-size: 12px
+      letter-spacing: 0.2em
+    &-bold
+      font-family:  "ploni-bold", sans-serif
+      font-size: 20px
+      line-height: 136%
+      text-align: right
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      color: #000000
+    &-available
+      padding: 25px 50px 0 10px
+      align-items: center
+  &-arrow-right
+    margin: 0 40px 0 25px
+  &-available
+    background: #FFFFFF
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15)
+    max-width: 450px
+    width: 100%
+    min-height: 90px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    &-text
+      font-family: "ploni-regular", sans-serif
+      font-size: 16px
+      line-height: 24px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      color: #000000
+    &-span
+      font-family: "ploni-light", sans-serif
+      font-size: 12px
+      display: flex
+      justify-content: center
+  &-arrow-down
+    margin-left: 5px
+  &-third
+    padding: 55px 0 135px
+    &-title
+      font-family: "ploni-light", sans-serif
+      font-size: 70px
+      line-height: 103px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+      margin-bottom: 15px
+    &-list
+      width: 100%
+      border-bottom: 1px solid #BCBEC0
+    &-item
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-bottom: 8px
+      cursor: pointer
+
+      &:hover
+        .rewards-third-main
+          color: #B7B7B7
+    &-main
+      font-family: "ploni-light", sans-serif
+      font-size: 21px
+      line-height: 31px
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+      transition: all 0.5s ease
+      &.active
+        color: #B7B7B7
+    &-change
+      position: relative
+      width: 12px
+      height: 12px
+    &-plus
+      position: absolute
       background: #BCBEC0
+      left: 50%
+      transform: translateX(-50%)
+      top: 0
+      width: 1px
+      height: 100%
+      transition: all 0.5s ease
+      &.active
+        transform: translateX(-50%) rotate(90deg)
+    &-minus
+      position: absolute
+      background: #BCBEC0
+      top: 50%
+      transform: translateY(-50%)
+      left: 0
+      width: 100%
+      height: 1px
+    &-drop
+      padding: 15px 20px 25px
+      display: none
+      &.active
+        display: block
+
+
+
 

@@ -423,6 +423,7 @@ $(document).ready(function () {
         placeholder: '--'
     });
 
+
     $(".popup-measure-face svg").click(function () {
         $(".popup-prescription-hover").addClass('active');
     });
@@ -456,6 +457,7 @@ $(document).ready(function () {
             }
         });
         $( ".popup-color-level" ).val($( ".popup-color-range" ).slider( "value" ) + "% (Pale)" );
+
     $(".wishlist-btn-share").click(function (e) {
         e.preventDefault();
         $(".wishlist-share").addClass('active');
@@ -476,6 +478,53 @@ $(document).ready(function () {
     });
     $(".slick-arrow").text("");
 
+    //Rewards - accordion
+    $(".rewards-third-item").click(function () {
+        $(this).parent().find(".rewards-third-drop").slideToggle(500).parents().siblings().find(".rewards-third-drop").slideUp(500);
+        $(this).find(".rewards-third-plus, .rewards-third-main").toggleClass('active').parents().siblings().find(".rewards-third-plus, .rewards-third-main").removeClass('active');
+    });
+
+    $(".visit-slider").slick({
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        speed: 1000,
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000
+    });
+
+    //FAQ - accordion
+    $(".faq-menu-item").click(function () {
+        $(this).parent().find(".faq-menu-drop").slideToggle(500).parents().siblings().find(".faq-menu-drop").slideUp(500);
+        $(this).find(".faq-menu-text, .faq-menu-line, .faq-menu-plus").toggleClass('active').parents().siblings().find(".faq-menu-text, .faq-menu-line, .faq-menu-plus").removeClass('active');;
+    });
+
+    //Book - click on "change"
+    $(".book-first-link").click(function (e) {
+        e.preventDefault();
+        $(this).addClass('active');
+        $(".book-drop").addClass('active');
+        $(".book-first-title").hide();
+    });
+
+    //Book - time choose
+    $(".book-drop-list").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        if($(this).addClass('active')){
+            $('.book-block').removeClass('active');
+            $('.book-second').addClass('active');
+        }
+        $(".book-left-time").text($(".book-drop-list.active").text());
+        $(".book-left-date").text($(".book-first-date").datepicker("getDate").getMonth() + "/" +  $(".ui-state-active").text() + "/" + $(".ui-datepicker-year").text());
+    });
+    $(".book-left-btn").click(function (e) {
+        e.preventDefault();
+        $('.book-block').addClass('active');
+        $('.book-second').removeClass('active');
+    });
+
+    $(".book-first-date").datepicker();
     $(".wishlist-select").select2({
         minimumResultsForSearch: -1
     }).data('select2').$dropdown.addClass('wishlist-select-container');
@@ -520,8 +569,5 @@ $(document).ready(function () {
         minimumResultsForSearch: -1,
         placeholder: '0',
     }).data('select2').$dropdown.addClass('select-boxes-container');
-
-    
-
 
 });
