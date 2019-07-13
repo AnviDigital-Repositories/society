@@ -524,6 +524,71 @@ $(document).ready(function () {
         $('.book-second').removeClass('active');
     });
 
+    //Style - form face
+    $(".style-third-item").click(function () {
+        $(this).find(".style-third-figure, .style-third-heart").addClass('active').parent().siblings().find(".style-third-figure, .style-third-heart").removeClass('active');
+    });
+    //terms
+    $(".terms-tabs-td").on('click', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let index = $(this).index(),
+            headHeight = $(".header").height();
+        $('html,body').animate({scrollTop:$('.terms-article-tema').eq(index).offset().top - headHeight + "px"},{duration:1E3});
+
+    });
+
+    //shop - gallery (masonry)
+    var grid = document.querySelector('.shop-content');
+    var msnry = new Masonry( grid, {
+        columnWidth: 5
+    });
+
+    grid.addEventListener( 'click', function( event ) {
+        // don't proceed if item was not clicked on
+        if ( !matchesSelector( event.target, '.shop-content-item' ) ) {
+            return;
+        }
+        // change size of item via class
+        event.target.classList.toggle('shop-content-box');
+        // trigger layout
+        msnry.layout();
+    });
+
+    //shop - click on plus
+    $(".shop-add").click(function () {
+        $(".shop-content").toggleClass("active");
+        $(".shop-add-plus").toggleClass("active");
+    });
+
+    //shop - slider in popup
+    $(".popup-shop-slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        speed: 1000
+    });
+
+    //shop - popup
+    $(".shop-content-item").click(function (e) {
+        e.preventDefault();
+        $(".popup-shop").addClass('active');
+        bodyFreezeScroll();
+    });
+    $(".popup-shop-close").click(function () {
+        $(".popup-shop").removeClass('active');
+        bodyUnfreezeScroll();
+    });
+    let shopHeight = $(".popup-shop").height(),
+        winHeight = window.innerHeight;
+    if(shopHeight > winHeight){
+        $(".popup-shop").addClass("height");
+
+    } else {
+        $(".popup-shop").removeClass("height");
+    }
+
+    //Book - date
     $(".book-first-date").datepicker();
     $(".wishlist-select").select2({
         minimumResultsForSearch: -1

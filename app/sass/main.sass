@@ -578,7 +578,7 @@ section
   border: 1px solid #000000
 .checkbox:checked ~ .wishlist-form-check
   background: #000000 url("../img/check-white.svg") no-repeat center
-.checkbox:checked ~ .book-form-item
+.checkbox:checked ~ .book-form-item.ui-datepicker th
   background: #000000 url("../img/check-white.svg") no-repeat center
 .graythrough
   font-family: "ploni-light", sans-serif
@@ -2254,6 +2254,93 @@ section
           color: #000000
     &-back
       width: 50%
+  &-shop
+    position: fixed
+    overflow-y: auto
+    max-width: 1080px
+    width: 100%
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    background: #ffffff
+    padding: 20px
+    display: flex
+    opacity: 0
+    pointer-events: none
+    transition: all 0.5s ease
+    z-index: 2
+    margin: 20px
+    &.active
+      opacity: 1
+      pointer-events: auto
+    &.height
+      top: 0
+      transform: translate(-50%, 0)
+    &-block
+      display: flex
+    &-slider
+      width: 640px
+      height: 800px
+    &-product
+      width: 640px
+      height: 800px
+      background: #F8F8F8
+    &-content
+      padding-left: 20px
+      padding-top: 47px
+      position: relative
+    &-close
+      position: absolute
+      right: 0
+      top: 0
+      cursor: pointer
+    &-img
+      width: 170px
+      height: 180px
+      object-fit: cover
+      margin: 0 auto 11px
+      background: #F8F8F8
+    &-price, &-text, &-info
+      font-family: "ploni-regular", sans-serif
+      font-size: 14px
+      line-height: 21px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+    &-span
+      font-family: "ploni-light", sans-serif
+      display: block
+      font-size: 12px
+      line-height: 18px
+    &-btn
+      height: 30px
+      line-height: 30px
+      font-size: 12px
+      padding: 0 26px
+      width: max-content
+      margin: 10px auto 20px
+    &-text
+      font-family: "ploni-light", sans-serif
+    &-info
+      font-family: "ploni-light", sans-serif
+      color: #777777
+      text-align: left
+      margin: 17px 0 28px
+    &-flex
+      display: flex
+      align-items: center
+    &-icon
+      margin-right: 25px
+      display: block
+    .slick-arrow
+      z-index: 9
+    .slick-prev
+      left: calc(100% + 20px)
+    .slick-next
+      left: calc(100% + 85px)
+      transform: scale(-1,1)
 .select-boxes-container
   .select2-results__option[aria-selected]
     text-align: center
@@ -2726,23 +2813,26 @@ span.select2-selection.select2-selection--single
   text-transform: uppercase
   font-variant: small-caps
   color: #000000
-.ui-widget-header a
+.ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-prev
   position: absolute
   top: 50%
   transform: translateY(-50%)
-.ui-datepicker-prev
+  width: 10px
+  height: 15px
+.ui-datepicker .ui-datepicker-prev
   background-image: url("../img/arrow-left.svg")!important
   background-repeat: no-repeat
-  background-size: 5px 10px
+  background-size: 10px 15px
   left: 0
-.ui-datepicker-next
+.ui-datepicker .ui-datepicker-next
   background-image: url("../img/arrow-right1.svg")!important
   background-repeat: no-repeat
-  background-size: 5px 10px
+  background-size: 10px 15px
   background-color: transparent
   background-image:
   right: 0
 .ui-datepicker-calendar
+  width: 100%
   span, .ui-state-default
     width: 52px
     height: 52px
@@ -2770,9 +2860,10 @@ span.select2-selection.select2-selection--single
       border: 1px solid #000000
 .ui-widget.ui-widget-content
   border: none
+  width: 100%
 .ui-button:focus, .ui-button:hover, .ui-state-focus, .ui-state-hover, .ui-widget-content .ui-state-focus, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-focus, .ui-widget-header .ui-state-hover
   background-color: transparent
-  background-size: 5px 10px
+  background-size: 10px 15px
   background-repeat: no-repeat
   border: none
   cursor: pointer
@@ -2781,6 +2872,8 @@ span.select2-selection.select2-selection--single
   border: 1px solid #000000
   background: #000000
   color: #ffffff
+.ui-datepicker th
+  padding: 0
 @import "../components/pages/home/style"
 @import "../components/pages/collection/style"
 @import "../components/pages/product/style"
@@ -2792,5 +2885,9 @@ span.select2-selection.select2-selection--single
 @import "../components/pages/visit/style"
 @import "../components/pages/faq/style"
 @import "../components/pages/book/style"
+@import "../components/pages/shop/style"
+@import "../components/pages/about/style"
+@import "../components/pages/404/style"
+@import "../components/pages/style/style"
 @import "media"
 // Всегда в конце
