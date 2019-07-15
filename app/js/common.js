@@ -444,19 +444,21 @@ $(document).ready(function () {
 
         }
     });
+    $( ".popup-color-range" ).slider({
+        animate: true,
+        min: 0,
+        max: 100,
+        slide: function (event, ui )
+        {
+            var value = $(".popup-color-range").slider("value");
+            var opacity = value / 100;
+            $(".popup-color-change").css({ opacity: opacity });
+            $( ".popup-color-level" ).val(ui.value + "% (Pale)" );
+        }
+    }).slider("value", 100);//startup value
 
-        $( ".popup-color-range" ).slider({
-            range: "min",
-            value: 10,
-            opacity: 1,
-            min: 1,
-            max: 100,
-            slide: function( event, ui ) {
-                $( ".popup-color-level" ).val(ui.value + "% (Pale)" );
-                $( "#swatch" ).val(ui.opacity);
-            }
-        });
-        $( ".popup-color-level" ).val($( ".popup-color-range" ).slider( "value" ) + "% (Pale)" );
+
+    $( ".popup-color-level" ).val($( ".popup-color-range" ).slider( "value" ) + "% (Pale)" );
 
     $(".wishlist-btn-share").click(function (e) {
         e.preventDefault();
@@ -468,7 +470,9 @@ $(document).ready(function () {
         $(this).addClass('active').siblings().removeClass('active');
         let index = $(this).index();
         $(".wishlist-right-list").eq(index).addClass('active').siblings().removeClass('active');
+
     });
+
     $(".popup-reset-close").click(function () {
         $(".popup-reset").removeClass('active');
     });
@@ -535,6 +539,34 @@ $(document).ready(function () {
             headHeight = $(".header").height();
         $('html,body').animate({scrollTop:$('.terms-article-tema').eq(index).offset().top - headHeight + "px"},{duration:1E3});
 
+    });
+    //Light - range
+    $( ".light-range" ).slider({
+        animate: true,
+        slide: function (event)
+        {
+            var value = $(".light-range").slider("value");
+            var opacity = value / 100;
+            $(".light-glasses-path").css({ opacity: opacity });
+        }
+    }).slider("value", 0.1);//startup value
+
+    $(".light-slider").slick({
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        arrows: false,
+        dots: true
+    });
+    // Progressive
+    $(".progressive-sixth-list").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let index = $(this).index();
+        $(".progressive-sixth-main").eq(index).addClass('active').siblings().removeClass('active');
+    });
+    $(".progressive-sixth-main").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let index = $(this).index();
+        $(".progressive-sixth-list").eq(index).addClass('active').siblings().removeClass('active');
     });
 
     //shop - gallery (masonry)
