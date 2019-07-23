@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow: /folder/
+Host: https://eyesociety.anvi.dev

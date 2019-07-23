@@ -14,6 +14,7 @@
 </head>
 
 <body>
+<div class="main">
 	@import "header.html"
 	<div id="fullpage" class="fullpage">
 		<section class="section first">
@@ -49,20 +50,20 @@
 			<div class="third-flex">
 				<div class="third-left"></div>
 				<div class="third-right">
-					<h4 class="first-title title">visit a store</h4>
+					<h4 class="first-title title">have it all</h4>
 					<p class="first-text text">Get a polarized frame and show up in style while caseally<br>
 						protecting your eyes from harmful UV rays.</p>
-					<a href="" class="first-link">your text here</a>
+					<a href="" class="first-link">shop fashion polarized</a>
 				</div>
 			</div>
 		</section>
 		<section class="section first">
 			<div class="first-content">
-				<h4 class="first-title title">have it all</h4>
-				<p class="first-text text">Get a polarized frame and show up in style while caseally
-					protecting your eyes from harmful UV rays.</p>
-				<a href="" class="first-link">shop men</a>
-				<a href="" class="first-link">shop women</a>
+					<h4 class="first-title title">visit a store</h4>
+					<p class="first-text text">Get a polarized frame and show up in style while<br>caseally
+						protecting your eyes from harmful UV rays.</p>
+					<a href="" class="first-link">your text here</a>
+
 			</div>
 		</section>
 		<section class="section fourth">
@@ -108,7 +109,7 @@
 						</div>
 						<div class="trust-item">
 							<img src="img/icon4.svg" alt="" class="trust-item-img">
-							<p class="trust-item-text">100% SAFE & SECURE
+							<p class="trust-item-text">100% SAFE & SECURE<br>
 								CHECKOUT</p>
 						</div>
 					</div>
@@ -117,29 +118,74 @@
 		</section>
 		@import "footer.html"
 	</div>
-	<div class="footer-popup">
-		<div class="footer-popup-container">
-			<h4 class="footer-popup-title">#joineyesociety</h4>
-			<p class="footer-popup-text">Dress with intent, live with purpose. Check out our latest <br> adventures below.</p>
-			<div class="footer-popup-flex">
-				<a href="#" class="footer-popup-item">
-					<img src="" alt="" class="footer-popup-img">
-					<p class="footer-popup-name">Give $20, Get $20</p>
-				</a>
-				<a href="#" class="footer-popup-item">
-					<img src="" alt="" class="footer-popup-img">
-					<p class="footer-popup-name">blog post</p>
-				</a>
-				<a href="#" class="footer-popup-item">
-					<img src="" alt="" class="footer-popup-img">
-					<p class="footer-popup-name">Book an Eye Exam</p>
-				</a>
+	<div class="popup popup-welcome active">
+        <div class="popup-welcome-overlay"></div>
+		<div class="popup-welcome-content">
+			<img src="//cdn.shopify.com/s/files/1/2422/6603/files/Footer_Candle_03_350x.progressive.jpg?v=1562709134" alt="" class="popup-welcome-img">
+			<form class="popup-welcome-form">
+				<div class="popup-welcome-close">
+					<svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 1L21 21M21 1L1 21" stroke="black"/>
+					</svg>
+				</div>
+				<p class="popup-welcome-title">Welcome to eye society!</p>
+				<p class="popup-welcome-text">We're a New Orleans based small batch eyewear brand. Get your first pair of replacement frames free with our 'Second Chances' and be the first to know about new arrivals.</p>
+				<p class="popup-welcome-text popup-welcome-interested">
+					Styles i am interested in:
+				</p>
+				<div class="popup-welcome-flex">
+					<label class="popup-welcome-label">
+						<input type="checkbox" class="checkbox">
+						<span class="popup-welcome-item"></span>
+						<span class="popup-welcome-text">Women’s</span>
+					</label>
+					<label class="popup-welcome-label">
+						<input type="checkbox" class="checkbox">
+						<span class="popup-welcome-item"></span>
+						<span class="popup-welcome-text">Men’s</span>
+					</label>
+					<label class="popup-welcome-label">
+						<input type="checkbox" class="checkbox">
+						<span class="popup-welcome-item"></span>
+						<span class="popup-welcome-text">Both</span>
+					</label>
+				</div>
+				<div class="popup-welcome-field">
+					<input type="text" class="popup-welcome-input" placeholder="Enter your email" required>
+					<button type="submit" class="popup-welcome-submit">
+						<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 0.5L6.5 6L1 11.5" stroke="black"/>
+						</svg>
+					</button>
+
+				</div>
+
+			</form>
+
+		</div>
+	</div>
+	<div class="popup popup-cookie active">
+		<div class="container">
+			<div class="popup-cookie-flex">
+				<div class="popup-cookie-info">
+					<p class="popup-cookie-title">COOKIE INFORMATION</p>
+					<p class="popup-cookie-text">
+						No chocolate chips? Online we use a different kind of Cookie to make your visit a little sweeter. Click ‘I accept’ if you're happy to agree with our Cookie Policy and keep shopping or ‘Manage’ to adjust your preferences</p>
+				</div>
+				<div class="popup-cookie-btns">
+					<a href="" class="popup-cookie-btn popup-cookie-white btn">learn more</a>
+					<a href="" class="popup-cookie-btn btn popup-cookie-accept">i accept</a>
+				</div>
 			</div>
 		</div>
 	</div>
+</div>
+
+
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
+	<script src="js/scrolloverflow.min.js"></script>
     <script src="js/common.js"></script>
 
 </body>

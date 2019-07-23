@@ -110,6 +110,22 @@
     border-bottom: 1px solid #BCBEC0
     position: relative
     z-index: 1
+    &-menu
+      display: none
+    &-view, &-btn
+      font-family: "ploni-light", sans-serif
+      font-size: 12px
+      line-height: 18px
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #000000
+    &-btn
+      width: 100%
+      height: 100%
+      font-family: "ploni-regular", sans-serif
+      font-size: 14px
+      line-height: 21px
+      padding: 0
     &-item
       display: flex
       align-items: center
@@ -120,6 +136,44 @@
         transition: all 0.5s ease
         &.active
           transform: rotate(180deg)
+    &-list
+      height: 50px
+      padding: 0 15px
+      width: 100%
+      display: none
+      align-items: center
+      justify-content: center
+      border-right: 1px solid #BCBEC0
+      background: #F8F8F8
+      &:last-child
+        display: flex
+        border-right: none
+    &-label
+      position: relative
+    &-span
+      display: block
+      width: 20px
+      height: 20px
+      margin-left: 15px
+      background: #BCBEC0
+      position: relative
+      cursor: pointer
+      transition: all 0.3s ease
+    &-one
+      &:before, &:after
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        background: #ffffff
+        width: 100%
+        height: 2px
+
+      &:after
+        height: 100%
+        width: 2px
+
   span.select2-selection.select2-selection--single
     height: 50px
     padding: 0 20px
@@ -131,6 +185,7 @@
   .select2-container--default .select2-selection--single
     border: none
     border-left: 1px solid #BCBEC0
+    border-right: 1px solid #BCBEC0
     border-radius: 0
   .select2-container--default .select2-selection--single .select2-selection__placeholder
     font-family: "ploni-regular", sans-serif
@@ -171,13 +226,16 @@
       pointer-events: none
       transition: all 0.2s ease
       padding: 0 60px
-      height: 0
+      height: auto
       border-top: 1px solid #BCBEC0
-      border-bottom: 1px solid #BCBEC0
       &.active
-        height: auto
         opacity: 1
         pointer-events: auto
+        .collection-type-check
+          &.active
+            opacity: 1
+            height: 100%
+            transform: translateY(0)
   &-type, &-gender
     position: absolute
     top: 50px
@@ -200,11 +258,7 @@
       transform: translateY(20px)
       transition: opacity .3s,transform .3s
       opacity: 0
-      height: 0
-      &.active
-        opacity: 1
-        height: 100%
-        transform: translateY(0)
+
     &-top
       padding: 40px 20px 35px
       overflow: hidden
@@ -252,6 +306,7 @@
       display: flex
       justify-content: space-between
       text-align: center
+      border-bottom: 1px solid #BCBEC0
     &-left
       display: flex
     &-main, &-type, &-right
@@ -347,6 +402,7 @@
       font-variant: small-caps
       color: #000000
       cursor: pointer
+      white-space: nowrap
       &:before
         content: none
         position: absolute
@@ -365,7 +421,6 @@
       font-size: 24px
       line-height: 35
       font-family: "ploni-light", sans-serif
-      position: relative
       padding-right: 20px
       &::-webkit-input-placeholder
         font-family: "ploni-light", sans-serif
@@ -390,6 +445,7 @@
       padding: 0 0 100px
     &-flex
       display: flex
+      flex-wrap: wrap
       margin-top: 25px
     &-block
       width: 20%
@@ -491,6 +547,7 @@
       margin-right: 20px
       margin-bottom: 30px
       overflow: hidden
+
       &:nth-child(4n+4)
         margin-right: 0
       &_two
@@ -498,6 +555,9 @@
         margin-right: 20px
         &:nth-child(2n+2)
           margin-right: 0
+      &.active
+        width: 100%
+        margin: 0 0 15px
     &-sub, &-slider, &-slide
       position: relative
       width: 100%
@@ -508,6 +568,10 @@
           opacity: 1
           pointer-events: auto
           transform: translateY(0)
+    &-sub
+      display: flex
+      flex-direction: column
+      justify-content: center
     &-slide
       opacity: 0
       pointer-events: none
@@ -515,12 +579,17 @@
       position: absolute
       left: 0
       top: 0
+      display: flex
+      flex-direction: column
+      justify-content: center
       &.active
         opacity: 1
         pointer-events: auto
     &-block
       display: flex
       align-items: center
+      width: calc(100% - 35px)
+      justify-content: flex-end
     &-img
       width: 100%
       height: 100%
@@ -565,14 +634,12 @@
       display: flex
       flex-wrap: wrap
       align-items: center
-      margin-left: 10px
-      width: 200px
+      width: auto
       height: 40px
       overflow: hidden
       transition: all 0.5s ease
       justify-content: flex-end
       &.active
-        width: auto
         height: auto
     &-color
       width: 28px
@@ -584,28 +651,25 @@
       &.active
         border: 1px solid #000000
     &-more
-      width: 16px
-      height: 16px
+      width: 40px
+      height: 40px
       position: relative
-      margin: 6px 12px
+      padding: 12px
       cursor: pointer
     &-one, &-two
       background: #000000
       height: 1px
-      width: 100%
+      width: 16px
       display: block
       position: absolute
-      left: 0
+      left: 50%
       top: 50%
-      transform: translateY(-50%)
+      transform: translate(-50%, -50%)
       transition: all 0.4s ease
     &-two
       position: absolute
-      left: 50%
-      top: 0
       width: 1px
-      height: 100%
-      transform: translateX(-50%)
+      height: 16px
       transition: all 0.4s ease
     &-heart
       cursor: pointer
@@ -642,18 +706,19 @@
       position: absolute
       bottom: 105px
       text-align: center
-      left: 40px
+      left: 50%
+      transform: translateX(-50%)
+      padding: 0 60px 0 0
       max-width: 530px
       width: 100%
     &-top
       position: absolute
       top: 105px
-      right: 40px
+      padding: 0 0 0 60px
       max-width: 530px
       width: 100%
       text-align: center
       bottom: auto
-      left: auto
     &-main, &-text
       font-family: "ploni-light", sans-serif
       font-size: 30px
@@ -676,14 +741,41 @@
       display: flex
       flex-wrap: wrap
       width: 50%
+    &-link, &-not
+      font-family: "ploni-regular", sans-serif
+      font-size: 16px
+      line-height: 24px
+      text-align: center
+      letter-spacing: 0.1em
+      text-decoration-line: underline
+      font-variant: small-caps
+      color: #000000
+      display: block
+    &-not
+      color: #808285
+      text-decoration: none
+    &-noimg
+      width: 63px
+      height: 63px
+      margin: 0 auto 10px
+      vertical-align: middle
+  &-btn
+    background: #ffffff
+    border: 1px solid #000000
+    color: #000000
+    width: max-content
+    margin: 20px auto 0
+    font-size: 18px
+    padding: 0 20px
   &-fouth
-    padding: 67px 0 120px
+    padding: 65px 0
     &-slider
       margin-top: 15px
       padding: 0 38px
     .slick-arrow
       position: absolute
       top: calc(50% - 70px)
+      z-index: 9
       transform: translateY(-50%)
     .slick-next
       right: 0
@@ -692,7 +784,40 @@
       left: 0
     .slick-slide img
       margin: 0 20px
-
+  &-category
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    &-item
+      border: 1px solid #BCBEC0
+      width: 180px
+      cursor: pointer
+      height: 70px
+      margin: 0 10px
+      display: flex
+      font-family: "ploni-regular", sans-serif
+      font-size: 14px
+      line-height: 21px
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #808285
+      align-items: center
+      justify-content: center
+  &-prescription
+    &-item
+      height: 132px
+      width: 100%
+      border: 1px solid #BCBEC0
+      display: flex
+      justify-content: center
+      align-items: center
+      font-family: "ploni-regular", sans-serif
+      font-size: 20px
+      line-height: 29px
+      text-align: center
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #808285
 .color
   &-black
     background: url("../img/black.jpg") no-repeat center / 100%
@@ -712,8 +837,170 @@
     background: linear-gradient(180deg, #BCBEC0 0%, #808285 100%)
   &-mixed
     background: linear-gradient(180deg, rgba(188, 190, 192, 0.2) 0%, #808285 100%)
+  &-blue
+    background: linear-gradient(225deg, #393E53 100%, #5E6679 0%)
+  &-red
+    background: #B61020
 
 .collection-lens-checkbox:checked ~ .collection-lens-i
   left: auto
   right: 4px
   transition: all 0.5s ease
+.collection
+  .win-filter-category, .win-filter-prescription
+    height: calc(100vh - 61px - 96px - 51px)
+    align-items: flex-start
+  &-popup
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    background: #ffffff
+    height: 100vh
+    z-index: 9
+    transition: all 0.5s ease
+    opacity: 0
+    pointer-events: none
+    transform: translateY(-200%)
+    &.active
+      opacity: 1
+      pointer-events: auto
+      transform: translateY(0)
+    &-close
+      position: relative
+      width: 10%
+      height: 100%
+      cursor: pointer
+
+      &:before, &:after
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        transform: rotate(45deg)
+        background: #000000
+        height: 1px
+        width: 10px
+      &:after
+        transform: rotate(-45deg)
+    &-title, &-toptitle
+      cursor: pointer
+      font-family: "ploni-light", sans-serif
+      font-size: 18px
+      line-height: 60px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+      width: 100%
+    &-toptitle
+      padding-left: 10%
+      width: 90%
+    &-flex
+      border-top: 1px solid #BCBEC0
+      display: none
+      background: #ffffff
+      &.active
+        display: flex
+    &-btn
+      width: 25%
+      height: 95px
+      border-right: 1px solid #BCBEC0
+      padding: 0
+      &:last-child
+        border-right: none
+      &:hover
+        background: #F8F8F8
+    &-clear
+      width: 25%
+      background: #F8F8F8
+      color: #000000
+
+    &-shop
+      width: 75%
+    &-name
+      font-family: "ploni-light", sans-serif
+      font-size: 11px
+      line-height: 18px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+      margin-top: 10px
+  &-sort
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    background: #ffffff
+    height: 100vh
+    z-index: 9
+    opacity: 0
+    pointer-events: none
+    transition: all 0.5s ease
+    transform: translateY(-200%)
+    &.active
+      opacity: 1
+      pointer-events: auto
+      transform: translateY(0)
+    &-flex
+      display: flex
+      border-bottom: 1px solid #BCBEC0
+      background: #ffffff
+      width: 100%
+      align-items: center
+    &-menu
+      padding: 25px 30px
+    &-link
+      border: 1px solid #000000
+      height: 65px
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      font-family: "ploni-light", sans-serif
+      font-size: 18px
+      line-height: 26px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      margin-bottom: 15px
+      color: #808285
+  &-filter
+    background: #F8F8F8
+    &-list
+      width: 50%
+      height: 50%
+      border-right: 1px solid #BCBEC0
+      border-bottom: 1px solid #BCBEC0
+    &-link
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+    &-text
+      font-family: "ploni-light", sans-serif
+      font-size: 16px
+      line-height: 24px
+      text-align: center
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      font-variant: small-caps
+      color: #000000
+      margin-top: 25px
+    &-menu
+      display: none
+      flex-wrap: wrap
+      overflow-y: auto
+      width: 100%
+      &.active
+        display: flex
+    &-close
+      border-top: 1px solid #BCBEC0
+
+

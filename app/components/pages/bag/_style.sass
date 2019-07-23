@@ -2,15 +2,35 @@
   padding-top: 117px
   .header
     background: #ffffff
-    padding-bottom: 10px
+
   .header-news
     display: none
+  &-bread
+    display: none
+    border-top: 1px solid #BCBEC0
+    border-bottom: 1px solid #BCBEC0
+    padding: 4px 0
+    &-text
+      font-family: "ploni-light", sans-serif
+      font-size: 14px
+      line-height: 21px
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #4A4644
   &-left
     max-width: 875px
     width: 100%
     margin-right: 20px
     .popup-bag-droptop, .popup-bag-droptext
       width: 139px
+    .popup-bag-submobflex
+      margin-top: 10px
+    .popup-bag-subgray
+      margin: 0 0 15px
+    .popup-bag-remove
+      margin: 0
+    .popup-bag-submsg
+      display: none
   &-list
     padding-top: 25px
     padding-bottom: 45px
@@ -33,7 +53,7 @@
 
   &-name
     font-size: 20px
-    line-height: 29px
+    line-height: 1
     &-span
       font-size: 18px
       line-height: 26px
@@ -55,6 +75,7 @@
   &-num
     color: #808285
     padding: 0 5px
+    margin-top: 0
     text-decoration: none
     position: relative
     &:before
@@ -172,3 +193,4 @@
       display: block
     &-price
       font-family: "ploni-regular", sans-serif
+

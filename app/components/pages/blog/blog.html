@@ -22,11 +22,19 @@
     </section>
     <section class="blog-section">
         <ul class="blog-menu">
-            <li class="blog-menu-list"><a href="" class="blog-menu-link">all posts</a></li>
-            <li class="blog-menu-list"><a href="" class="blog-menu-link">product</a></li>
-            <li class="blog-menu-list"><a href="" class="blog-menu-link">fashion</a></li>
-            <li class="blog-menu-list"><a href="" class="blog-menu-link">travel</a></li>
-            <li class="blog-menu-list"><a href="" class="blog-menu-link">disruptors & dreamers</a></li>
+            <li class="blog-menu-main">
+                <p class="blog-menu-item">explore by topic
+                    <span class="blog-menu-span"></span>
+                </p>
+                <ul class="blog-menu-drop">
+                    <li class="blog-menu-list"><a href="" class="blog-menu-link">all posts</a></li>
+                    <li class="blog-menu-list"><a href="" class="blog-menu-link">product</a></li>
+                    <li class="blog-menu-list"><a href="" class="blog-menu-link">fashion</a></li>
+                    <li class="blog-menu-list"><a href="" class="blog-menu-link">travel</a></li>
+                    <li class="blog-menu-list"><a href="" class="blog-menu-link">disruptors & dreamers</a></li>
+                </ul>
+            </li>
+
         </ul>
         <div class="container">
             <div class="blog-second">
@@ -188,25 +196,29 @@
                             </a>
                         </div>
                     </div>
-                    <div class="blog-fourth-card">
-                        <div class="blog-fourth-more">
-                            <p class="blog-title_two">
-                                see all disruptors & dreamers
-                            </p>
-                            <a href="" class="blog-link blog-link-line">see all</a>
-                        </div>
-                    </div>
+                    <a href="#" class="blog-fourth-card">
+                        <object data="" type="">
+                            <div class="blog-fourth-more">
+                                <p class="blog-title_two">
+                                    see all disruptors & dreamers
+                                </p>
+                                <a href="" class="blog-link blog-link-line">see all</a>
+                            </div>
+                        </object>
+                    </a>
                 </div>
             </div>
             <div class="blog-fifth">
-                <h2 class="blog-fifth-title">like what you see?</h2>
-                <p class="blog-fifth-text">Join the MVMT newletter for new product releases, travel stories, fashion inspiration and exclusive offers.></p>
-                <form class="blog-form">
-                    <div class="blog-field">
-                        <input type="text" class="blog-input" placeholder="Your Email" required>
-                        <button type="submit" class="blog-btn btn">sign up</button>
-                    </div>
-                </form>
+                <div class="blog-fifth-container">
+                    <h2 class="blog-fifth-title">like what you see?</h2>
+                    <p class="blog-fifth-text">Join the MVMT newletter for new product releases, travel stories, fashion inspiration and exclusive offers.></p>
+                    <form class="blog-form">
+                        <div class="blog-field">
+                            <input type="text" class="blog-input" placeholder="Your Email" required>
+                            <button type="submit" class="blog-btn btn">sign up</button>
+                        </div>
+                    </form>
+                </div>
                 <div class="blog-flex blog-fifth-blogs">
                     <div class="blog-fifth-card">
                         <img src="" alt="" class="blog-fifth-img">
@@ -277,9 +289,33 @@
                     <div class="fourth-item-block"></div>
                 </div>
             </div>
+            <div class="trust">
+                <div class="container">
+                    <div class="trust-list">
+                        <div class="trust-item">
+                            <img src="img/icon1.svg" alt="" class="trust-item-img">
+                            <p class="trust-item-text">FREE SHIPPING WORLDWIDE</p>
+                        </div>
+                        <div class="trust-item">
+                            <img src="img/icon2.svg" alt="" class="trust-item-img">
+                            <p class="trust-item-text">FREE RETURNS WORLDWIDE</p>
+                        </div>
+                        <div class="trust-item">
+                            <img src="img/icon3.svg" alt="" class="trust-item-img">
+                            <p class="trust-item-text">24 MONTH WARRANTY<br>
+                                ON ALL PRODUCTS</p>
+                        </div>
+                        <div class="trust-item">
+                            <img src="img/icon4.svg" alt="" class="trust-item-img">
+                            <p class="trust-item-text">100% SAFE & SECURE<br>
+                                CHECKOUT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </section>
-
+    @import "footer.html"
 
 <script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
