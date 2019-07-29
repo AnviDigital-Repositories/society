@@ -1,7 +1,4 @@
 .made
-  padding-top: 153px
-  .header
-    background: #ffffff
   &-first
     background: #E5E5E5 url(..) no-repeat center / cover
     width: 100%
@@ -71,26 +68,53 @@
     color: #000000
     display: block
     margin-bottom: 25px
-  &-flex
-    display: flex
-    align-items: center
-    margin-bottom: 85px
-    &-center
-      justify-content: center
+
   &-img
     width: 100%
     height: 600px
     object-fit: cover
     background: #C4C4C4
+  &-mob
+    &-item
+      display: none
+      width: 100%
+      border-top: 1px solid #BCBEC0
+      border-bottom: 1px solid #BCBEC0
+      cursor: pointer
+      z-index: 9
+      background: #ffffff
+    &-text
+      font-family: "ploni-regular", sans-serif
+      font-size: 16px
+      line-height: 50px
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #000000
+    &-arrow
+      margin: 0 0 3px 8px
+      transform: rotate(0)
+      transition: all 0.4s ease
+      &.active
+        transform: rotate(180deg)
+    &-br
+      display: none
   &-second
     padding: 55px 0 80px
-    .style-text
+    .style-text, &-text
       max-width: 785px
       width: 100%
       margin: 14px auto 20px
+    &-text
+      font-family: "ploni-light", sans-serif
+      font-size: 16px
+      line-height: 24px
+      text-align: center
+      letter-spacing: 0.1em
+      color: #000000
     &-block
       background: #C4C4C4
       margin: 35px 0 0 0
+      object-fit: cover
       .style-text
         text-align: left
         margin: 10px 0 0 0
@@ -99,40 +123,66 @@
         height: 100%
         object-fit: cover
     &-one
-      width: 400px
+      max-width: 400px
+      width: 100%
       height: 400px
-      margin: 35px 60px 0 0
+      margin: 35px 3vw 0 0
     &-two
-      width: 880px
+      max-width: 880px
+      width: 100%
       height: 650px
     &-tree
-      width: 870px
+      width: 100%
       height: 450px
-      margin: 35px 45px 0 0
+      &_block
+        max-width: 870px
+        width: 100%
+        margin: 35px 2.4vw 0 0
     &-four
-      width: 300px
+      width: 100%
       height: 280px
+      &_block
+        max-width: 300px
+        width: 100%
     &-five
-      width: 635px
+      width: 100%
       height: 430px
-      margin: 35px 55px 0 120px
+      &_block
+        max-width: 635px
+        width: 100%
+        margin: 35px 2.9vw 0 6vw
     &-six
-      width: 405px
+      width: 100%
       height: 480px
+      &_block
+        max-width: 405px
+        width: 100%
     &-seven
-      width: 640px
+      width: 100%
       height: 390px
-      margin: 35px 35px 0 0
+      &_block
+        max-width: 640px
+        width: 100%
+        margin: 35px 1.8vw 0 0
     &-eight
-      width: 420px
+      width: 100%
       height: 330px
+      &_block
+        max-width: 420px
+        width: 100%
     &-nine
-      width: 410px
+      width: 100%
       height: 400px
-      margin: 35px 40px 0 0
+      &_block
+        max-width: 410px
+        width: 100%
+        margin: 35px 2.1vw 0 0
     &-ten
-      width: 770px
+      width: 100%
       height: 480px
+      &_block
+        max-width: 770px
+        width: 100%
     &-bottom
       padding-top: 100px
   &-third
@@ -166,3 +216,12 @@
       min-width: 190px
       width: max-content
       margin: 15px 10px 0
+  &-flex
+    display: flex
+    align-items: center
+    margin-bottom: 85px
+    &-center
+      justify-content: center
+    .style-text
+      text-align: left
+      margin: 14px 0 0 0

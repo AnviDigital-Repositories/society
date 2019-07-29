@@ -1,7 +1,6 @@
 .style
-  padding: 230px 0 60px
-  .header
-    background: #ffffff
+  padding: 0 0 60px
+
   &-title
     font-family: "ploni-light", sans-serif
     font-size: 34px
@@ -13,6 +12,7 @@
     &_main
       font-size: 40px
       line-height: 59px
+      margin-top: 55px
   &-flex
     display: flex
     flex-wrap: wrap
@@ -30,8 +30,8 @@
   &-first
     padding: 75px 0 90px
     &-item
-      width: calc(50% - 50px)
-      margin-right: 100px
+      width: calc(50% - 2.5vw)
+      margin-right: 5vw
       display: flex
       flex-direction: column
       justify-content: center
@@ -55,6 +55,8 @@
     border-bottom: 1px solid #BCBEC0
     display: flex
     justify-content: center
+    &-select
+      display: none
     &-list
       margin: 20px 0
       &:first-child
@@ -85,6 +87,10 @@
   &-second
     padding-bottom: 75px
     border-bottom: 1px solid #BCBEC0
+    &-flex
+      width: 66.66%
+      display: flex
+
     &-link
       margin: 0 3px
     &-top
@@ -96,9 +102,9 @@
     &-text
       margin-bottom: 40px
     &-item
-      width: 33.33%
       margin-bottom: 40px
   &-left
+    width: 33.33%
     padding: 40px 45px
     border: 1px solid #000000
     box-sizing: border-box
@@ -125,6 +131,7 @@
       letter-spacing: 0.1em
       color: #000000
   &-mid
+    width: 50%
     display: flex
     flex-direction: column
     justify-content: space-around
@@ -174,9 +181,12 @@
       z-index: 0
 
   &-right
+    width: 50%
     display: flex
     flex-direction: column
     justify-content: space-around
+    .style-mid-item
+      display: none
     &-item
       margin: 10px auto
       max-width: 405px
@@ -258,6 +268,7 @@
       display: flex
       flex-direction: column
       justify-content: center
+      padding: 30px 0
       .style-text
         text-align: left
     &-list
@@ -291,17 +302,22 @@
       max-width: 505px
       margin: 0 auto 30px
     &-item
-      width: calc(50% - 20px)
-      margin-right: 40px
+      width: calc(50% - 1.1vw)
+      margin-right: 2.2vw
       margin-top: 40px
-      background: #F8F8F8
-      display: flex
-      align-items: center
-      justify-content: center
-      min-height: 600px
+      position: relative
       &:nth-child(2n+2)
         margin-right: 0
+    &-img
+      background: #F8F8F8
+      min-height: 600px
+      object-fit: cover
+      width: 100%
     &-card
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
       background: #ffffff
       max-width: 500px
       min-height: 310px
@@ -330,19 +346,61 @@
     &-flex
       display: flex
       justify-content: space-between
-
+  .select2-container .select2-selection--single, .select2-container
+    width: 100%!important
+    height: 50px
+  .select2-container--default .select2-selection--single .select2-selection__rendered
+    line-height: 50px
+    position: relative
+    &:before
+      content: 'explore: '
+      position: absolute
+      left: 15px
+      top: 0
+      height: 50px
+      line-height: 50px
+      font-family: "ploni-regular", sans-serif
+      font-size: 16px
+      letter-spacing: 0.1em
+      font-variant: small-caps
+      color: #000000
+  .select2-container .select2-selection--single .select2-selection__rendered
+    padding-left: 95px
+    font-family: "ploni-regular", sans-serif
+    font-size: 16px
+    letter-spacing: 0.1em
+    font-variant: small-caps
+    color: #000000
+  .select2-container--default .select2-selection--single .select2-selection__arrow
+    background: url("../img/arrow-down.svg") no-repeat center / 12px 7px
+    width: 42px
+    height: 100%
+    b
+      display: none
+  .select2-container--default .select2-selection--single
+    border-radius: 0
 .fit
-  padding: 153px 0 60px
-  .header
-    background: #ffffff
+  padding: 0 0 60px
   &-first
-    background: #F8F8F8 url("..") no-repeat center / cover
     width: 100%
-    height: calc(100vh - 153px)
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
+    position: relative
+    &-mob
+      display: none
+    &-flex
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      z-index: 1
+    &-img
+      background: #F8F8F8
+      height: calc(100vh - 153px)
+      object-fit: cover
+      width: 100%
     &-text
       max-width: 460px
       margin: 0 auto
@@ -384,13 +442,8 @@
     object-fit: contain
   &-third
     min-height: 900px
-    background: #F8F8F8 url("..") no-repeat center / cover
     width: 100%
-    height: calc(100vh - 153px)
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
+    position: relative
     &-title
       font-family: "ploni-light", sans-serif
       font-size: 30px

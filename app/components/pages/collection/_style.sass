@@ -1,11 +1,8 @@
 .collection
-  padding-top: 120px
   .container
     position: initial
   section
     min-height: auto
-  .header-news
-    display: none
   &-top
     &-link
       text-align: left
@@ -21,6 +18,12 @@
     text-transform: uppercase
     font-variant: small-caps
     color: #000000
+  &-slide
+    &-item
+      &.active
+        .collection-third-slide
+          opacity: 1
+          pointer-events: auto
   &-text
     text-transform: inherit
     font-size: 16px
@@ -69,7 +72,7 @@
       justify-content: space-between
       padding: 125px 3.6vw 30px
     &-right
-      background: #F8F8F8
+      background: #F8F8F8 url(//cdn.shopify.com/s/files/1/2422/6603/files/72319_Conti_HP-7_1920x.progressive.png.jpg?v=1563914333) no-repeat center / cover
       width: calc(100% - 560px)
       min-height: 450px
     &-img
@@ -558,6 +561,8 @@
       &.active
         width: 100%
         margin: 0 0 15px
+      &.active-slide
+
     &-sub, &-slider, &-slide
       position: relative
       width: 100%
@@ -582,9 +587,7 @@
       display: flex
       flex-direction: column
       justify-content: center
-      &.active
-        opacity: 1
-        pointer-events: auto
+
     &-block
       display: flex
       align-items: center
@@ -642,14 +645,15 @@
       &.active
         height: auto
     &-color
-      width: 28px
-      height: 28px
       margin: 6px
       background: #F8F8F8
       border: 1px solid #F8F8F8
       cursor: pointer
       &.active
         border: 1px solid #000000
+      .collection-third-img
+        height: 28px
+        width: 28px
     &-more
       width: 40px
       height: 40px
@@ -759,6 +763,7 @@
       height: 63px
       margin: 0 auto 10px
       vertical-align: middle
+
   &-btn
     background: #ffffff
     border: 1px solid #000000

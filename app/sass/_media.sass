@@ -3,6 +3,22 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+@media (min-height : 940px) and (max-width : 993px)
+  .popup-boxes-label
+    width: calc(50% - 10px)
+    margin: 5px
+    max-width: 153px
+  .popup-boxes-choice
+    justify-content: center
+@media (max-height : 939px) and (max-width : 993px)
+  .popup-boxes-label
+    width: 120px
+    margin: 5px 7px 20px 0
+  .popup-boxes-choice
+    flex-wrap: nowrap
+    padding-top: 15px
+    margin-top: -5px
+    overflow-x: auto
 
 @media only screen and (max-width : 1600px)
   .collection-second-flex
@@ -55,7 +71,19 @@
     margin: 0
     font-size: 20px
     line-height: 1
+  .product-first-left
+    max-width: 55%
+  .product-first-right
+    max-width: 45%
+  .product-third-scale
+    width: 50%
+    margin-right: 0
+  .rewards-second-available
+    padding: 25px 2.5vw 0 10px
+
 @media only screen and (max-width : 1200px)
+  .header-news-slider
+    max-width: 570px
   .footer-mid
     flex-wrap: wrap
   .footer-mid-left
@@ -106,26 +134,64 @@
   .light-glasses
     width: 100%
     height: auto
-@media only screen and (max-width : 1020px)
-  .co
-@media only screen and (max-width : 993px)
-  .header-news, .header-top-logo_search, .header-top-name, .header-menu-col
-    display: none
+  .product-fourth-text
+    br
+      display: none
+  .product-fifth
+    .slick-next
+      right: 0
+    .slick-prev
+      left: 0
+  .popup-select-footer
+    font-size: 16px
+    padding: 0 15px 15px 15px
+  .popup-select-span
+    font-size: 14px
+  .rewards-second-available
+    padding: 25px 0 0 0
+    flex-direction: column
+  .rewards-second-bold
+    text-align: center
+    font-size: 16px
+    line-height: 136%
+  .rewards-arrow-right
+    transform: rotate(90deg)
+    margin: 20px auto
+  .stores-card
+    margin: 0 15px 25px 15px
+@media only screen and (max-width : 1024px)
+  .product-fourth-item
+    width: 50%
+    display: flex
+    align-items: flex-start
 
-  .header-btn-menu, .header-top-logo_mob, .header-menu-arrow, .header-menu-sublist
-    display: block
-  .header
-    &.active
-      .header-top-logo_main, .header-top-logo_mob
-        path
-          fill: #000000
-      .header-top-border
-        fill: #000000
-      .header-top-number
-        color: #000000
+@media only screen and (max-width : 993px)
+  .blog-menu
+    &.stuck
+      margin-top: 97px
+  .third-left
+    display: none
+  .third-right
+    width: 100%
+    justify-content: flex-end
+    align-items: flex-start
+    padding: 30px 15px
+    .first-link
+      margin: 0
+  .first-text
+    text-align: left
+  .main
+    .header-top-border, .header-top-logo_main path
+      fill: #ffffff
+      transition: all 400ms ease 0s
+  .main .header-top-number
+    color: #ffffff
+    transition: all 400ms ease 0s
   .main .header-top-logo_mob
     path
       fill: #ffffff
+      transition: all 400ms ease 0s
+
   .main .header-top-like svg:hover .header-top-heart
     fill: #ffffff
     transition: all 0.5s ease
@@ -140,7 +206,34 @@
       span.fp-sr-only
         border: 1px solid #000000!important
   .first
-    background: #808285
+    background: linear-gradient(rgba(#000000, 0.5), rgba(#000000, 0.5)), url(//cdn.shopify.com/s/files/1/2422/6603/files/72319_Conti_HP-7_1920x.progressive.png.jpg?v=1563914333) no-repeat center / cover
+  .second-left
+    background: linear-gradient(rgba(#000000, 0.8), rgba(#000000, 0.8)), url(//cdn.shopify.com/s/files/1/2422/6603/files/Desktop_Polar_01_1920x.progressive.jpg?v=1563389737) no-repeat center/cover
+    .first-title, .first-link
+      color: #ffffff
+    .first-link:after
+      background: #ffffff
+  .first-title
+    font-size: 18px
+    line-height: 26px
+    font-family: "ploni-regular", sans-serif
+  .header-news, .header-top-logo_search, .header-top-name, .header-menu-col
+    display: none
+
+  .header-btn-menu, .header-top-logo_mob, .header-menu-arrow, .header-menu-sublist
+    display: block
+  .header
+    z-index: 8
+    transition: all 0.4s ease
+    &.active
+      .header-top-logo_main, .header-top-logo_mob
+        path
+          fill: #000000
+      .header-top-border
+        fill: #000000
+      .header-top-number
+        color: #000000
+
   .header-top
     padding: 22px 0
   .header-menu
@@ -159,6 +252,13 @@
     &.active
       opacity: 1
       pointer-events: auto
+  .header-news
+    display: none
+  .header
+    &.active
+      height: auto
+      .header-news, .header-top-logo_main, .container, .header-menu
+        transform: translate(0)
 
   .header-menu-subtitle
     color: #000000
@@ -188,13 +288,7 @@
     &.active
       opacity: 1
       pointer-events: auto
-  .main .header-top-border
-    fill: #ffffff
-  .main .header-top-number
-    color: #ffffff
-  .main
-    path
-      fill: #ffffff
+
   .header-top-basket
     width: 14px
     height: 16px
@@ -248,6 +342,68 @@
   .header-menu-link_red
     &:before, &:after
       content: none
+  .header-search
+    padding-top: 0
+  .header-search-input
+    height: 50px
+    line-height: 50px
+    font-size: 34px
+    &::-webkit-input-placeholder
+      font-size: 34px
+      line-height: 48px
+    &:-moz-placeholder
+      font-size: 34px
+      line-height: 48px
+    &::-moz-placeholder
+      font-size: 34px
+      line-height: 48px
+    &:-ms-input-placeholder
+      font-size: 34px
+      line-height: 48px
+  .header-search-menu
+    padding: 10px 0
+  .header-search-tab
+    margin: 8px 30px 0 0
+  .header-search-container
+    padding: 0 15px
+  .header-menu-bg
+    display: none
+  .header-search-hm, .header-search-link
+    font-size: 12px
+    line-height: 18px
+  .header-search-subtitle
+    font-size: 14px
+    line-height: 21px
+  .header-top-basket, .header-top-like
+    margin-left: 13px
+  .first .first-link
+    color: #ffffff
+  .first .first-link:after
+    background: #ffffff
+  .first .first-text
+    display: none
+  .first .fp-tableCell
+    display: flex
+    align-items: flex-end
+    height: 100vh!important
+    padding: 30px 5px
+  .first-content
+    display: flex
+    justify-content: space-between
+    max-width: 100%
+  #fp-nav
+    top: auto
+    bottom: 100px
+  #fp-nav.fp-right
+    right: 9px
+  .second-flex
+    flex-direction: column
+  .second-left
+    width: 100%
+    height: 100vh
+    padding: 30px 15px
+  .second-right
+    display: none
   .popup-bag-title
     font-size: 18px
     line-height: 26px
@@ -323,64 +479,33 @@
     padding: 0
   .popup-bag-chimg
     height: 60px
-  .header-search
-    padding-top: 0
-  .header-search-input
-    height: 50px
-    line-height: 50px
-    font-size: 34px
-    &::-webkit-input-placeholder
-      font-size: 34px
-      line-height: 50px
-    &:-moz-placeholder
-      font-size: 34px
-      line-height: 50px
-    &::-moz-placeholder
-      font-size: 34px
-      line-height: 50px
-    &:-ms-input-placeholder
-      font-size: 34px
-      line-height: 50px
-  .header-search-menu
-    padding: 10px 0
-  .header-search-tab
-    margin: 8px 30px 0 0
-  .header-search-container
-    padding: 0 15px
-  .header-menu-bg
-    display: none
-  .header-search-hm, .header-search-link
-    font-size: 12px
-    line-height: 18px
-  .header-search-subtitle
+  .popup-cookie-flex
+    flex-direction: column
+    align-items: flex-start
+  .popup-cookie
+    padding: 20px 15px 30px 15px
+  .popup-cookie-btns
+    width: 100%
+  .popup-cookie-title
+    font-size: 20px
+    line-height: 29px
+    margin-bottom: 3px
+  .popup-cookie-text
     font-size: 14px
     line-height: 21px
-  .header-top-basket, .header-top-like
-    margin-left: 13px
-  .first .first-link
-    color: #ffffff
-  .first .first-link:after
-    background: #ffffff
-  .first .first-title, .first .first-text
-    display: none
-  .first .fp-tableCell
-    display: flex
-    align-items: flex-end
-    height: 100vh!important
-    padding: 30px 5px
-  .first-content
-    display: flex
-    justify-content: space-between
-  #fp-nav
-    top: auto
-    bottom: 100px
-  #fp-nav.fp-right
-    right: 9px
+  .popup-cookie-btn
+    margin-left: 10px
+    margin-top: 16px
+    width: calc(50% - 5px)
+    &:first-child
+      margin-left: 0
+  .popup-cookie-info
+    margin: 0
   .fourth-item
     display: none
   .fourth-center
     width: 100%
-    height: calc(100vh - 400px)
+    height: calc(100vh - 432px)
   .trust-list
     padding: 15px 0
   .trust-item
@@ -428,8 +553,6 @@
     padding-bottom: 15px
   .main .header-mobsearch
     display: none
-  .about
-    padding-top: 110px
   .bread
     display: none
   .about-first-img
@@ -467,7 +590,7 @@
     font-size: 14px
     line-height: 21px
   .account, .wishlist
-    padding-top: 60px
+    padding-top: 0
     .header-mobsearch
       display: none
   .account-my
@@ -623,8 +746,6 @@
     line-height: 18px
   .bag-bottom
     padding-bottom: 30px
-  .blog, .lenses, .post, .faq, .info, .progressive, .light
-    padding-top: 111px
   .blog-third-card
     width: calc(50% - 15px)
     margin-right: 30px
@@ -703,6 +824,7 @@
     padding: 40px 0
   .brand-second-flex
     display: flex
+    //margin-top: 82px
   .brand-menu
     display: none
 
@@ -715,8 +837,6 @@
     max-width: 100%
     padding: 20px 15px
     min-height: 190px
-  .collection
-    padding-top: 91px
   .collection-third-card
     width: calc(50% - 10px)
     margin-right: 20px
@@ -1010,7 +1130,7 @@
     font-size: 14px
     line-height: 21px
     margin: 21px auto 15px
-  .made-third-btn
+  .light .made-third-btn
     margin: 15px 10px 0 0
     &:last-child
       margin-right: 0
@@ -1022,6 +1142,700 @@
     text-align: center
   .light-fifth .made-third-flex
     flex-wrap: nowrap
+  .made-second-five
+    margin: 35px 2.9vw 0 0
+  .meet-card
+    width: calc(50% - 25px)
+    margin: 0 50px 50px 0
+    height: 50vw
+    min-height: 400px
+    &:nth-child(3n+3)
+      margin: 0 50px 50px 0
+    &:nth-child(2n+2)
+      margin: 0 0 50px 0
+  .meet-change-half
+    width: 100%
+  .meet-change-right
+    display: none
+  .meet-change-left
+    padding: 130px 30px 30px
+  .meet-close
+    border: none
+    position: absolute
+    right: 25px
+    top: 25px
+  .meet-change-block
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+  .meet-second
+    padding: 15px 0
+  .product-header
+    display: none
+  .product-first .product-flex
+    flex-direction: column
+  .product-first-left, .product-first-right
+    max-width: 100%
+    padding-left: 0
+  .product-slider-img
+    height: 340px
+    margin: 0 auto
+  .product
+    .slick-dots
+      display: flex
+      left: 15px
+      top: auto
+      bottom: 20px
+    .slick-dots li button
+      padding: 0 5px
+  .product-first
+    padding: 0
+  .product-third-side .product-second-text
+    font-size: 12px
+    line-height: 18px
+  .product-fourth-content
+    padding-top: 35px
+  .product-title
+    font-size: 20px
+    line-height: 29px
+    text-align: left
+  .product-first-name
+    font-size: 18px
+    line-height: 26px
+    text-align: left
+  .product-first-span
+    font-size: 13px
+    line-height: 19px
+  .product-first-text
+    font-size: 14px
+    line-height: 21px
+    text-align: left
+  .product-first-mob
+    display: flex
+    justify-content: space-between
+    .collection-third-graythrough
+      text-align: right
+  .product-first-direction
+    display: flex
+    flex-direction: column-reverse
+  .product-colors
+    margin: 10px 0 13px
+  .product-first-name, .product-first-span
+    margin: 0 0 4px 0
+  .product-mob-red, .product-mob, .product-mob-arrow
+    display: block
+  .product-first-msg
+    display: none
+  .product-first-flex
+    flex-direction: column-reverse
+    align-items: flex-start
+  .product-first-revers
+    .star, .product-first-text
+      display: flex
+      width: 100%
+      font-family: "ploni-bold", sans-serif
+  .product-mob-menu
+    border-top: 1px solid #000000
+    flex-direction: column-reverse
+    align-items: flex-start
+  .product-mob-list
+    width: 100%
+    border-bottom: 1px solid #000000
+    .product-bold
+      border-bottom: none
+  .product-mob-drop
+    &.active
+      display: block
+  .product-mob-hide
+    display: block
+    &:nth-child(2)
+      .product-mob-drop
+        padding-top: 20px
+        border-top: 1px solid #BCBEC0
+  .product-slider-tree_img
+    min-width: 150px
+    height: 215px
+  .product-fifth-name
+    margin-top: 7px
+    font-size: 14px
+    line-height: 21px
+  .product-mob-fix
+    position: fixed
+    bottom: 0
+    left: 0
+    padding: 12px 15px 7px 15px
+    background: #ffffff
+    margin: 0
+    width: 100%
+    z-index: 7
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15)
+  .product-first-input
+    font-size: 15px
+    line-height: 22px
+    height: 23px
+    &::-webkit-input-placeholder
+      font-size: 15px
+      line-height: 22px
+    &:-moz-placeholder
+      font-size: 15px
+      line-height: 22px
+    &::-moz-placeholder
+      font-size: 15px
+      line-height: 22px
+    &:-ms-input-placeholder
+      font-size: 15px
+      line-height: 22px
+
+  .product-first-box, .product-first-bottom
+    display: none
+  .product-second-box
+    position: initial
+    padding: 50px 0 30px
+  .product-second-tab
+    font-size: 18px
+    line-height: 26px
+    font-family: "ploni-bold", sans-serif
+
+  .product-second-flex
+    justify-content: center
+  .product-second-text
+    text-align: center
+  .product-second-disc
+    text-align: left
+  .product-second-item
+    flex-direction: column
+    align-items: center
+    &.active
+      display: flex
+  .product-second-main
+    height: 75vw
+    min-height: 280px
+    max-height: 600px
+    margin-top: 10px
+  .product-second-bottom
+    margin-top: 0
+    justify-content: center
+  .product-second-text
+    &:last-child
+      font-family: "ploni-regular", sans-serif
+  .product-fifth-tab
+    font-size: 14px
+    line-height: 21px
+    font-family: "ploni-bold", sans-serif
+  .product-second-popup
+    background: #ffffff
+    align-items: flex-start
+  .product-second-details
+    max-height: 100vh
+    overflow-y: auto
+  .product-second-content
+    padding: 0 15px 35px
+    .product-second-text
+      text-align: left
+  .product-third-flex
+    flex-direction: column
+  .product-third-eye
+    //margin-left: -15px
+    width: 360px
+    margin-bottom: 60px
+  .product-third-svg
+    height: 210px
+    width: 100%
+  .product-third-line
+    height: 72px
+    margin: 5px auto
+  .product-third-side
+    left: 50%
+    height: 100%
+    padding: 20px 0 20px 15px
+
+  .product-third-top svg
+    height: 63px
+    top: -24px
+    padding-left: 15px
+  .product-third-svg
+    margin-left: -15px
+  .product-third-bottom svg
+    height: 50px
+    padding-left: 15px
+  .product-third-top
+    top: 50px
+    padding-left: 15px
+  .product-third-side .product-second-text
+    margin: 0
+  .product-third-side .product-third-row
+    margin-top: 53px
+  .product-third-row
+    padding: 0 65px 0 76px
+    width: 100%
+    justify-content: space-between
+  .product-third-left
+    height: 85px
+    width: 30px
+    margin-right: 0
+  .product-third-right
+    height: 90px
+    margin-left: 0
+    width: 32px
+  .product-third-bottom
+    bottom: 15px
+    display: flex
+    align-items: center
+    height: 50px
+    padding-left: 15px
+  .product-third-block
+    width: 100%
+    padding: 0 0 50px 0
+  .product-third-disc .product-second-text
+    text-align: left
+  .product-third-tab
+    font-family: "ploni-bold", sans-serif
+  .product-third-drop
+    margin-top: 20px
+  .product-third-item
+    width: 100%
+    padding: 0
+    .product-title
+      text-align: center
+    .product-flex
+      justify-content: center
+  .product-revers
+    flex-direction: column
+    padding: 50px 0
+  .product-third-change
+    flex-wrap: nowrap
+    max-width: 100%
+    overflow-x: auto
+  .product-revers .product-third-item
+    padding: 65px 0 0 0
+  .product-third-scale
+    width: 100%
+    margin-right: -15px
+  .product-third-protection
+    width: 365px
+    svg
+      height: 210px
+      width: 100%
+  .product-third-img
+    top: 25px
+    left: -70px
+  .product-third-materials
+    max-width: 100%
+    justify-content: center
+    flex-wrap: nowrap
+    overflow-x: auto
+  .product-third-block:last-child
+    padding: 50px 0 30px 0
+    border-bottom: 1px solid #BCBEC0
+  .product-third-technology
+    display: flex
+    flex-direction: column
+    align-items: center
+    svg
+      width: 212px
+
+  .product-third-technology:first-child svg
+    height: 33px
+  .product-third-technology:nth-child(2) svg
+    height: 28px
+  .product-third-technology:nth-child(3) svg
+    height: 22px
+  .product-third-technology:nth-last-child(1) svg
+    height: 17px
+  .product-third-technology:last-child svg
+    height: 12px
+  .product-fifth-flex
+    justify-content: flex-start
+  .product-fourth
+    display: none
+  .product-fifth
+    padding: 30px 0
+  .product-fifth-tab
+    margin: 0 20px 20px 0
+  .product-fifth-block:first-child
+    padding-right: 20px
+  .product-fifth-block:last-child
+    padding-left: 20px
+  .product-slider-two
+    margin-bottom: 30px
+  .product-slider-two_img
+    width: 335px
+    height: 335px
+    margin: 0 10px
+  .product-fifth-title
+    font-family: "ploni-bold", sans-serif
+    margin: 0 0 9px 0
+    text-align: left
+  .product-second-btn, .product-second-btn:last-child
+    margin: 25px 5px 0
+
+  .product-fifth-btn
+    margin: 0 9px 0 0
+    font-size: 14px
+    line-height: 40px
+    height: 40px
+    &:last-child
+      margin: 0 0 0 0
+  .product-third-lens .product-third-eye
+    margin-left: 0
+  .popup-select-left
+    display: none
+  .popup-select-right
+    max-width: 100%
+    padding: 15px 15px 0 15px
+  .popup-select-title
+    font-size: 20px
+    line-height: 29px
+    margin-bottom: 15px
+  .popup-select-mob
+    display: block
+  .popup-select-name
+    font-size: 16px
+    line-height: 24px
+  .popup-select-available
+    font-size: 12px
+    line-height: 18px
+  .popup-select-focus
+    margin: -30px -15px 0
+    line-height: 14px
+    padding: 0 15px
+    transform: translateY(-30px)
+  .popup-select-bottom, .popup-review-bottom
+    padding: 20px 15px
+    width: calc(100% + 30px)
+    margin-left: -15px
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15)
+    background: #ffffff
+  .popup-select-footer, .popup-next-hide
+    display: none
+  .popup-select-link
+    margin-bottom: 0
+    font-size: 14px
+    line-height: 21px
+  .popup-select .btn, .popup-select-subtotal
+    margin-top: 20px
+  .popup-prescription
+    .popup-select-subtotal
+      display: flex
+      justify-content: center
+    .popup-review-center
+      font-variant: none
+      position: relative
+      display: inline-block
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        height: 1px
+        width: 100%
+        background: #000000
+  .popup-select-subtotal
+    display: none
+  .popup-prescription-hover
+    width: calc(100% - 30px)
+    padding: 25px 15px
+    bottom: 50%
+    left: 50%
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15)
+    transform: translate(100%, 50%)
+    &.active
+      transform: translate(-50%, 50%)
+  .popup-prescription-hover_span
+    text-align: center
+  .popup-prescription-img
+    margin: 20px auto 0
+  .popup-prescription-hover_flex
+    justify-content: center
+
+  //.popup-prescription_type, .popup-lens,
+  //  .btn, .popup-select-subtotal
+  //    display: none
+  //.popup-material
+  //  .popup-select-subtotal
+  //    display: none
+
+  .popup-boxes .select2-container, .popup-boxes span.select2-selection.select2-selection--single, .popup-boxes-td
+    width: 120px !important;
+  .popup-select-text
+    font-size: 14px
+    line-height: 21px
+  .popup-select-item
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: 0.1em
+  .popup-review-top
+    .popup-review-price
+      position: absolute
+      top: 0
+      right: 0
+    .popup-review-change
+      margin-left: 25px
+  .popup-review-item
+    justify-content: flex-start
+  .popup-review-block
+    padding: 0
+    //max-height: calc(100% - 153px - 50px)
+  .popup-review-select
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    .popup-select-subtotal
+      display: block
+
+  .product span.select2-selection.select2-selection--single, .popup-prescription-subtd, .popup-prescription-subleft
+    width: 80px
+  .popup-review-content
+    max-width: 360px
+    margin: 0 auto
+  .popup-prescription-subtable
+    padding: 15px 15px 0 5px
+
+  span.select2-container.select2-container--default.select2-container--open
+    z-index: 9
+  .popup-prescription-subbottom
+    padding: 20px 20px 20px 5px
+  .product .select2-results__option[aria-selected]
+    font-size: 16px
+    line-height: 21px
+  .product .select2-dropdown
+    max-height: 273px
+  .popup-prescription .popup-review-bottom
+    padding: 20px 0
+    width: 100%
+    margin: 0
+    box-shadow: none
+  .product .select2-container--default .select2-selection--single .select2-selection__placeholder, .product .select2-container .select2-selection--single .select2-selection__rendered
+    font-size: 16px
+  .popup-prescription-span, .popup-prescription-link
+    font-size: 14px
+    line-height: 21px
+  .popup-measure-content .select2-container
+    width: 80px !important
+  .popup-color-label
+    width: 32px
+    height: 32px
+    margin: 4px 7px 4px 0
+    &:last-child
+      margin: 4px 0 4px 0
+  .popup-boxes-bottom
+    padding: 19px 0
+  .popup-review-img
+    display: block
+  .popup-prescription_type-back, .popup-lens-back, .popup-material-back, .popup-review-back, .popup-prescription-back, .popup-measure-back, .popup-color-back, .popup-boxes-back
+    padding: 15px
+  .popup-select-close
+    right: 15px
+    top: 18px
+  .product
+    padding-bottom: 78px
+    .popup
+      transition: all 0.4s ease
+      &.active
+        position: fixed
+        height: 100vh
+        top: 0
+        left: 0
+        width: 100%
+        background: #BCBEC0
+        z-index: 9
+  .product-btn-bag
+    max-width: 100%
+  .product-bag
+    padding: 5px 0 0
+    z-index: 7
+    position: inherit
+    display: none
+    height: 100%
+    transform: translate(0)
+    transition: none
+    &.active
+      display: block
+  .product-bag-title
+    margin: 10px 0
+    font-size: 18px
+    line-height: 26px
+  .product-bag-text
+    display: none
+  .product-bag-mob
+    display: block
+  .product-bag-amount
+    margin: 0 0 13px 0
+  .product-bag-price
+    color: #000000
+  .popup-boxes-table
+    max-width: 360px
+    margin: 0 auto
+  .popup-review .popup-review-content
+    max-width: 100%
+  .product-bag-list
+    display: block
+  .product-third-materials:nth-child(2)
+    margin-right: 0
+  .reviews-form
+    flex-direction: column
+  .reviews-form-img
+    width: 100%
+    height: 415px
+    object-fit: contain
+    margin: 0 0 15px 0
+  .reviews-form-right
+    max-width: 100%
+  .product-mob-reviews
+    cursor: pointer
+  .popup-prescription-subanswer_one, .popup-prescription-subanswer_four
+    left: 0
+  .popup-prescription-subanswer_two
+    right: 0
+  .popup-prescription-subanswer_two:before
+    right: 97px
+  .popup-prescription-subanswer_one:before
+    right: 137px
+  .popup-prescription-subanswer_tree:before
+    right: 15px
+  .popup-prescription-subanswer_four:before, .popup-prescription-subanswer_five:before
+    left: 33px
+  .popup-color-drop .popup-color-text
+    white-space: nowrap
+    flex-wrap: nowrap
+  .popup-prescription-subblock
+    padding-top: 80px
+  .popup-measure .popup-select-subtotal
+    display: block
+  .rewards-title
+    font-size: 40px
+    line-height: 99%
+    font-family: "ploni-regular", sans-serif
+  .rewards-place
+    margin: 20px auto
+  .rewards-second-title
+    font-size: 26px
+    font-family: "ploni-regular", sans-serif
+  .rewards-card
+    width: calc(50% - 10px)
+    &:nth-child(2n+2)
+      margin-right: 0
+  .rewards-card_big
+    width: 100%!important
+  .error-container
+    min-height: 570px
+  .fit-title_main
+    font-size: 50px
+    line-height: 60px
+  .fit-first-img
+    height: 680px
+  .fit-second
+    padding: 15px 0 65px
+  .fit-third
+    min-height: auto
+  .fit-fourth
+    padding: 0
+  .fit-fourth .fit-flex
+    padding: 30px 0 20px
+  .style-title
+    font-size: 26px
+    line-height: 38px
+  .style-first-text
+    font-size: 15px
+    line-height: 22px
+    margin-bottom: 1.5em
+  .style-second-item
+    width: 100%
+    margin-bottom: 15px
+  .style-second-flex
+    width: 100%
+    margin-bottom: 30px
+  .style-flex-reverse
+    flex-direction: column-reverse
+  .style-title_main
+    margin: 0
+    font-size: 30px
+    line-height: 44px
+  .style-first
+    padding: 20px 0 50px
+  .style-second-top
+    padding: 30px 0 40px
+  .style-left-img
+    height: 120px
+    width: 120px
+  .style-second-text
+    margin-bottom: 1.5em
+  .style-right-title
+    font-size: 22px
+    line-height: 32px
+  .style-text, .style-link, .style-third-name
+    font-size: 14px
+    line-height: 21px
+  .style-left-title
+    margin-bottom: 6px
+  .style-third
+    padding: 50px 0 10px
+  .style-third-title
+    margin-bottom: 0
+  .style-third-item
+    margin: 20px 2vw 35px
+  .style-third-img
+    max-width: 100%
+    margin: 0
+  .style-third .style-third-list, .style-left-text
+    font-size: 14px
+    line-height: 21px
+  .style-fourth
+    padding: 50px 0
+  .style-fourth-text
+    margin: 20px auto 30px
+  .style-fourth-item
+    width: 100%
+    margin: 0 0 45px 0
+  .style
+    padding-bottom: 0
+  .stores-link
+    font-size: 20px
+    line-height: 29px
+    letter-spacing: 0.02em
+  .visit-title
+    font-size: 20px
+    line-height: 29px
+  .visit-first-address
+    font-size: 14px
+    line-height: 21px
+  .visit-first-name
+    font-size: 16px
+    line-height: 24px
+    &:first-child
+      font-size: 20px
+      line-height: 29px
+  .visit-first-link
+    font-size: 18px
+    line-height: 26px
+  .fifth
+    display: block!important
+  .first-text
+    display: none
+  .first-title
+    margin-bottom: 0
+    text-align: left
+  .first .first-title
+    color: #ffffff
+  .first-content
+    flex-direction: column
+    align-items: flex-start
+    padding: 0 10px
+    .first-link
+      margin: 0
+  .first:first-child
+    .first-title
+      display: none
+    .first-content
+      display: flex
+      flex-direction: row
+      padding: 0
+    .first-link
+      margin: 0 10px
+  .stores-arrow
+    width: 9px
+    height: 17px
+
 @media only screen and (max-width : 767px)
   .header-search-card
     width: calc(50% - 5px)
@@ -1277,7 +2091,7 @@
     pointer-events: auto
     transform: translateY(0)
     padding: 0 10px
-  .collection-third-color
+  .collection-third-color .collection-third-img
     height: 20px
     width: 20px
   .collection-third-color
@@ -1578,5 +2392,501 @@
     line-height: 18px
   .light-range
     margin: 11px 20px 0
+  .light .made-third-btn
+    min-width: 168px
+    font-size: 16px
+  .info-second-title
+    padding: 0 5px
+  .made-first
+    height: 375px
+  .made-title
+    font-size: 26px
+  .made-first-link
+    margin-top: 25px
+  .made-mob-item
+    display: flex
+    align-items: center
+    justify-content: center
+  .shop-menu
+    flex-direction: column
+    border-top: none
+    padding: 0 15px
+    display: none
+  .shop-menu-link
+    font-size: 16px
+    line-height: 50px
+    padding: 0
+    &.active
+      span
+        position: relative
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          bottom: 0
+          height: 1px
+          width: 100%
+          background: #000000
+  .shop-menu-list
+
+    border-bottom: 1px solid #BCBEC0
+    &:first-child
+      border-left: none
+    &:last-child
+      border-bottom: none
+  .made-second
+    padding: 50px 0 0
+  .made-span
+    font-size: 16px
+    line-height: 24px
+    margin-bottom: 20px
+  .made-second .style-text
+    margin: 20px 0 0
+  .made-flex
+    flex-direction: column
+    margin-bottom: 0
+  .made-second-content
+    margin-bottom: 50px
+  .made-second-one
+    width: 280px
+    height: 280px
+    margin: 0 0 30px 0
+  .made-second-two
+    margin: 30px 0 0 0
+    height: 65vw
+    max-height: 280px
+    max-width: 400px
+    width: 100%
+  .made-second-tree, .made-second-five, .made-second-seven, .made-second-nine
+    height: 74.5vw
+    margin: 0
+  .made-second-five_block
+    max-width: 100%
+  .made-mob-container
+    padding: 0 15px
+  .made-second
+    .container
+      padding: 0
+  .made-second-tree_block
+    margin: 0
+  .made-second .style-text
+    padding: 0 15px
+  .made-second-four, .made-second-five
+    margin: 0
+  .made-second-five_block, .made-second-four_block, .made-second-one, .made-second-tree_block
+    margin: 30px 0 0 0
+  .made-flex .style-text
+    text-align: center
+  .made-img
+    display: none
+  .made-second-six, .made-second-eight, .made-second-ten
+    height: 280px
+    width: 280px
+    margin: 30px auto 0
+  .made-second .style-text
+    font-size: 12px
+    line-height: 18px
+  .made-second-text
+    font-size: 14px
+    line-height: 21px
+  .made-mob-br
+    display: block!important
+  .made-third
+    padding: 30px 0
+  .made-third-item
+    width: 100%
+  .made-third-img
+    width: 280px
+    height: 340px
+  .made-third-btn
+    margin-top: 20px
+    background: #000000
+    color: #ffffff
+    font-size: 16px
+  .made
+    padding-top: 0
+    .header
+      position: initial
+  .made-mob-fixed
+    z-index: 9
+    pointer-events: auto
+    background: #ffffff
+  .made-second-bottom
+    padding: 60px 15px 0
+  .meet-card
+    width: 100%
+    margin: 0 0 15px 0
+    &:nth-child(3n+3), &:nth-child(2n+2)
+      margin: 0 0 15px 0
+  .meet-first
+    height: 76vw
+    max-height: 500px
+  .meet-title
+    font-size: 50px
+    line-height: 50px
+    color: #000000
+  .product-fifth
+    .product-flex
+      flex-direction: column
+  .product-fifth-block:first-child, .product-fifth-block:last-child
+
+    padding: 0
+    width: 100%
+  .product-fifth-block:first-child:before
+    content: none
+  .product-second-tab, .product-fifth-title
+    font-size: 14px
+    line-height: 21px
+  .product-fifth-more
+    display: block
+  .product-fifth-hide
+    display: none
+  .product-first
+    .graythrough
+      font-size: 20px
+      line-height: 29px
+  .product-third-materials
+    justify-content: flex-start
+  .product-first-field a
+    padding-left: 0
+    height: 14px
+    width: 6px
+  .reviews-flex
+    flex-direction: column
+  .reviews-left
+    align-items: flex-start
+  .reviews-item
+    padding: 20px 0
+  .reviews-right, .reviews-left
+    width: 100%
+  .reviews
+    padding: 20px 0
+  .reviews-title, .reviews-flex-center
+    margin-bottom: 10px
+  .reviews-date
+    text-align: left
+  .rewards-first
+    flex-direction: column
+  .rewards-half
+    width: 100%
+    min-height: auto
+    background: #F7F8F9
+    &:first-child
+      min-height: auto
+      height: 56vw
+  .rewards-btn
+    font-size: 16px
+  .rewards-half-container
+    background: #ffffff
+    padding: 30px 15px 10px
+    max-width: calc(100% - 60px)
+    margin: -42.8vw auto 0
+  .rewards-down
+    margin: 5px auto -30px
+  .rewards-flex
+    flex-direction: column
+  .rewards-left
+    max-width: 100%
+    margin: 0 0 70px 0
+    padding: 0 30px
+  .rewards-second
+    padding: 67px 0 15px
+  .rewards-second-text, .rewards-second-title
+    text-align: center
+  .rewards-line
+    display: none
+  .rewards-right-title
+    text-align: center
+    width: 100%
+    font-size: 20px
+    line-height: 29px
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    color: #000000
+    margin-bottom: 5px
+  .rewards-card
+    width: calc(50% - 7.5px)
+    margin: 20px 15px 0 0
+    min-height: 170px
+    padding: 40px 4px 30px
+  .rewards-second-cards
+    margin-bottom: 50px
+  .rewards-card-block
+    width: 100%
+    &:nth-child(2)
+      display: none
+  .rewards-second-item
+    font-size: 16px
+    line-height: 24px
+  .rewards-second-span
+    font-size: 30px
+    line-height: 1
+  .rewards-second-bold
+    br
+      display: none
+  .rewards-second-available
+    padding: 15px 0 0 0
+  .rewards-third
+    padding: 30px 0 35px
+  .rewards-third-title
+    font-size: 50px
+    margin-bottom: 9px
+    line-height: 73px
+  .rewards-third-list
+    &:first-child
+      border-top: 1px solid #BCBEC0
+  .rewards-third-main
+    font-size: 16px
+    line-height: 24px
+  .rewards-third-item
+    padding: 13px 15px
+  .rewards-third-drop
+    padding: 0 25px 25px
+  .rewards-second-card
+    min-height: 165px
+  .rewards-second-card
+    width: calc(50% - 7.5px)
+    margin: 15px 15px 0 0
+    &:nth-child(2n+2)
+      margin: 15px 0 0 0
+  .shop-first
+    justify-content: flex-end
+    padding: 40px 30px
+  .shop-title
+    font-size: 50px
+    line-height: 99.98%
+  .shop-text
+    font-size: 22px
+    line-height: 32px
+  .shop-content
+    display: flex
+    flex-wrap: wrap
+  .shop-content-box
+    height: 44vw
+    width: 50%
+    margin-right: 15px
+  .shop-content-item
+    width: calc(50% - 7.5px)
+    margin: 0 15px 15px 0
+    height: 44vw
+    &:nth-child(2n+2)
+      margin-right: 0
+  .shop .shop-second .blog-menu-drop, .shop-content-box
+    display: none
+  .shop-second-block
+    padding: 25px 0
+  .shop-content-block
+    width: 100%
+  .shop-title shop-black
+    font-size: 30px
+    line-height: 44px
+  .shop-black
+    font-size: 20px
+    line-height: 24px
+  .error-btn
+    margin: 15px 10px 0
+  .error-title
+    font-size: 160px
+    line-height: 155px
+  .error-text
+    font-size: 16px
+    line-height: 24px
+  .fit-first-img
+    height: 285px
+    margin-bottom: 25px
+  .fit-first-flex
+    position: initial
+    transform: translate(0, 0)
+  .fit-title_main, .fit-third-title
+    display: none
+  .fit-first-mob
+    display: flex
+    align-items: center
+    position: absolute
+    left: 0
+    width: 100%
+    top: 0
+    transform: translate(0, 0)
+    height: 280px
+    display: flex
+    justify-content: center
+  .fit-item
+    width: 100%
+  .fit-second
+    padding: 5px 0 45px
+  .fit-item-block
+    max-width: 100%
+    padding: 30px 15px
+    br
+      display: none
+  .fit
+    padding: 0
+  .fit-fourth .fit-flex
+    padding: 30px 0 20px
+    &:nth-child(2n+2)
+      flex-direction: column-reverse
+  .style-left
+    padding: 25px 15px
+  .style-left-img
+    margin-bottom: 15px
+  .style-third-img
+    height: 315px
+  .style-first-item
+    width: 100%
+    margin: 0
+  .style-first-img
+    margin-bottom: 30px
+  .style-first-text
+    max-width: 100%
+  .style-first-title
+    margin-bottom: 10px
+  .style-first
+    padding: 20px 0 30px
+  .style-menu-select
+    display: block
+  .style-menu
+    display: none
+  .style-first
+    border-bottom: 1px solid #BCBEC0
+  .style-second
+    padding: 30px 0 50px
+  .style-second-top
+    max-width: 100%
+  .style-mid
+    display: none
+  .style-right
+    .style-mid-item
+      display: block
+  .style-right-title
+    text-align: center
+  .style-mid-img
+    margin-bottom: 15px
+  .style-right-text
+    text-align: center
+    margin-top: 10px
+  .style-second .style-flex
+    justify-content: center
+  .style-right-link
+    margin: 6px 25px 0 0
+    &:last-child
+      margin: 6px 0 0 0
+  .style-right-item
+    margin: 0 auto 40px
+  .style-second-flex
+    margin-bottom: 0
+  .style-left-img
+    height: 60px
+    width: 60px
+  .style-bottom
+    padding: 0
+  .style-bottom-text
+    display: none
+  .style-bottom-flex
+    margin: 0
+    flex-wrap: wrap
+    svg.faq-item-icon
+      width: 45.5px
+    .faq-item
+      border: 1px solid #BCBEC0
+      width: 100%
+      flex-direction: row
+      justify-content: flex-start
+      padding: 20px 25px
+      margin-bottom: 15px
+    .faq-text, .faq-item-name, .faq-item-text
+      text-align: left
+    .faq-item-name
+      margin: 0 0 0 24px
+      text-align: left
+  .style-third-figure
+    height: 54px
+    width: 54px
+  .style-third-oval
+    width: 36px
+  .style-third-heart
+    width: 58px
+    height: 54px
+    display: block
+  .style-third-item
+    margin: 20px 0 35px
+    width: 25%
+    max-width: auto
+  .style-third-content, .style-btn
+    width: 100%
+  .style-btn
+    background: #000000
+    color: #ffffff
+    margin-top: 40px
+  .style-fourth-card
+    position: initial
+    transform: translate(0,0)
+    padding: 0
+    min-height: auto
+  .style-fourth-img
+    min-height: 240px
+    margin-bottom: 20px
+  .style-fourth-flex
+    justify-content: center
+  .stores-card
+    width: 100%
+    margin: 0 0 25px 0
+  .stores-flex
+    padding: 0
+  .stores-bold
+    font-size: 14px
+    line-height: 21px
+  .stores-img
+    height: 60vw
+    margin-bottom: 10px
+  .visit-btn
+    font-size: 16px
+  .visit-center
+    flex-direction: column
+    padding: 0
+  .visit-first-block
+    margin: 17px auto 10px
+  .visit-first
+    padding: 25px 0 40px
+  .visit-first-link
+    display: none
+  .visit-first-block .visit-first-link
+    display: inline-block
+    margin-top: 5px
+  .visit-second
+    padding: 40px 30px
+  .visit-third
+    padding: 20px 0 50px
+  .visit-slider-item, .visit-slider
+    height: 62.7vw
+    margin: 0 auto 60px
+  .visit-third-item
+    width: 100%
+    padding: 0 15px
+    br
+      display: none
+  .visit-third-item
+    margin-bottom: 30px
+  .visit-fourth .fourth-flex
+    padding: 0
+  .popup-welcome-content
+    width: calc( 100% - 20px)
+    margin: 0 auto
+    max-height: 510px
+  .popup-welcome-form
+    position: absolute
+    left: 10px
+    top: 10px
+    max-width: 100%
+    width: calc(100% - 20px)
+    height: calc(100% - 20px)
+    padding: 100px 60px
+  .popup-welcome-img
+    width: 100%
+  .collection-frame-disc
+    margin: 0 auto
 @media only screen and (max-width : 480px)
-  .l
+  .popup-welcome-form
+    padding: 80px 30px
+  .popup-welcome-text
+    font-size: 14px
+    line-height: 21px
