@@ -159,6 +159,7 @@
     margin: 20px auto
   .stores-card
     margin: 0 15px 25px 15px
+    width: calc(50% - 30px)
 @media only screen and (max-width : 1024px)
   .product-fourth-item
     width: 50%
@@ -166,9 +167,8 @@
     align-items: flex-start
 
 @media only screen and (max-width : 993px)
-  .blog-menu
-    &.stuck
-      margin-top: 97px
+  .blog-menu.stuck
+    margin-top: 97px
   .third-left
     display: none
   .third-right
@@ -235,18 +235,18 @@
         color: #000000
 
   .header-top
-    padding: 22px 0
+    padding: 19px 0
   .header-menu
     opacity: 0
     pointer-events: none
     transition: all 0.5s ease
-    position: absolute
+    position: fixed
     left: 0
-    top: 0
+    top: 54px
     background: #ffffff
     width: 100%
     height: 100vh
-    padding: 60px 30px 30px
+    padding: 0 30px 60px
     z-index: 1
     overflow-y: auto
     &.active
@@ -580,8 +580,6 @@
     position: absolute
     left: 15px
     bottom: 85px
-  .terms
-    padding-top: 110px
   .terms-title
     font-size: 26px
     line-height: 38px
@@ -600,13 +598,13 @@
   .account-sing
     padding: 25px 15px
   .wishlist-right
-    position: absolute
+    //position: absolute
     top: 0
     left: 0
     opacity: 0
     pointer-events: none
     transition: all 0.5s ease
-    padding: 0 15px
+    width: 0
     &.active
       width: 100%
       opacity: 1
@@ -621,10 +619,12 @@
     opacity: 1
     pointer-events: auto
     transition: all 0.5s ease
+    width: 100%
     &.hide
       transform: translateX(-100%)
       opacity: 0
       pointer-events: none
+      width: 0
   .wishlist-left-menu
     width: 100%
     border-top: 1px solid #BCBEC0
@@ -649,9 +649,12 @@
     font-size: 18px
     line-height: 26px
     cursor: pointer
-  .wishlist-right-block.active
-    margin-top: 0
-
+  .wishlist-right-block
+    &.active
+      margin-top: 0
+  .wishlist-right-list
+    //overflow-y: auto
+    //height: calc(100vh - 105px)
   .wishlist-name
     font-size: 16px
     line-height: 24px
@@ -712,7 +715,6 @@
   .form-information-change
     display: block
   .bag
-    padding-top: 60px
     .header-mobsearch
       display: none
   .bag-bread, .bag-left .popup-bag-submsg
@@ -799,7 +801,7 @@
   .post-third-flex
     margin-bottom: 30px
   .post-first
-    min-height: calc(100vh - 111px)
+    min-height: calc(100vh - 105px)
   .book-first
     flex-direction: column
     align-items: center
@@ -807,11 +809,12 @@
     margin-top: 50px
   .book-first-date
     margin-right: 0
-  .book-second
+  .book-second-flex
     flex-direction: column
+    padding: 40px 0
   .book-second-left, .book-right
     max-width: 100%
-  .book-form
+  .book-right
     margin-left: 0
   .book-second-left
     height: 70vw
@@ -820,11 +823,8 @@
     align-items: flex-start
   .book-form-input
     max-width: 100%
-  .book-second
-    padding: 40px 0
   .brand-second-flex
     display: flex
-    //margin-top: 82px
   .brand-menu
     display: none
 
@@ -1677,7 +1677,6 @@
   .reviews-form-img
     width: 100%
     height: 415px
-    object-fit: contain
     margin: 0 0 15px 0
   .reviews-form-right
     max-width: 100%
@@ -1719,6 +1718,7 @@
     width: 100%!important
   .error-container
     min-height: 570px
+    padding: 34px 20px
   .fit-title_main
     font-size: 50px
     line-height: 60px
@@ -1820,7 +1820,10 @@
   .first-content
     flex-direction: column
     align-items: flex-start
+    justify-content: flex-end
+    height: 100%
     padding: 0 10px
+    vertical-align: bottom
     .first-link
       margin: 0
   .first:first-child
@@ -1829,6 +1832,8 @@
     .first-content
       display: flex
       flex-direction: row
+      align-items: flex-end
+      justify-content: space-between
       padding: 0
     .first-link
       margin: 0 10px
@@ -1901,7 +1906,7 @@
   .wishlist-price
     font-size: 14px
   .wishlist-noitems-img
-    height: 240px
+    height: 65vw
   .form-information
     .wishlist-flex
       display: block
@@ -1994,7 +1999,8 @@
     left: 50%
     transform: translateX(-50%)
     top: 0
-    width: max-content
+    width: auto
+    padding: 2px 15px
   .blog-second-card
     padding: 60px 30px 50px
   .blog-section
@@ -2884,9 +2890,72 @@
     width: 100%
   .collection-frame-disc
     margin: 0 auto
+  .yourself
+    position: relative
+    padding: 0
+    height: calc(100vh - 105px)
+    &-left
+      position: absolute
+      left: 0
+      top: 37px
+      width: 100%
+      z-index: -1
+      height: calc(100vh - 105px - 37px)
+  .yourself-right
+    width: calc( 100% - 2em)
+    height: calc( 100% - 4em)
+    margin: 1em auto
+    padding: 0 1em
+  .yourself-name
+    padding: 10px 0 0 0
+  .yourself-form-field
+    flex-direction: column
+    margin-bottom: 18px
+    padding: 0
+  .yourself-form-input
+    width: 100%
+    margin-bottom: 10px
+  .yourself-form-btn
+    width: 100%
+    max-width: 100%
+  .yourself-text
+    padding: 0 0 15px 0
+  .textlimited
+    &::-webkit-input-placeholder
+      font-size: 18px
+      line-height: 26px
+    &:-moz-placeholder
+      font-size: 18px
+      line-height: 26px
+
+    &::-moz-placeholder
+      font-size: 18px
+      line-height: 26px
+
+    &:-ms-input-placeholder
+      font-size: 18px
+      line-height: 26px
+  .popup-gift-comment
+    min-height: 100px
+  .product-slider-tree_img
+    margin: 0 5px
+  .product-slider-two, .product-slider-tree, .product-slider-four
+    margin-left: -5px
+  .fp-viewing-2 .fifth .fp-tableCell
+    display: flex!important
+    flex-direction: column
+    justify-content: center
+  .wishlist-noitems-card
+    width: calc(50% - 10px)
+    margin: 20px 20px 0 0
+    &:nth-child(2n+2)
+      margin-right: 0
 @media only screen and (max-width : 480px)
   .popup-welcome-form
     padding: 80px 30px
   .popup-welcome-text
     font-size: 14px
     line-height: 21px
+  .wishlist-noitems-card
+    width: 100%
+    margin: 20px 0 0 0

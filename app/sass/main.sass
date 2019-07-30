@@ -57,6 +57,7 @@ body textarea:required:valid
 *::-webkit-scrollbar
   -webkit-appearance: none
   width: 0
+  height: 0
 
 *::-webkit-scrollbar-thumb
   border-radius: 0
@@ -96,6 +97,7 @@ input
   line-height: 26px
   letter-spacing: 0.1em
   color: #000000
+  border-radius: 0
 textarea
   resize: none
   border: none
@@ -178,9 +180,7 @@ section
   width: 100%
   z-index: 2
   background: #ffffff
-  height: auto
   transition: background 400ms ease 0s
-
   &.active
     position: fixed
     top: 0
@@ -326,6 +326,7 @@ section
     transition: all 0.5s ease
     &-left
       width: 200px
+      z-index: 2
     &-right
       width: 200px
       z-index: 2
@@ -403,7 +404,7 @@ section
       opacity: 0
       visibility: hidden
       pointer-events: none
-      background: rgba(255,255,255,0.97)
+      background: rgba(255,255,255,1)
       box-shadow: 0px 2px 3px rgba(0,0,0,0.05)
       z-index: 1
       transition: all 300ms
@@ -894,9 +895,12 @@ section
   font-variant: small-caps
   color: #FFFFFF
   white-space: nowrap
-.fp-viewing-2, .fp-viewing-3, .fp-viewing-5, .fp-viewing-6
+.fp-viewing-2, .fp-viewing-3, .fp-viewing-5, .fp-viewing-6, .fp-viewing-7
   .main .header-top-border, .main .header-top-logo_main path, .main .header-top-logo_mob path
     fill: #000000
+  .main
+    .header-top-number
+      color: #000000
   .header-top-logo, .header-top-number
     color: #000000
     path
@@ -936,6 +940,7 @@ section
     color: #000000
     width: 100%
     margin-bottom: 25px
+    padding: 0
     &::-webkit-input-placeholder
       font-family: "ploni-light", sans-serif
       font-size: 18px
@@ -977,7 +982,7 @@ section
     background: rgba(#ffffff, 0.8)
     position: fixed
     width: 100%
-    height: 100vh
+    height: 100%
     left: 0
     top: 0
     z-index: 9
@@ -3296,6 +3301,8 @@ section
         width: 100%
         background: #000000
 .main
+  .header-menu-bg
+    background: rgba(255,255,255,0.97)
   .header-news
     display: none
   .header
@@ -3445,6 +3452,8 @@ section
     height: 185px
     width: 100%
     margin: 7px 0 0 0
+    display: flex
+    overflow-x: auto
     &-img
       width: 130px
       margin-right: 10px

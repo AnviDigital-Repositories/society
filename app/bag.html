@@ -15,7 +15,8 @@
 </head>
 
 <body>
-<!-- header.html -->
+<div class="bag">
+    <!-- header.html -->
 <header class="header">
     <div class="header-news">
         <a href="" class="header-news-link">Need Help? (Live Chat)</a>
@@ -1010,10 +1011,11 @@
                         </clipPath>
                     </defs>
                 </svg>
-                <span class='textcounter popup-gift-gray' id="counter1">
-                </span>
-                <textarea class="popup-bag-title popup-gift-comment textlimited" data-textcounterid="counter1" maxlength="200" placeholder="Type your message here, but avoid emojis and special characters.">
-                </textarea>
+
+                <span class="popup-gift-gray"> <span class="textcounter" id="counter1">200</span> characters remaining</span>
+
+                <textarea class="popup-bag-title popup-gift-comment textlimited" data-textcounterid="counter1" maxlength="200" placeholder="Type your message here, but avoid emojis and special characters."></textarea>
+
                 <div class="popup-gift-flex">
                     <button class="popup-gift-btn btn not-active">save</button>
                     <button class="popup-gift-btn btn popup-gift-cancel">cancel</button>
@@ -1023,7 +1025,6 @@
     </div>
 </div>
 
-<div class="bag">
     <div class="container">
         <div class="bag-bread">
             <p class="bag-bread-text">my bag</p>

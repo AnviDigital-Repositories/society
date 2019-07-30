@@ -25,12 +25,7 @@
     margin: 8px auto 0
   &-block
     padding: 70px 0
-    transition: all 0.5s ease
-    opacity: 0
-    pointer-events: none
-    &.active
-      opacity: 1
-      pointer-events: auto
+    display: block
   &-first
     display: flex
     justify-content: space-between
@@ -119,20 +114,16 @@
   &-relative
     position: relative
   &-second
-    display: flex
-    justify-content: space-between
-    padding: 70px 0
-    opacity: 0
-    pointer-events: none
-    transition: all 0.5s ease
-    position: absolute
-    left: 0
-    top: 0
     width: 100%
+    display: none
     &.active
-      opacity: 1
-      position: absolute
-      pointer-events: auto
+      display: block
+    &-flex
+      display: flex
+      justify-content: space-between
+      padding: 70px 0
+      transition: all 0.5s ease
+      width: 100%
     &-left
       max-width: 540px
       width: 100%
@@ -174,10 +165,10 @@
   &-right
     max-width: 720px
     width: 100%
+    margin-left: 30px
   &-form
     width: 100%
     display: block
-    margin-left: 30px
     &-field
       display: flex
       justify-content: space-between
@@ -199,7 +190,7 @@
       font-family: "ploni-regular", sans-serif
       font-size: 16px
       line-height: 24px
-      padding-top: 20px
+      padding: 20px 0 0 0
       color: #000000
       max-width: 519px
       width: 100%

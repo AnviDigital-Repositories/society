@@ -21,13 +21,9 @@
         color: #000000
 .wishlist
   padding: 50px 0 70px
-  height: 100vh
   &-share
     display: none
     background: #ffffff
-    position: absolute
-    left: 0
-    top: 0
     width: 100%
     height: 100%
     overflow-y: auto
@@ -64,6 +60,7 @@
       display: flex
       justify-content: space-between
       align-items: center
+
     &-btns
       margin: 5px 0 40px
       padding-bottom: 40px
@@ -314,8 +311,10 @@
         color: #808285
   &-add, &-form
     display: none
+    width: 0
     &.active
       display: block
+      width: 100%
   &-white
     background: none
     color: #000000
