@@ -58,9 +58,7 @@ $(document).ready(function () {
         scrollHorizontally: true,
         scrollBar: false,
         navigationPosition: 'right',
-
-
-});
+    });
 
 
     // $( ".header-menu-img" ).each(function() {
@@ -71,14 +69,21 @@ $(document).ready(function () {
     //     }
     //
     // });
+
     // Main search
-    var addCl = true;
-    $(".header-top-logo_search, .header-top-logo_mob").bind('click', function () {
+    $(".header-top-logo_search, .header-top-logo_mob").click(function () {
         $(".header-search").addClass('active');
+        bodyFreezeScroll();
+        $(".fp-enabled").css("overflow", "auto");
+        $("body").css("overflow", "auto");
+
     });
 
-    $(".header-search-close").bind('click', function () {
+    $(".header-search-close").click(function () {
         $(".header-search").removeClass('active');
+        $(".fp-enabled").css("overflow", "hidden");
+        $("body").css("overflow", "hidden");
+        bodyUnfreezeScroll();
     });
 
     $(".popup-welcome-close, .popup-welcome-overlay").click(function () {
