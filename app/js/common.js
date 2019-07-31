@@ -54,14 +54,13 @@ $(document).ready(function () {
     $('.fullpage').fullpage({
         navigation: true,
         scrollOverflow: true,
-        autoScrolling: true,
+        // autoScrolling: true,
         scrollHorizontally: true,
         scrollBar: false,
         navigationPosition: 'right',
     });
 
-
-    // $( ".header-menu-img" ).each(function() {
+    // $( ".head)'er-menu-img" ).each(function() {
     //     var attr = $(this).attr('data-image-src');
     //
     //     if (typeof attr !== typeof undefined && attr !== false) {
@@ -73,16 +72,23 @@ $(document).ready(function () {
     // Main search
     $(".header-top-logo_search, .header-top-logo_mob").click(function () {
         $(".header-search").addClass('active');
+        $(".header-btn-menu").toggleClass('btn-active');
+        $('.header-menu').removeClass("active");
+        $(".header-menu-drop").removeClass('active');
+        $(".header-menu-subdrop").slideUp(500);
         bodyFreezeScroll();
-        $(".fp-enabled").css("overflow", "auto");
-        $("body").css("overflow", "auto");
+        // $.fn.fullpage.setAllowScrolling(true);
+        // $(".fp-enabled").css("overflow", "auto");
+        // $("body").css("overflow", "auto");
 
     });
 
     $(".header-search-close").click(function () {
         $(".header-search").removeClass('active');
-        $(".fp-enabled").css("overflow", "hidden");
-        $("body").css("overflow", "hidden");
+        // $(".fp-enabled").css("overflow", "hidden");
+        // $("body").css("overflow", "hidden");
+        // $.fn.fullpage.setAllowScrolling(false);
+
         bodyUnfreezeScroll();
     });
 
@@ -312,7 +318,7 @@ $(document).ready(function () {
     });
     //My Bag
     $(".header-top-basket").click(function () {
-        $(".popup-bag, .popup").addClass('active');
+        $(".popup-bag").addClass('active');
     });
     $(".popup-bag-sellers").click(function (e) {
         e.preventDefault();
@@ -964,13 +970,13 @@ $(document).ready(function () {
     });
     $(".fifth-slider").slick({
         slidesToShow: 2,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
         dots: false,
         arrows: false,
         variableWidth: true,
         centerMode: false,
         focusOnSelect: true,
-        infinite: true
+        infinite: true,
     });
     //terms
     if (window.matchMedia("(min-width: 768px)").matches) {
