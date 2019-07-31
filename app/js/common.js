@@ -58,6 +58,7 @@ $(document).ready(function () {
         scrollHorizontally: true,
         scrollBar: false,
         navigationPosition: 'right',
+        normalScrollElements: ".header, .header-search-flex, .header-search-contanet"
     });
 
     // $( ".head)'er-menu-img" ).each(function() {
@@ -72,9 +73,10 @@ $(document).ready(function () {
     // Main search
     $(".header-top-logo_search, .header-top-logo_mob").click(function () {
         $(".header-search").addClass('active');
-        $(".header-btn-menu").toggleClass('btn-active');
+        $(".header-btn-menu").removeClass('btn-active');
         $('.header-menu').removeClass("active");
         $(".header-menu-drop").removeClass('active');
+        $(".header-menu-subtitle").removeClass('active');
         $(".header-menu-subdrop").slideUp(500);
         bodyFreezeScroll();
         // $.fn.fullpage.setAllowScrolling(true);
