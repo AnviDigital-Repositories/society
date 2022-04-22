@@ -34,7 +34,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "fancybox": "^3.0.1",
-    "fullpage.js": "^3.0.5",
+    "fullpage.js": "^4.0.5",
     "gulp-cli": "^2.0.1",
     "gulp-tinypng-compress": "^1.2.1",
     "node-sass": "^4.12.0",
